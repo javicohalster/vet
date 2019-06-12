@@ -85,7 +85,7 @@ $("#speciality_id_e").change(function(event){ //carga los doctores en el select 
     if (!id) 
         $("#doctor_id_e").html("<option>--Seleccione--</option>")
         $('.selectpicker').selectpicker('refresh') //refresca el select para que cambie su valor
-        $.get("get-doctor/"+id+"",function(response,speciality){
+        $.get("./get-doctor/"+id+"",function(response,speciality){
         $("#doctor_id_e").empty()
         $('.selectpicker').selectpicker('refresh') //refresca el select para que cambie su valor
         if (response == "") {
@@ -106,7 +106,7 @@ $("#speciality_id").change(function(event){ //carga los doctores en el select #d
     if (!id) 
         $("#doctor_id").html("<option>--Seleccione--</option>")
         $('.selectpicker').selectpicker('refresh') //refresca el select para que cambie su valor
-        $.get("get-doctor/"+id+"",function(response,speciality){
+        $.get("./get-doctor/"+id+"",function(response,speciality){
         $('.selectpicker').selectpicker('refresh') //refresca el select para que cambie su valor
         $("#doctor_id").empty()
         if (response == "") {
@@ -124,7 +124,7 @@ $("#speciality_id").change(function(event){ //carga los doctores en el select #d
 $( "#delete_cita" ).click(function(event){ //esta funcion elimina una cita oendiente desde el cale ndario.
     var id= $( '#id' ).val()
     var popup = confirm("¿ Esta seguro de eliminar esta cita ?")
-    var route = "/citas/"+id+"";
+    var route = "./citas/"+id+"";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
     if(popup ==true){
      $.ajax({
@@ -149,7 +149,7 @@ $( "#delete_cita" ).click(function(event){ //esta funcion elimina una cita oendi
 $( "#guardar_cita" ).click(function(event){
        // event.preventDefault();
         var dataString  = $( '#form_cita' ).serializeArray();
-        var route = "/citas";
+        var route = "./citas";
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             url: route,
@@ -185,7 +185,7 @@ $( "#guardar_cita" ).click(function(event){
 $( "#btn_guardar_doc" ).click(function(event){ 
         event.preventDefault();
         var dataString  = $( '#form_doc' ).serializeArray();
-        var route = "/doctores";
+        var route = "./doctores";
         $.ajax({
             url: route,
             type: 'post',
@@ -236,7 +236,7 @@ $( "#btn_guardar_rec" ).click(function(event){
 $( "#update_cita" ).click(function(event){ 
         event.preventDefault()
         var id= $( '#id' ).val()
-        var route = "/citas/"+id+""
+        var route = "./citas/"+id+""
         var dataString  = $( '#form_update_cita' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -264,7 +264,7 @@ $( "#update_cita" ).click(function(event){
 $( "#update_consulta_pendiente" ).click(function(event){ //esta funcion actualiza una cita Pendiente desde el modulo de consultas medicas.
         event.preventDefault()
         var id= $( '#id_consulta_pendiente' ).val()
-        var route = "/citas/"+id+""
+        var route = "./citas/"+id+""
         var dataString  = $( '#form_update_consulta_pendiente' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -292,7 +292,7 @@ $( "#update_consulta_pendiente" ).click(function(event){ //esta funcion actualiz
 $( "#update_consulta" ).click(function(event){ 
     
        var id= $( '#id' ).val()
-        var route = "/consultas/"+id+""
+        var route = "./consultas/"+id+""
         var dataString  = $( '#form_consulta' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -346,7 +346,7 @@ $( "#update_role_user" ).click(function(event){
     })
 $( "#update_especialidades" ).click(function(event){ 
         var id= $( '#id_especialidad' ).val()
-        var route = "/especialidad-doctor/"+id+""
+        var route = "./especialidad-doctor/"+id+""
         var dataString  = $( '#form_especielidades_doctor' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -452,7 +452,7 @@ $( "#update_editar_permiso" ).click(function(event){ //actualiza los datos del m
 $( "#update_editar_paciente" ).click(function(event){ 
         event.preventDefault()
         var id= $( '#id_paciente' ).val()
-        var route = "pacientes/"+id+""
+        var route = "./pacientes/"+id+""
         var dataString  = $( '#form_editar_paciente' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -505,7 +505,7 @@ $( "#actualizar_usuario" ).click(function(event){  //actualiza los datos del doc
         var id= $( '#id' ).val()
         var tipo = $("#tipo").val()
         var route = ""
-        if (tipo === "doctor") {route = "/doctores/"+id+"";}else{route = "/recepcionistas/"+id+"";}
+        if (tipo === "doctor") {route = "./doctores/"+id+"";}else{route = "./recepcionistas/"+id+"";}
         var dataString  = $( '#form_editar_usuario' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -640,7 +640,7 @@ $( "#add_permiso" ).click(function(event){
     })
 
 $( "#add_paciente" ).click(function(event){
-        var route = "pacientes/"
+        var route = "./pacientes/"
         var dataString  = $( '#form_add_paciente' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -804,7 +804,7 @@ $( "#ingresar" ).click(function(event){
                 contentType: false,
 
             beforeSend: function(){
-                    $avatar_img.attr('src', '/assets/img/touchloader.gif');
+                    $avatar_img.attr('src', './assets/img/touchloader.gif');
             },
             success: function(data){
                     $avatar_img.attr('src', './assets/img/perfiles/'+data.file_name+'?'+ new Date().getTime());
@@ -835,7 +835,7 @@ $( "#ingresar" ).click(function(event){
 
 function guardar_especialidad()
 {
-    var route = "/especialidades/"
+    var route = "./especialidades/"
     var dataString  = $( '#form_especialidades' ).serializeArray()
     $.ajax({
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -861,7 +861,7 @@ function guardar_especialidad()
 function actualizar_especialidad($id)
 {
     var id= $( '#id' ).val()
-    var route = "/especialidades/"+id+"";
+    var route = "./especialidades/"+id+"";
     var dataString  = $( '#form_especialidades' ).serializeArray()
     $.ajax({
            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -885,7 +885,7 @@ function actualizar_especialidad($id)
 }
 
 function getDoctorUp(especialidad, id_doctor){
-    $.get("get-doctor/"+especialidad+"",function(response,speciality){
+    $.get("./get-doctor/"+especialidad+"",function(response,speciality){
     $("#doctor_id_e").empty()
     $('.selectpicker').selectpicker('refresh')
     if (response == "") {
@@ -902,7 +902,7 @@ function getDoctorUp(especialidad, id_doctor){
 }
 
 function getDoctorAdd(especialidad){
-    $.get("get-doctor/"+especialidad+"",function(response,speciality){
+    $.get("./get-doctor/"+especialidad+"",function(response,speciality){
         $("#up_evento #doctor_id").empty()
         if (response == "") {
              $("#up_evento #doctor_id").html("<option>--Seleccione--</option>")
@@ -917,7 +917,7 @@ function getDoctorAdd(especialidad){
 }
 // si falla el select especialidades en el update cita en sesion doctor, es porque no tiene permisos "leer especialidades"
 function select_especialidad_up(doctor_id, speciality_id){ //lista las especialidades del doctor en sesion 
-        $.get("get-especialidad/"+doctor_id+"",function(response,speciality){
+        $.get("./get-especialidad/"+doctor_id+"",function(response,speciality){
         $("#speciality_id_e").empty()
         $('.selectpicker').selectpicker('refresh')
         if (response == "") {
@@ -937,7 +937,7 @@ function select_especialidad_up(doctor_id, speciality_id){ //lista las especiali
 function select_especialidad_add(id, speciality_id){
     if (id == "0") {
     }else{
-        $.get("get-especialidad/"+id+"",function(response,speciality){
+        $.get("./get-especialidad/"+id+"",function(response,speciality){
         $("#speciality_id_add").empty()
         $('.selectpicker').selectpicker('refresh')
         if (response == "") {
@@ -958,7 +958,7 @@ function select_especialidad_add(id, speciality_id){
 function roles_user(id)// carga datos en el modal roles_user del módulo de personas.
 {
    event.preventDefault();
-   var route = "/personas/"+id+"/edit";
+   var route = "./personas/"+id+"/edit";
    var csrf_token = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
            url: route,
@@ -967,7 +967,7 @@ function roles_user(id)// carga datos en el modal roles_user del módulo de pers
             $('#id').val(data.id)
             $('#rut').val(data.rut)
             $('#nombres').val(data.nombres)
-            $('.title-name').html(data.nombres +' '+ data.apellidos)
+            $('.title-name').html(data.nombres +' / '+ data.apellidos)
             $('#image-modal').html('<img src="./assets/img/perfiles/'+data.avatar+'" alt="Thumbnail Image" class="img-rounded img-responsive">')
             const crearOption = (value, name, selected) => `<option value="${value}"${selected.includes(value) ? ' selected' : ''}>${name}</option>`
             const obj = data.roles
@@ -992,7 +992,7 @@ function roles_user(id)// carga datos en el modal roles_user del módulo de pers
 function carga_usuario(id)//carga datos del doctor y recepcionista en el modal editar.
 {
    //event.preventDefault(); este evento no funciona con firefox y envia error, no cargan los datos en el modal.
-   var route = "/recepcionistas/"+id+"/edit";
+   var route = "./recepcionistas/"+id+"/edit";
    var csrf_token = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
            url: route,
@@ -1005,9 +1005,9 @@ function carga_usuario(id)//carga datos del doctor y recepcionista en el modal e
             $("INPUT[name=direccion]").val([data.direccion])
             $("INPUT[name=nacimiento]").val([data.nacimiento])
             $("INPUT[name=id]").val(data.id)
-            $(".avatarImage").attr('src', '.assets/img/perfiles/'+data.avatar+'?'+ new Date().getTime())
+            $(".avatarImage").attr('src', './assets/img/perfiles/'+data.avatar+'?'+ new Date().getTime())
             $("INPUT[name=genero]").val([data.genero]) //carga valor de radiobutton desde mysql
-            $('.title-name').html(data.nombres+" "+ data.apellidos)
+            $('.title-name').html(data.nombres+" / "+ data.apellidos)
           },
        error:function(){
            alert('la operación falló');
@@ -1017,7 +1017,7 @@ function carga_usuario(id)//carga datos del doctor y recepcionista en el modal e
 
 function carga_rol(id)//carga datos del doctor en el modal editar.
 {
-   var route = "/roles/"+id+"/edit";
+   var route = "./roles/"+id+"/edit";
    var csrf_token = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
            url: route,
@@ -1034,7 +1034,7 @@ function carga_rol(id)//carga datos del doctor en el modal editar.
 }
 function carga_permiso(id)//carga datos de los permisos en el modal editar.
 {
-   var route = "/permisos/"+id+"/edit";
+   var route = "./permisos/"+id+"/edit";
    var csrf_token = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
            url: route,
@@ -1053,7 +1053,7 @@ function carga_permiso(id)//carga datos de los permisos en el modal editar.
 function carga_paciente(id)//carga datos del paciente en el modal editar.
 {
    //event.preventDefault(); este evento no funciona con firefox y envia error, no cargan los datos en el modal.
-   var route = "pacientes/"+id+"/edit";
+   var route = "./pacientes/"+id+"/edit";
     $.ajax({
            url: route,
            type: 'GET',
@@ -1084,7 +1084,7 @@ function carga_paciente(id)//carga datos del paciente en el modal editar.
 }
 function permisos_roles(id) //carga modal que contiene el select multiple de permisos del rol.
 {
-   var route = "permisos-roles/"+id+"/edit";
+   var route = "./permisos-roles/"+id+"/edit";
    var csrf_token = $('meta[name="csrf-token"]').attr('content');
    var image = new Image();
     $.ajax({
@@ -1115,7 +1115,7 @@ function permisos_roles(id) //carga modal que contiene el select multiple de per
 }
 function especialidad_doctor(id) //carga modal que contiene el select multiple de las especialidades del doctor.
 {
-   var route = "/especialidad-doctor/"+id+"/edit";
+   var route = "./especialidad-doctor/"+id+"/edit";
    var csrf_token = $('meta[name="csrf-token"]').attr('content');
    var image = new Image();
     $.ajax({
@@ -1152,7 +1152,7 @@ function especialidad_doctor(id) //carga modal que contiene el select multiple d
 
 function ficha_paciente(id) //carga datos en la ficha del paciente.
 {
-   var route = "ficha/"+id+"";
+   var route = "./ficha/"+id+"";
    var csrf_token = $('meta[name="csrf-token"]').attr('content');
    var image = new Image();
     $.ajax({
@@ -1185,7 +1185,7 @@ function ficha_paciente(id) //carga datos en la ficha del paciente.
 
 function expediente_paciente(id) //carga datos en el expediente del paciente.
 {
-   var route = "expediente/"+id+"";
+   var route = "./expediente/"+id+"";
    var csrf_token = $('meta[name="csrf-token"]').attr('content');
    var html = "";
     $.ajax({
@@ -1227,7 +1227,7 @@ function expediente_paciente(id) //carga datos en el expediente del paciente.
 function eliminar_recep(id)
 {
     var popup = confirm("¿ Esta seguro de eliminar este registro ?")
-    var route = "/recepcionistas/"+id+"";
+    var route = "./recepcionistas/"+id+"";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
     if(popup ==true){
      $.ajax({
@@ -1247,7 +1247,7 @@ function eliminar_recep(id)
 function eliminar_doc(id)
 {
     var popup = confirm("¿ Esta seguro de eliminar este registro ?")
-    var route = "/doctores/"+id+"";
+    var route = "./doctores/"+id+"";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
     if(popup ==true){
      $.ajax({
@@ -1270,7 +1270,7 @@ function delete_paciente(id)
 }
 function del_paciente(id)
 {// elimina un paciente
-    var route = "pacientes/"+id+"";
+    var route = "./pacientes/"+id+"";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
      $.ajax({
             url: route,
@@ -1292,7 +1292,7 @@ function delete_especialidad(id)
 }
 function del_especialidad(id)
 {// elimina un paciente
-    var route = "/especialidades/"+id+"";
+    var route = "./especialidades/"+id+"";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
      $.ajax({
             url: route,
@@ -1314,7 +1314,7 @@ function delete_rol(id)
 }
 function del_rol(id)
 {// elimina un paciente
-    var route = "/roles/"+id+"";
+    var route = "./roles/"+id+"";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
      $.ajax({
             url: route,
@@ -1358,7 +1358,7 @@ function delete_doctor(id)
 }
 function del_doctor(id)
 {// elimina un paciente
-    var route = "/doctores/"+id+"";
+    var route = "./doctores/"+id+"";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
      $.ajax({
             url: route,
@@ -1380,7 +1380,7 @@ function delete_recepcionista(id)
 }
 function del_recepcionista(id)
 {// elimina un paciente
-    var route = "/recepcionistas/"+id+"";
+    var route = "./recepcionistas/"+id+"";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
      $.ajax({
             url: route,
@@ -1398,7 +1398,7 @@ function del_recepcionista(id)
 }
 function atender(id)
 { //Carga mestra el modal para realizar una atención.
-    var route = "/consultas/"+id+"/edit";
+    var route = "./consultas/"+id+"/edit";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
            url: route,
@@ -1420,7 +1420,7 @@ function atender(id)
 }
 function cargar_datos_especialidad(id)// Carga los datos en el formulario que esta al lado de la lista de especialidades.
 {
-    var route = "/especialidades/"+id+"/edit";
+    var route = "./especialidades/"+id+"/edit";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
            url: route,
@@ -1437,7 +1437,7 @@ function cargar_datos_especialidad(id)// Carga los datos en el formulario que es
 }
 function cargar_consulta_atendida(id)// Carga los datos en el modal para editar, en una consulta atendida.
 {
-    var route = "/consultas/"+id+"/edit";
+    var route = "./consultas/"+id+"/edit";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
            url: route,
@@ -1459,7 +1459,7 @@ function cargar_consulta_atendida(id)// Carga los datos en el modal para editar,
 }
     function update_cita_pendiente(id)
     {
-        var route = "/citas/"+id+"/edit";
+        var route = "./citas/"+id+"/edit";
         var csrf_token = $('meta[name="csrf-token"]').attr('content');
         $.ajax({
                url: route,
@@ -1484,7 +1484,7 @@ function cargar_consulta_atendida(id)// Carga los datos en el modal para editar,
 }
  function ver_cita(id)
     {
-        var route = "/citas/"+id+"/edit";
+        var route = "./citas/"+id+"/edit";
         var csrf_token = $('meta[name="csrf-token"]').attr('content');
         $.ajax({
                url: route,
@@ -1498,7 +1498,7 @@ function cargar_consulta_atendida(id)// Carga los datos en el modal para editar,
                 $('#speciality_id_ver').val(data.especialidad)
                 //$('#doctor_id').val(data.doctor)
                 $('#descripcion_ver').val(data.descripcion)
-                $.get("get-doctor/"+data.especialidad+"",function(response,speciality){
+                $.get("./get-doctor/"+data.especialidad+"",function(response,speciality){
                     $("#doctor_id_ver").empty();
                     if (response == "") {
                          $("#doctor_id_ver").html("<option>--Seleccione--</option>")
@@ -1520,7 +1520,7 @@ function cargar_consulta_atendida(id)// Carga los datos en el modal para editar,
  function delete_cita_pendiente(id)
 {  //esta funcion elimina una cita oendiente desde el modulo de consultas medicas.
     var popup = confirm("¿ Esta seguro de eliminar esta cita ?")
-    var route = "/citas/"+id+"";
+    var route = "./citas/"+id+"";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
     if(popup ==true){
      $.ajax({

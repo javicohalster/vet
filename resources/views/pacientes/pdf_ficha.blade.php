@@ -9,7 +9,7 @@
   <body>
     <header class="clearfix">
       <div id="logo">
-        <img src="http://www.clinicadentalnaves.com/img/logoClinicaDentalNaves.png">
+        <img src="https://irp-cdn.multiscreensite.com/1be65cd3/DESKTOP/jpg/995.jpg>
       </div>
       <h1>FICHA PERSONAL DEL PACIENTE</h1>
       <div id="company" class="clearfix">
@@ -18,10 +18,10 @@
       </div>
       </div>
       <div id="project">
-        <div><span>RUT</span>{{$pacientes->rut}}</div>
-        <div><span>PACIENTE</span> {{$pacientes->nombres}} {{$pacientes->apellidos}}</div>
-        <div><span>GÉNERO</span> {{$pacientes->genero}}</div>
-        <div><span>PROFESIÓN/OFICIO</span> {{$pacientes->titulo}}</div>
+        <div><span>CI</span>{{$pacientes->rut}}</div>
+        <div><span>PACIENTE</span> {{$pacientes->nombres}} <span>RAZA</span> {{$pacientes->sangre}}</div>
+        <div><span>SEXO</span> {{$pacientes->genero}}</div>
+        <div><span>PROPIETARIO</span> {{$pacientes->apellidos}}</div>
         <div><span>EMAIL</span>  <a href="mailto:john@example.com">{{$pacientes->email}}</a></div>
         <div><span>DIRECCIÓN</span> {{$pacientes->direccion}}</div>
         <div><span>TELÉFONO</span> {{$pacientes->telefono}}</div>
@@ -31,7 +31,7 @@
     <main>
       <table>
         <tbody>
-          <tr>
+         <!-- <tr>
             <td colspan="4">TIPO DE SANGRE</td>
             <td class="total">{{$pacientes->sangre}}</td>
           </tr>
@@ -39,7 +39,7 @@
             <td colspan="4">VIH</td>
             <td class="total">{{$pacientes->vih}}</td>
           </tr>
-          <tr>
+          <tr>-->
             <td colspan="4">PESO</td>
             <td class="total">{{$pacientes->peso}} Kg.</td>
           </tr>
@@ -76,7 +76,7 @@
       </div>
     </main>
     <footer>
-      Documento generado por el sistema de reservas y gestión administrativa doctorClick, Todos los derechos reservados &copy; 2018 Serviline Limitada.
+      Documento generado por el sistema de reservas y gestión administrativa javicohal, Todos los derechos reservados &copy; 2019.
     </footer>
   </body>
 </html>

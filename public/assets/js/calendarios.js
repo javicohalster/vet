@@ -78,7 +78,7 @@ $(document).ready(function() {
                     var time_end = $.fullCalendar.moment(event.end).format('HH:mm:ss');
                     var id= event.id;
                     var estado = event.estado;
-                    var route = "/citas/"+id+"";
+                    var route = "./citas/"+id+"";
                     var dataString  = 'type=resetdate&fecha_inicio='+start+'&fecha_fin='+end+'&id='+id+'&hora_inicio='+time_start+'&hora_fin='+time_end+'&paciente_id='+event.paciente_id+'&doctor_id='+event.doctor_id+'&speciality_id='+event.speciality_id;
 
                     if (estado == 'atendido') {

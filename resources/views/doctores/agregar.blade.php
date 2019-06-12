@@ -6,7 +6,7 @@
                     <div class="row sinpadding">
                         <div class="col-md-12">
                             <div class="form-group label-floating">
-                                <label class="control-label">Rut:</label>
+                                <label class="control-label">C.I:</label>
                                 <input type="text" class="form-control" id="rut_add" name="rut_add">
                             </div>
                         </div>
@@ -59,14 +59,14 @@
                         <div class="col-sm-6">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="genero_add" value="masculino">MASCULINO
+                                    <input type="radio" name="genero_add" value="MASCULINO">MASCULINO
                                 </label>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="genero_add" value="femenino">FEMENINO
+                                    <input type="radio" name="genero_add" value="FEMENINO">FEMENINO
                                 </label>
                             </div>
                         </div>

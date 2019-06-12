@@ -56,14 +56,14 @@
                     <div class="col-sm-6">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="genero" value="masculino">MASCULINO
+                                <input type="radio" name="genero" value="MASCULINO">MASCULINO
                             </label>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="radio">
                             <label>
-                                <input type="radio" name="genero" value="femenino">FEMENINO
+                                <input type="radio" name="genero" value="FEMENINO">FEMENINO
                             </label>
                         </div>
                     </div>

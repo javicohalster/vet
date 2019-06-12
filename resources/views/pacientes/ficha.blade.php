@@ -25,7 +25,7 @@
                     <table class="table">
                             <tbody>
                                 <tr>
-                                    <th>Rut:</th>
+                                    <th>C.I:</th>
                                     <td id="rut"></td>
                                 </tr>
                                 <tr>
@@ -45,7 +45,7 @@
                                     <td id="telefono"></td>
                                 </tr>
                                 <tr>
-                                    <th>Género:</th>
+                                    <th>Sexo:</th>
                                     <td id="genero"></td>
                                 </tr>
                                 <tr>
@@ -59,11 +59,11 @@
                     <table class="table">
                             <tbody class="text-left">
                                 <tr>
-                                    <th>Sangre:</th>
+                                    <th>Raza:</th>
                                     <td id="sangre2"></td>
                                 </tr>
                                 <tr>
-                                    <th>Vih:</th>
+                                    <th>Color:</th>
                                     <td id="vih2"></td>
                                 </tr>
                                 <tr>

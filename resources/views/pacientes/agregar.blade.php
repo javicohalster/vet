@@ -7,7 +7,7 @@
                         <div class="row sinpadding">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
-                                    <label class="control-label">Rut:</label>
+                                    <label class="control-label">C.I:</label>
                                     <input type="text" class="form-control" id="rut_add" name="rut_add">
                                 </div>
                             </div>
@@ -15,7 +15,7 @@
                         <div class="row ">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
-                                    <label class="control-label">Nombres:</label>
+                                    <label class="control-label">Nombre Mascota:</label>
                                     <input type="text" class="form-control" id="nombres_add" name="nombres_add">
                                 </div>
                             </div>
@@ -23,7 +23,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
-                                    <label class="control-label">Apellidos:</label>
+                                    <label class="control-label">Propietario:</label>
                                     <input type="text" class="form-control" id="apellidos_add" name="apellidos_add">
                                 </div>
                             </div>
@@ -64,14 +64,14 @@
                             <div class="col-sm-6">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="genero_add" value="masculino">MASCULINO
+                                            <input type="radio" name="genero_add" value="MACHO">MACHO
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="genero_add" value="femenino">FEMENINO
+                                            <input type="radio" name="genero_add" value="HEMBRA">HEMBRA
                                         </label>
                                     </div>
                                 </div>
@@ -82,11 +82,11 @@
                         <div class="row sinpadding">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="control-label">SANGRE</label>
+                                    <label class="control-label">Raza</label>
                                     <select id="sangre_add" name="sangre_add" class="form-control" data-style="select-with-transition">
                                         <option value="">-- Seleccione --</option>
-                                        <option value="ARH+">A RH+</option>
-                                        <option value="AB-">AB-</option>
+                                        <option value="ALANO ESPAÑOL">ALANO ESPAÑOL</option>
+                                        <option value="AKITA">AKITA</option>
                                     </select>
                                 </div>
                             </div>
@@ -94,11 +94,11 @@
                         <div class="row sinpadding">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="control-label">VIH</label>
+                                    <label class="control-label">Color</label>
                                     <select id="vih_add" name="vih_add" class="form-control" data-style="select-with-transition">
                                         <option value="">-- Seleccione --</option>
-                                        <option value="negativo">Negativo </option>
-                                        <option value="positivo">Positivo</option>
+                                        <option value="NEGRO">NEGRO </option>
+                                        <option value="BEIGE">BEIGE</option>
                                     </select>
                                 </div>
                             </div>

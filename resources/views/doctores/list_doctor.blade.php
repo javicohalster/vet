@@ -3,7 +3,7 @@
     <thead>
         <tr>
             <th>Acciones</th>
-            <th>Rut</th>
+            <th>C.I</th>
             <th>Nombres</th>
             <th>Apellidos</th>
             <th>Email</th>

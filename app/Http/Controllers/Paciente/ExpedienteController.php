@@ -29,7 +29,7 @@ class ExpedienteController extends Controller
         return response()->json([
            "array"    => $queries,
            "fecha"    => $fecha,
-           "paciente" => $paciente->nombres . " " . $paciente->apellidos,
+           "paciente" => $paciente->nombres . " / " . $paciente->apellidos,
            "paciente_id" => $paciente->id,
         ]);
     }
@@ -39,7 +39,7 @@ class ExpedienteController extends Controller
         $paciente       = User::findOrFail($id);
         $edad           = Carbon::parse($paciente->nacimiento)->age;
         $query_paciente = Query::select(['id', 'sintomas', 'examenes', 'tratamiento', 'observaciones', 'estado', 'fecha_inicio'])->where('estado', '=' , 'atendido')->where('paciente_id', '=', $paciente->id)->orderBy('queries.fecha_inicio', 'desc')->get();
-       $query_paciente->fecha_inicio = "9 de mayo";
+        $query_paciente->fecha_inicio = "9 de mayo";
         $fecha          = Date::now()->toFormattedDateString();
         $pdf            = \PDF::loadView('pacientes.pdf_expediente', ['paciente' => $paciente, 'edad' => $edad, 'fecha' => $fecha, 'query_paciente' => $query_paciente]);
         return $pdf->download($paciente->nombres ." ". $paciente->apellidos.".pdf");

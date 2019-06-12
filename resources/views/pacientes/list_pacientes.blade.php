@@ -3,10 +3,12 @@
     <thead>
         <tr>
             <th>Acciones</th>
-            <th>Rut</th>
-            <th>Nombres</th>
-            <th>Apellidos</th>
+            <th>C.I. Prop.</th>
+            <th>Nombre Mascota</th>
+            <th>Propietario</th>
             <th>Teléfono</th>
+            <th>Raza</th>
+            <th>Color</th>
             <th>Edad</th>
         </tr>
     </thead>

@@ -42,14 +42,14 @@ class PacienteController extends Controller
             $paciente->save();
             $paciente->attachRole(4); //4 es el numero id del rol paciente
             return response()->json([
-                "message" => "El paciente ".$paciente->nombres." ".$paciente->apellidos." ha sido guardado exitosamente !"
+                "message" => "El paciente ".$paciente->nombres." ha sido guardado exitosamente !"
                 ]); 
         }
     }
 
     public function show()
     {
-        $users = User::select(['id', 'rut', 'nombres', 'apellidos', 'telefono', 'nacimiento'])->withRole('paciente');
+        $users = User::select(['id', 'rut', 'nombres', 'apellidos', 'telefono', 'sangre','vih','nacimiento'])->withRole('paciente');
         return  datatables()->of($users)
                 ->editColumn('nacimiento', function ($user) {
                  return $user->getYearsAttribute();
@@ -111,7 +111,7 @@ class PacienteController extends Controller
             $user->save();
             return response()->json([
              "apellidos" => $user->apellidos,
-             "message" => "El paciente ".$user->nombres." ".$user->apellidos." ha sido actualizado correctamente !"
+             "message" => "El paciente ".$user->nombres." ha sido actualizado correctamente !"
             ]);
         }
     }

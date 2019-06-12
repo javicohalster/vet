@@ -9,7 +9,7 @@
   <body>
     <header class="clearfix">
       <div id="logo">
-        <img src="http://www.clinicadentalnaves.com/img/logoClinicaDentalNaves.png">
+        <img src="https://irp-cdn.multiscreensite.com/1be65cd3/DESKTOP/jpg/995.jpg">
       </div>
       <h1>EXPEDIENTE CLÍNICO DEL PACIENTE</h1>
       <div id="company" class="clearfix">
@@ -18,10 +18,11 @@
       </div>
       </div>
       <div id="project">
-        <div><span>RUT</span>{{$paciente->rut}}</div>
-        <div><span>PACIENTE</span> {{$paciente->nombres}} {{$paciente->apellidos}}</div>
-        <div><span>GÉNERO</span> {{$paciente->genero}}</div>
-        <div><span>PROFESIÓN/OFICIO</span> {{$paciente->titulo}}</div>
+        <div><span>C.I</span>{{$paciente->rut}}</div>
+        <div><span>PACIENTE</span> {{$paciente->nombres}} <span>RAZA</span>{{$paciente->sangre}}</div>
+        <div><span>SEXO</span> {{$paciente->genero}}</div>
+        <div><span>PROPIETARIO</span> {{$paciente->apellidos}}</div>
+        <div><span>COLOR</span> {{$paciente->vih}}</div>
         <div><span>EMAIL</span>  <a href="mailto:john@example.com">{{$paciente->email}}</a></div>
         <div><span>DIRECCIÓN</span> {{$paciente->direccion}}</div>
         <div><span>TELÉFONO</span> {{$paciente->telefono}}</div>
@@ -70,7 +71,7 @@
       </div>
     </main>
     <footer>
-      Documento generado por el sistema de reservas y gestión administrativa doctorClick, Todos los derechos reservados &copy; 2018 Serviline Limitada.
+      Documento generado por el sistema de reservas y gestión administrativa javicohal, Todos los derechos reservados &copy; 2019.
     </footer>
   </body>
 </html>

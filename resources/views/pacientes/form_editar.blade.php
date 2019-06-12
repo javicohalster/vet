@@ -8,7 +8,7 @@
                         <div class="row sinpadding">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label class="control-label">NOMBRES:</label>
+                                    <label class="control-label">NOMBRE MASCOTA:</label>
                                     <input type="text" class="form-control" id="nombres_e" name="nombres_e">
                                 </div>
                             </div>
@@ -16,7 +16,7 @@
                         <div class="row sinpadding">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label class="control-label">APELLIDOS:</label>
+                                    <label class="control-label">PROPIETARIO:</label>
                                     <input type="text" class="form-control" id="apellidos_e" name="apellidos_e">
                                 </div>
                             </div>
@@ -57,14 +57,14 @@
                             <div class="col-sm-6">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="genero_e" value="masculino">MASCULINO
+                                            <input type="radio" name="genero_e" value="masculino">MACHO
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="genero_e" value="femenino">FEMENINO
+                                            <input type="radio" name="genero_e" value="femenino">HEMBRA
                                         </label>
                                     </div>
                                 </div>
@@ -74,11 +74,11 @@
                         <div class="row sinpadding">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="control-label">SANGRE</label>
+                                    <label class="control-label">RAZA</label>
                                     <select id="sangre_e" name="sangre_e" class="form-control" data-style="select-with-transition">
                                         <option value="">-- SELECCIONE --</option>
-                                        <option value="ARH+">A RH+</option>
-                                        <option value="AB-">AB-</option>
+                                        <option value="ALANO ESPAÑOL">ALANO ESPAÑOL</option>
+                                        <option value="AKITA">AKITA</option>
                                     </select>
                                 </div>
                             </div>
@@ -86,11 +86,11 @@
                         <div class="row sinpadding">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <label class="control-label">VIH</label>
+                                    <label class="control-label">COLOR</label>
                                     <select id="vih_e" name="vih_e" class="form-control" data-style="select-with-transition">
                                         <option value="">-- SELECCIONE --</option>
-                                        <option value="negativo">Negativo </option>
-                                        <option value="positivo">Positivo</option>
+                                        <option value="NEGRO">NEGRO </option>
+                                        <option value="BEIGE">BEIGE</option>
                                     </select>
                                 </div>
                             </div>

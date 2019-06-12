@@ -9,7 +9,7 @@
             <table class="table">
                 <tbody>
                     <tr>
-                        <th>Rut:</th>
+                        <th>C.I:</th>
                         <td id="rut"></td>
                     </tr>
                     <tr>

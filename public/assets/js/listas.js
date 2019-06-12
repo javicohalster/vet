@@ -225,6 +225,8 @@ var listar_pacientes = function()
             {data: 'nombres', name: 'nombres'},
             {data: 'apellidos', name: 'apellidos'},
             {data: 'telefono', name: 'telefono'},
+            {data: 'sangre', name: 'sangre'},
+            {data: 'vih', name: 'vih'},
             {data: 'nacimiento', name: 'nacimiento'}
         ]
 	})
