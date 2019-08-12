@@ -28,7 +28,7 @@
                     </div>
                     <div class="card-content">
                         <p class="category">Reservas</p>
-                        <h3 class="card-title">75.521</h3>
+                        <h3 class="card-title">0</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
@@ -44,7 +44,7 @@
                     </div>
                     <div class="card-content">
                         <p class="category">Total Consultas</p>
-                        <h3 class="card-title">$34,245</h3>
+                        <h3 class="card-title">$0</h3>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
