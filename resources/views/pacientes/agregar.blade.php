@@ -75,7 +75,23 @@
                                         </label>
                                     </div>
                                 </div>
-                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="altura_add" value="SI">ESTERILIZADO
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="altura_add" value="NO">NO ESTERILIZADO
+                                        </label>
+                                    </div>
+                                </div>
+                        </div>
                     </div>
                     
                 <div class="tab-pane" id="add_2">
@@ -86,7 +102,7 @@
                                     <select id="sangre_add" name="sangre_add" class="form-control" data-style="select-with-transition">
                                         <option value="">-- Seleccione --</option>
                                          @foreach($razas as $raza)
-                                            <option value="{{ $raza->id }}">{{ $raza->nombre }}</option>
+                                            <option value="{{ $raza->nombre }}">{{ $raza->nombre }}</option>
                                         @endforeach
                                   </select>                                   
                                 </div>
@@ -108,14 +124,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        <!--<div class="row">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Estatura</label>
                                     <input id="altura_add" name="altura_add" type="number" class="form-control" />                    
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
