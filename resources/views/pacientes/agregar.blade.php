@@ -85,9 +85,10 @@
                                     <label class="control-label">Raza</label>
                                     <select id="sangre_add" name="sangre_add" class="form-control" data-style="select-with-transition">
                                         <option value="">-- Seleccione --</option>
-                                        <option value="ALANO ESPAÑOL">ALANO ESPAÑOL</option>
-                                        <option value="AKITA">AKITA</option>
-                                    </select>
+                                         @foreach($razas as $raza)
+                                            <option value="{{ $raza->id }}">{{ $raza->nombre }}</option>
+                                        @endforeach
+                                  </select>                                   
                                 </div>
                             </div>
                         </div>
@@ -95,11 +96,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label class="control-label">Color</label>
-                                    <select id="vih_add" name="vih_add" class="form-control" data-style="select-with-transition">
-                                        <option value="">-- Seleccione --</option>
-                                        <option value="NEGRO">NEGRO </option>
-                                        <option value="BEIGE">BEIGE</option>
-                                    </select>
+                                    <input id="vih_add" name="vih_add" type="number" class="form-control" />                                    
                                 </div>
                             </div>
                         </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Paciente;
 use App\User;
 use App\Role;
 use App\Query;
+use App\Razas;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ValidatePacienteRequest;
@@ -16,6 +17,7 @@ class PacienteController extends Controller
 {
     public function index()
     {
+        $razas = Razas::select(['id', 'nombre'])->orderBy('nombre', 'asc')->get();
         return view('pacientes.index');
     }
 

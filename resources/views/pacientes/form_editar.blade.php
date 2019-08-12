@@ -87,11 +87,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label class="control-label">COLOR</label>
-                                    <select id="vih_e" name="vih_e" class="form-control" data-style="select-with-transition">
-                                        <option value="">-- SELECCIONE --</option>
-                                        <option value="NEGRO">NEGRO </option>
-                                        <option value="BEIGE">BEIGE</option>
-                                    </select>
+                                    <input id="vih_e" name="vih_e" type="text" class="form-control" />                                    
                                 </div>
                             </div>
                         </div>
