@@ -8,6 +8,7 @@ $(document).ready(function() {
     listar_roles()
     listar_citas_pendientes()
     listar_citas_atendidas()
+  
 })
 
 var listar_permisos = function()

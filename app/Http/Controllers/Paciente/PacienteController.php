@@ -18,7 +18,7 @@ class PacienteController extends Controller
     public function index()
     {
         $razas = Razas::select(['id', 'nombre'])->orderBy('nombre', 'asc')->get();
-        return view('pacientes.index');
+        return view('pacientes.index',compact('razas'));
     }
 
     public function store(ValidateAddPacienteRequest $request)
