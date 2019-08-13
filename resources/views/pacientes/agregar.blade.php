@@ -112,7 +112,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label class="control-label">Color</label>
-                                    <input id="vih_add" name="vih_add" type="number" class="form-control" />                                    
+                                    <input id="vih_add" name="vih_add" type="text" class="form-control" />                                    
                                 </div>
                             </div>
                         </div>
