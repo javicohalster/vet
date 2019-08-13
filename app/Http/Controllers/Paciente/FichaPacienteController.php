@@ -40,7 +40,10 @@ class FichaPacienteController extends Controller
     {
         //
     }
-
+    public function getAge(){
+        return $this->birthdate->diff(Carbon::now())
+             ->format('%y years, %m months and %d days');
+    }
     /**
      * Display the specified resource.
      *
@@ -50,7 +53,8 @@ class FichaPacienteController extends Controller
     public function reporte($id)
     {
         $pacientes = User::findOrFail($id);
-        $edad = Carbon::parse($pacientes->nacimiento)->age;
+        $edad = $this->$pacientes->nacimiento->diff(Carbon::now())->format('%y años, %m mes and %d dias');
+       // $edad = Carbon::parse($pacientes->nacimiento)->age;
         $fecha = Date::now()->toFormattedDateString();
         $pdf = \PDF::loadView('pacientes.pdf_ficha', ['pacientes' => $pacientes, 'edad' => $edad, 'fecha' => $fecha]);
         return $pdf->download($pacientes->nombres ." ". $pacientes->apellidos.".pdf");
