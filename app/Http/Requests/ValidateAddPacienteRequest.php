@@ -31,8 +31,7 @@ class ValidateAddPacienteRequest extends FormRequest
             'telefono_add'  => 'required',
             'direccion_add' => 'required|min:5',
             'genero_add'    => 'required',
-            'peso_add'      => 'min:0|max:3', 
-            'altura_add'    => 'min:0|max:3'  
+              
         ];
     }
     public function messages()
@@ -51,8 +50,7 @@ class ValidateAddPacienteRequest extends FormRequest
             'telefono_add.required' => 'El campo telefono es obligatorio.',
             'direccion_add.required' => 'El campo dirección es obligatorio.',
             'genero_add.required' => 'El campo género es obligatorio.',
-            'peso_add.numeric' => 'El campo peso debe ser de tipo numérico.',
-            'altura_add.numeric' => 'El campo estatura debe ser de tipo numérico.',
+           
         ];
     }
 }
