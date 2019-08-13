@@ -89,7 +89,7 @@ class DoctorController extends ApiController
             'avatar'      => $doctor->avatar,
             'nombres'     => $doctor->nombres,
             'apellidos'   => $doctor->apellidos,
-            'nacimiento'  => Carbon::parse($doctor->nacimiento)->format('d-m-Y'),
+            'nacimiento'  => Carbon::parse($doctor->nacimiento)->format('y-m-d'),
             'genero'      => $doctor->genero,
             'email'       => $doctor->email,
             'telefono'    => $doctor->telefono,
