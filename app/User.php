@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Carbon;
+use Jenssegers\Date\Date;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
@@ -85,7 +86,8 @@ class User extends Authenticatable
     public function getYearsAttribute()
     {
         //return $this->nacimiento->diff(Carbon::now())->format('%y años, %m mes and %d dias');
-        return Carbon::parse($this->nacimiento)->age;
+        return Date::parse($this->nacimiento)->toFormattedDateString();
+       // return Carbon::parse($this->nacimiento)->age;
     }
 
     public function getFullNameAttribute()

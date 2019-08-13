@@ -77,7 +77,7 @@ class PacienteController extends Controller
             'rut'         => $paciente->rut,
             'nombres'     => $paciente->nombres,
             'apellidos'   => $paciente->apellidos,
-            'nacimiento'  => Carbon::parse($paciente->nacimiento)->format('d-m-Y'),
+            'nacimiento'  => Carbon::parse($paciente->nacimiento)->format('Y-m-d'),
             'genero'      => $paciente->genero,
             'email'       => $paciente->email,
             'telefono'    => $paciente->telefono,
