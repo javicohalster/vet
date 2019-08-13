@@ -80,14 +80,14 @@
                             <div class="col-sm-6">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="altura_add" value="SI">ESTERILIZADO
+                                            <input type="radio" name="alergia_add" value="SI">ESTERILIZADO
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="altura_add" value="NO">NO ESTERILIZADO
+                                            <input type="radio" name="alergia_add" value="NO">NO ESTERILIZADO
                                         </label>
                                     </div>
                                 </div>
@@ -99,7 +99,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label class="control-label">Raza</label>
-                                    <select id="alergia_add" name="alergia_add" class="form-control" data-style="select-with-transition">
+                                    <select id="sangre_add" name="sangre_add" class="form-control" data-style="select-with-transition">
                                         <option value="">-- Seleccione --</option>
                                          @foreach($razas as $raza)
                                             <option value="{{ $raza->nombre }}">{{ $raza->nombre }}</option>
