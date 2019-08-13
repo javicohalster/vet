@@ -63,7 +63,8 @@ class FichaPacienteController extends Controller
     public function show($id)
     {
         $paciente = User::findOrFail($id);
-        $edad     = $paciente->getYearsAttribute();
+        $edad = $this->$paciente->nacimiento->diff(Carbon::now())->format('%y años, %m mes and %d dias');
+       //antes $edad     = $paciente->getYearsAttribute();
         //$edad = $paciente->nacimiento->diffInYears(now());
         return response()->json([
             'success'     => true,
