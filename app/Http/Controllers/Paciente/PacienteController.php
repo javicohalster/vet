@@ -44,7 +44,7 @@ class PacienteController extends Controller
             $paciente->save();
             $paciente->attachRole(4); //4 es el numero id del rol paciente
             return response()->json([
-                "message" => "El paciente ".$paciente->nombres." ha sido guardado exitosamente ! Ficha Nro: " . "000". $paciente->id
+                "message" => "El paciente ".$paciente->nombres." ha sido guardado exitosamente ! Ficha Nro: "
                 ]); 
         }
     }
