@@ -53,8 +53,9 @@ class FichaPacienteController extends Controller
     public function reporte($id)
     {
         $pacientes = User::findOrFail($id);
-        $edad = $this->$pacientes->nacimiento->diff(Carbon::now())->format('%y años, %m mes, %d dias');
+       // $edad = $this->$pacientes->nacimiento->diff(Carbon::now())->format('%y años, %m mes, %d dias');
        // $edad = Carbon::parse($pacientes->nacimiento)->age;
+        $edad     = $pacientes->getYearsAttribute();
         $fecha = Date::now()->toFormattedDateString();
         $pdf = \PDF::loadView('pacientes.pdf_ficha', ['pacientes' => $pacientes, 'edad' => $edad, 'fecha' => $fecha]);
         return $pdf->download($pacientes->nombres ." ". $pacientes->apellidos.".pdf");
@@ -63,8 +64,8 @@ class FichaPacienteController extends Controller
     public function show($id)
     {
         $paciente = User::findOrFail($id);
-        $edad = $this->$paciente->nacimiento->diff(Carbon::now())->format('%y años, %m mes and %d dias');
-       //antes $edad     = $paciente->getYearsAttribute();
+        //$edad = $this->$paciente->nacimiento->diff(Carbon::now())->format('%y años, %m mes, %d dias');
+         $edad     = $paciente->getYearsAttribute();
         //$edad = $paciente->nacimiento->diffInYears(now());
         return response()->json([
             'success'     => true,
