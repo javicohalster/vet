@@ -321,7 +321,7 @@ $( "#update_consulta" ).click(function(event){
     })
 $( "#update_role_user" ).click(function(event){ 
         var id= $( '#id' ).val()
-        var route = "/update-roles/"+id+""
+        var route = "./update-roles/"+id+""
         var dataString  = $( '#form_update_roles_user' ).serializeArray()
         $.ajax({
             url: route,
@@ -372,7 +372,7 @@ $( "#update_especialidades" ).click(function(event){
     })
 $( "#update_permisos_roles" ).click(function(event){ 
         var id= $( '#id' ).val()
-        var route = "/permisos-roles/"+id+""
+        var route = "./permisos-roles/"+id+""
         var dataString  = $( '#form_permisos_rol' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -399,7 +399,7 @@ $( "#update_permisos_roles" ).click(function(event){
 
 $( "#update_editar_rol" ).click(function(event){ //actualiza los datos del modal rol.
         var id = $("#id_e").val();
-        var route = "/roles/"+id+""
+        var route = "./roles/"+id+""
         var dataString  = $( '#form_editar_rol' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -425,7 +425,7 @@ $( "#update_editar_rol" ).click(function(event){ //actualiza los datos del modal
     })
 $( "#update_editar_permiso" ).click(function(event){ //actualiza los datos del modal rol.
         var id = $("#id_e").val();
-        var route = "/permisos/"+id+""
+        var route = "./permisos/"+id+""
         var dataString  = $( '#form_editar_permiso' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -478,7 +478,7 @@ $( "#update_editar_paciente" ).click(function(event){
     })
 $( "#update_micuenta" ).click(function(event){  //actualiza los datos del doctor.
         var id= $( '#id_micuenta' ).val()
-        var route = "mi-cuenta/"+id+""
+        var route = "./mi-cuenta/"+id+""
         var dataString  = $( '#form_micuenta' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -539,7 +539,7 @@ $( "#actualizar_usuario" ).click(function(event){  //actualiza los datos del doc
 	$( "#update_clave" ).click(function(event){ 
 		event.preventDefault()
         var id= $( '#id_user_clave' ).val()
-        var route = "/put-clave/"+id+""
+        var route = "./put-clave/"+id+""
 		var dataString  = $( '#form_clave' ).serializeArray();
 		$.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -566,7 +566,7 @@ $( "#actualizar_usuario" ).click(function(event){  //actualiza los datos del doc
     $( "#update_miclave" ).click(function(event){ 
         event.preventDefault()
         var id= $( '#mi_pass' ).val()
-        var route = "/put-clave/"+id+""
+        var route = "./put-clave/"+id+""
         var dataString  = $( '#form_mi_clave' ).serializeArray();
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -589,7 +589,7 @@ $( "#actualizar_usuario" ).click(function(event){  //actualiza los datos del doc
         })
     })
 $( "#add_rol" ).click(function(event){
-        var route = "/roles/"
+        var route = "./roles/"
         var dataString  = $( '#form_add_rol' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
@@ -614,7 +614,7 @@ $( "#add_rol" ).click(function(event){
         })
     })
 $( "#add_permiso" ).click(function(event){
-        var route = "/permisos/"
+        var route = "./permisos/"
         var dataString  = $( '#form_add_permisos' ).serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},

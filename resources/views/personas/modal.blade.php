@@ -11,7 +11,7 @@
             </div>
             <div class="modal-footer text-center">
                 <a href="#" class="btn btn-danger pull-right" data-dismiss="modal">Cancelar</a>
-                <a href="#" id="update_role_user" class="btn btn-info pull-right">Actulizar</a>
+                <a href="#" id="update_role_user" class="btn btn-info pull-right">Actualizar</a>
             </div>
         </div>
     </div>
