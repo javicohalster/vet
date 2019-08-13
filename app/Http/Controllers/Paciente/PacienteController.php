@@ -54,8 +54,7 @@ class PacienteController extends Controller
         $users = User::select(['id', 'rut', 'nombres', 'apellidos', 'telefono', 'sangre','vih','nacimiento'])->withRole('paciente');
         return  datatables()->of($users)
                 ->editColumn('nacimiento', function ($user) {
-                    return $user->nacimiento->diff(Carbon::now())->format('%y años, %m mes and %d dias');
-                 //return $user->getYearsAttribute();
+                 return $user->getYearsAttribute();
                     })
                     ->addColumn('action', function ($user) {
                         $ficha = '<a href="#" onclick="ficha_paciente('.$user->id.')" data-toggle="modal" data-target="#modal_ficha" rel="tooltip" title="Ficha del paciente" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">folder_shared</i></a>';
