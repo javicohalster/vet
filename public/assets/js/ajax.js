@@ -640,8 +640,8 @@ $( "#add_permiso" ).click(function(event){
     })
 
 $( "#add_paciente" ).click(function(event){
-        var route = "./pacientes/"
-        var dataString  = $( '#form_add_paciente' ).serializeArray()
+        var route = "./pacientes"
+        var dataString  = $('#form_add_paciente').serializeArray()
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             url: route,
