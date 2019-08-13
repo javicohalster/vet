@@ -209,7 +209,7 @@ $( "#btn_guardar_doc" ).click(function(event){
 $( "#btn_guardar_rec" ).click(function(event){ 
         event.preventDefault();
         var dataString  = $( '#form_rec' ).serializeArray();
-        var route = "/recepcionistas";
+        var route = "./recepcionistas";
 
         $.ajax({
             url: route,

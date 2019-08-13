@@ -79,7 +79,7 @@ class User extends Authenticatable
     }
 
     public function getEdad(){
-        return $this->nacimiento->diffInYears(now());
+        return $this->nacimiento->diffInDays(now());
     }
 
     public function getYearsAttribute()
