@@ -57,17 +57,33 @@
                             <div class="col-sm-6">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="genero_e" value="masculino">MACHO
+                                            <input type="radio" name="genero_e" value="MACHO">MACHO
                                         </label>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="radio">
                                         <label>
-                                            <input type="radio" name="genero_e" value="femenino">HEMBRA
+                                            <input type="radio" name="genero_e" value="HEMBRA">HEMBRA
                                         </label>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="altura_e" value="SI">ESTERILIZADO
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="altura_e" value="NO">NO ESTERILIZADO
+                                            </label>
+                                        </div>
+                                    </div>
                             </div>
                     </div>
                 <div class="tab-pane" id="2">
@@ -76,10 +92,11 @@
                                 <div class="form-group">
                                     <label class="control-label">RAZA</label>
                                     <select id="sangre_e" name="sangre_e" class="form-control" data-style="select-with-transition">
-                                        <option value="">-- SELECCIONE --</option>
-                                        <option value="ALANO ESPAÑOL">ALANO ESPAÑOL</option>
-                                        <option value="AKITA">AKITA</option>
-                                    </select>
+                                        <option value="">-- Seleccione --</option>
+                                         @foreach($razas as $raza)
+                                            <option value="{{ $raza->nombre }}">{{ $raza->nombre }}</option>
+                                        @endforeach
+                                  </select>                                     
                                 </div>
                             </div>
                         </div>
@@ -99,14 +116,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row sinpadding">
+                        <!--<div class="row sinpadding">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">ALTURA</label>
                                     <input id="altura_e" name="altura_e" type="text" class="form-control" />                    
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="row sinpadding">
                             <div class="col-md-12">
                                 <div class="form-group">
