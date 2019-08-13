@@ -34,6 +34,6 @@
 @include('doctores.modal_agregar')
 @include('doctores.modal_dias')
 @include('doctores.modal_form_dias')
-@include('../clave.usuarios')
+@include('clave.usuarios')
 @endsection
 
