@@ -85,7 +85,7 @@ class User extends Authenticatable
 
     public function getYearsAttribute()
     {
-        return Carbon::parse($this->nacimiento)->diff(Carbon::parse(Carbon::now()))->format('%y');
+        return Carbon::parse($this->nacimiento)->diff(Carbon::parse(Carbon::now()))->format('%y años, %m mes, %d dias');
         //return $this->nacimiento->diff(Carbon::now())->format('%y años, %m mes and %d dias');
       //  return Date::parse($this->nacimiento)->toFormattedDateString();
        // return Carbon::parse($this->nacimiento)->age;
