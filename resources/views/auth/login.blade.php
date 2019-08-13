@@ -87,7 +87,7 @@
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        <a href="http://www.serviline.cl">Serviline</a>, Hecho para mejorar las gestiones administrativas.
+                        <a href="#">Javicohal</a>, Hecho para mejorar las gestiones administrativas.
                     </p>
                 </div>
             </footer>
