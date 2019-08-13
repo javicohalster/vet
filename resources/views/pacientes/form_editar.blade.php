@@ -73,14 +73,14 @@
                                 <div class="col-sm-6">
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="altura_e" value="SI">ESTERILIZADO
+                                                <input type="radio" name="alergia_e" value="SI">ESTERILIZADO
                                             </label>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="altura_e" value="NO">NO ESTERILIZADO
+                                                <input type="radio" name="alergia_e" value="NO">NO ESTERILIZADO
                                             </label>
                                         </div>
                                     </div>
@@ -124,14 +124,14 @@
                                 </div>
                             </div>
                         </div>-->
-                        <div class="row sinpadding">
+                        <!--<div class="row sinpadding">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="control-label">ALERGIA</label>
                                     <input id="alergia_e" name="alergia_e" type="text" class="form-control" />             
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="row sinpadding">
                             <div class="col-md-12">
                                 <div class="form-group">

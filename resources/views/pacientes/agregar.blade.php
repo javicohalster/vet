@@ -99,7 +99,7 @@
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label class="control-label">Raza</label>
-                                    <select id="sangre_add" name="sangre_add" class="form-control" data-style="select-with-transition">
+                                    <select id="alergia_add" name="alergia_add" class="form-control" data-style="select-with-transition">
                                         <option value="">-- Seleccione --</option>
                                          @foreach($razas as $raza)
                                             <option value="{{ $raza->nombre }}">{{ $raza->nombre }}</option>
@@ -132,14 +132,14 @@
                                 </div>
                             </div>
                         </div>-->
-                        <div class="row">
+                        <!--<div class="row">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Alergia</label>
                                     <input id="alergia_add" name="alergia_add" type="text" class="form-control" />             
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
