@@ -49,6 +49,18 @@ $('.timepicker').datetimepicker({
         $("#btn-guardar").html('<a href="#" onclick="guardar_especialidad();" class="btn btn-fill btn-success">Guardar</a>')
     })
 
+     /* Evento que se ejecuta cada vez que se selecciona un elemento en el 
+    primer select */
+    $("#medicamento_add").change(function(){
+        var valor = $("#medicamento_add").val();
+       if(valor == 'FELINA'){
+          $('#sangre_add').empty();
+          $('#sangre_add').append("<option value='NUEVO'>NUEVO</option>");
+          $('#sangre_add').append("<option value='NUEVO1'>NUEVO1</option>");
+       }
+     
+  });
+
     $("#fonasa").click(function(event){
         var html = "";
         html+="<select id='prevision_select' data-style='select-with-transition'>";
@@ -900,6 +912,10 @@ function getDoctorUp(especialidad, id_doctor){
     }
 })
 }
+
+
+   
+
 
 function getDoctorAdd(especialidad){
     $.get("./get-doctor/"+especialidad+"",function(response,speciality){
