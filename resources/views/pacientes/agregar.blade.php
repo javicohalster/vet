@@ -110,7 +110,7 @@
                         </div>
                         <div class="row sinpadding">
                                 <div class="col-md-12">
-                                    <div class="form-group label-floating">
+                                    <div class="form-group">
                                         <label class="control-label">Especie</label>
                                         <select id="medicamento_add" name="medicamento_add" class="form-control" data-style="select-with-transition">
                                                 <option value="">-- Seleccione --</option>
@@ -118,8 +118,7 @@
                                                 <option value="FELINA">FELINA</option>
                                                 <option value="OTRA">OTRA</option>
                                                
-                                          </select>
-                                        <input id="medicamento_add" name="medicamento_add" type="text" class="form-control" />                      
+                                          </select>                                                              
                                     </div>
                                 </div>
                         </div>

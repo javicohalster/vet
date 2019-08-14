@@ -110,8 +110,7 @@
                                                 <option value="FELINA">FELINA</option>
                                                 <option value="OTRA">OTRA</option>
                                                
-                                          </select>
-                                        <input id="medicamento_add" name="medicamento_add" type="text" class="form-control" />                      
+                                          </select>                                                          
                                     </div>
                                 </div>
                         </div>
