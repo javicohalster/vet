@@ -1072,7 +1072,7 @@ function carga_paciente(id)//carga datos del paciente en el modal editar.
             $('#vih_e').val(data.vih)
             $('#peso_e').val(data.peso)
             $('#altura_e').val(data.altura)
-            $('INPUT[name=alergia_e]').val(data.alergia)
+            $('INPUT[name=alergia_e]').val([data.alergia])
             $('#medicamento_e').val(data.medicamento)
             $('#enfermedad_e').val(data.enfermedad)
             $('.title-name_e').html(data.nombres)
