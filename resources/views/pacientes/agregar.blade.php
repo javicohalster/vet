@@ -109,6 +109,21 @@
                             </div>
                         </div>
                         <div class="row sinpadding">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Especie</label>
+                                        <select id="medicamento_add" name="medicamento_add" class="form-control" data-style="select-with-transition">
+                                                <option value="">-- Seleccione --</option>
+                                                <option value="CANINA">CANINA</option> 
+                                                <option value="FELINA">FELINA</option>
+                                                <option value="OTRA">OTRA</option>
+                                               
+                                          </select>
+                                        <input id="medicamento_add" name="medicamento_add" type="text" class="form-control" />                      
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="row sinpadding">
                             <div class="col-sm-12">
                                 <div class="form-group">
                                     <label class="control-label">Color</label>
@@ -143,7 +158,14 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
-                                    <label class="control-label">Medicamento Actual</label>
+                                    <label class="control-label">Especie</label>
+                                    <select id="medicamento_add" name="medicamento_add" class="form-control" data-style="select-with-transition">
+                                            <option value="">-- Seleccione --</option>
+                                            <option value="CANINA">CANINA</option> 
+                                            <option value="FELINA">FELINA</option>
+                                            <option value="OTRA">OTRA</option>
+                                           
+                                      </select>
                                     <input id="medicamento_add" name="medicamento_add" type="text" class="form-control" />                      
                                 </div>
                             </div>
