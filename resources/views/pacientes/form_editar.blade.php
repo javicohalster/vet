@@ -104,7 +104,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="control-label">ESPECIE</label>
-                                        <select id="medicamento_add" name="medicamento_add" class="form-control" data-style="select-with-transition">
+                                        <select id="medicamento_e" name="medicamento_e" class="form-control" data-style="select-with-transition">
                                                 <option value="">-- Seleccione --</option>
                                                 <option value="CANINA">CANINA</option> 
                                                 <option value="FELINA">FELINA</option>
