@@ -189,8 +189,6 @@
     </div>
 </div>
 <script>
-      	
-
         $(document).ready(function(){
         /* Evento que se ejecuta cada vez que se selecciona un elemento en el 
         primer select */
