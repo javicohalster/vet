@@ -103,8 +103,7 @@
                                                 <option value="">-- Seleccione --</option>
                                                 <option value="CANINA">CANINA</option> 
                                                 <option value="FELINA">FELINA</option>
-                                                <option value="OTRA">OTRA</option>
-                                               
+                                                <option value="OTRA">OTRA</option>                                               
                                           </select>                                                              
                                     </div>
                                 </div>
@@ -154,22 +153,7 @@
                                     <input id="alergia_add" name="alergia_add" type="text" class="form-control" />             
                                 </div>
                             </div>
-                        </div>-->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group label-floating">
-                                    <label class="control-label">Especie</label>
-                                    <select id="medicamento_add" name="medicamento_add" class="form-control" data-style="select-with-transition">
-                                            <option value="">-- Seleccione --</option>
-                                            <option value="CANINA">CANINA</option> 
-                                            <option value="FELINA">FELINA</option>
-                                            <option value="OTRA">OTRA</option>
-                                           
-                                      </select>
-                                    <input id="medicamento_add" name="medicamento_add" type="text" class="form-control" />                      
-                                </div>
-                            </div>
-                        </div>
+                        </div>-->                        
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
@@ -204,3 +188,19 @@
         </div>
     </div>
 </div>
+<script>
+      	
+
+        $(document).ready(function(){
+        /* Evento que se ejecuta cada vez que se selecciona un elemento en el 
+        primer select */
+        $("#medicamento_add").change(function(){
+             if($("#medicamento_add").val() == 'FELINA'){
+                $('#sangre_add').empty();
+                $('#sangre_add').append("<option value='NUEVO'>NUEVO</option>");
+                $('#sangre_add').append("<option value='NUEVO1'>NUEVO1</option>");
+             }
+           
+        });
+    });
+</script>
