@@ -96,19 +96,6 @@
                     
                 <div class="tab-pane" id="add_2">
                         <div class="row sinpadding">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                    <label class="control-label">Raza</label>
-                                    <select id="sangre_add" name="sangre_add" class="form-control" data-style="select-with-transition">
-                                        <option value="">-- Seleccione --</option>
-                                         @foreach($razas as $raza)
-                                            <option value="{{ $raza->nombre }}">{{ $raza->nombre }}</option>
-                                        @endforeach
-                                  </select>                                   
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row sinpadding">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label class="control-label">Especie</label>
@@ -122,6 +109,20 @@
                                     </div>
                                 </div>
                         </div>
+                        <div class="row sinpadding">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label class="control-label">Raza</label>
+                                    <select id="sangre_add" name="sangre_add" class="form-control" data-style="select-with-transition">
+                                        <option value="">-- Seleccione --</option>
+                                         @foreach($razas as $raza)
+                                            <option value="{{ $raza->nombre }}">{{ $raza->nombre }}</option>
+                                        @endforeach
+                                  </select>                                   
+                                </div>
+                            </div>
+                        </div>
+                        
                         <div class="row sinpadding">
                             <div class="col-sm-12">
                                 <div class="form-group">
