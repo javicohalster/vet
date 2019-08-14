@@ -53,7 +53,7 @@ $('.timepicker').datetimepicker({
     primer select */
     $("#medicamento_add").change(function(){
         var valor = $("#medicamento_add").val();
-       if(valor == 'FELINA'){
+       if(valor == "FELINA"){
           $('#sangre_add').empty();
           $('#sangre_add').append("<option value='NUEVO'>NUEVO</option>");
           $('#sangre_add').append("<option value='NUEVO1'>NUEVO1</option>");
