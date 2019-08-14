@@ -188,17 +188,3 @@
         </div>
     </div>
 </div>
-<script>
-        $(document).ready(function(){
-        /* Evento que se ejecuta cada vez que se selecciona un elemento en el 
-        primer select */
-        $("#medicamento_add").change(function(){
-             if($("#medicamento_add").val() == 'FELINA'){
-                $('#sangre_add').empty();
-                $('#sangre_add').append("<option value='NUEVO'>NUEVO</option>");
-                $('#sangre_add').append("<option value='NUEVO1'>NUEVO1</option>");
-             }
-           
-        });
-    });
-</script>
