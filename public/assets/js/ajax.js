@@ -1714,7 +1714,7 @@ function ficha_paciente(id) //carga datos en la ficha del paciente.
            url: route,
            type: 'GET',
         success:function(data){
-            $(".img_pac").attr('src', './assets/img/perfiles/'+data.avatar+'?'+ new Date().getTime());
+            $(".img_pac").attr('src', 'assets/img/perfiles/'+data.avatar+'?'+ new Date().getTime());
             $('#rut').html(data.rut)
             $('#nombres').html(data.nombres)
             $('#edad').html(data.edad)
