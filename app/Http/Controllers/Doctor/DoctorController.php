@@ -103,7 +103,7 @@ class DoctorController extends ApiController
             $doctor = User::findOrFail($id);
             $doctor->nombres            = $request->nombres;
             $doctor->apellidos          = $request->apellidos;
-            $doctor->nacimiento         = Carbon::parse($request->nacimiento_e)->format('Y-m-d');
+            $doctor->nacimiento         = Carbon::parse($request->nacimiento)->format('Y-m-d');
             $doctor->email              = $request->email;
             $doctor->telefono           = $request->telefono;
             $doctor->direccion          = $request->direccion;
