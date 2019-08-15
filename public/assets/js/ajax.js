@@ -1284,7 +1284,7 @@ $( "#ingresar" ).click(function(event){
         $avatarImage = $('.avatarImage')
         $avatarForm = $('#avatarForm')
         avatarUrl = "./users/avatar"
-        $id = $('#id_avatar').val();
+        $id = $('#id_paciente').val();
 
         $avatarImage.on('click', function(){    
             $avatarInput.click()
