@@ -1304,10 +1304,10 @@ $( "#ingresar" ).click(function(event){
                 contentType: false,
 
             beforeSend: function(){
-                    $avatarImage.attr('src', 'assets/img/touchloader.gif')
+                    $avatarImage.attr('src', './assets/img/touchloader.gif')
             },
             success: function(data){
-                    $avatarImage.attr('src', 'assets/img/perfiles/'+data.file_name+'?'+ new Date().getTime())
+                    $avatarImage.attr('src', './assets/img/perfiles/'+data.file_name+'?'+ new Date().getTime())
                     $.notify({icon: "add_alert", message: data.message},{type: 'success', timer: 1000})
             },
             error: function(data){
@@ -1315,7 +1315,7 @@ $( "#ingresar" ).click(function(event){
                 for(var i in error){
                     var message = error[i];
                       $avatarImage.attr('src');
-                      $avatarImage.attr('src', 'assets/img/perfiles/'+data.file_name+'?'+ new Date().getTime())
+                      $avatarImage.attr('src', './assets/img/perfiles/'+data.file_name+'?'+ new Date().getTime())
                      $.notify({icon: "add_alert", message: message},{type: 'warning', timer: 1000})
                 }
             }
