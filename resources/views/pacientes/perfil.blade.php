@@ -26,7 +26,7 @@
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <th class="text-right">Rut:</th>
+                                    <th class="text-right">C.I.:</th>
                                     <td>{!! $paciente->rut !!}</td>
                                 </tr>
                                 <tr>
@@ -74,31 +74,31 @@
                         <table class="table">
                             <tbody>
                                 <tr>
-                                    <th width="10" class="text-right">Sangre:</th>
+                                    <th width="10" class="text-right">Raza:</th>
                                     <td>{!! $paciente->sangre !!}</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-right">Vih:</th>
+                                    <th class="text-right">Color:</th>
                                     <td>{!! $paciente->vih !!}</td>
                                 </tr>
                                 <tr>
                                     <th class="text-right">Peso:</th>
                                     <td>{!! $paciente->peso !!}</td>
                                 </tr>
-                                <tr>
+                                <!--<tr>
                                     <th class="text-right">Estatura:</th>
                                     <td>{!! $paciente->altura !!}</td>
-                                </tr>
+                                </tr>-->
                                 <tr>
-                                    <th class="text-right">Alergia:</th>
+                                    <th class="text-right">Esterilizado:</th>
                                     <td>{!! $paciente->alergia !!}</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-right">Medicamento:</th>
+                                    <th class="text-right">Especie:</th>
                                     <td>{!! $paciente->medicamento_actual !!}</td>
                                 </tr>
                                 <tr>
-                                    <th class="text-right">Enfermedad:</th>
+                                    <th class="text-right">Observaciones:</th>
                                     <td>{!! $paciente->enfermedad !!}</td>
                                 </tr>
                             </tbody>

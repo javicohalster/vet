@@ -31,11 +31,11 @@
     <main>
       <table>
         <tbody>
-         <!-- <tr>
-            <td colspan="4">TIPO DE SANGRE</td>
+          <tr>
+            <td colspan="4">RAZA</td>
             <td class="total">{{$pacientes->sangre}}</td>
           </tr>
-          <tr>
+         <!-- <tr>
             <td colspan="4">VIH</td>
             <td class="total">{{$pacientes->vih}}</td>
           </tr>
@@ -47,16 +47,16 @@
             <td colspan="4">ESTATURA</td>
             <td class="total">{{$pacientes->altura}} Cm.</td>
           </tr>
-          <tr>
+         <!-- <tr>
             <td colspan="4">ALERGIAS</td>
             <td class="total">{{$pacientes->alergia}}</td>
           </tr>
-          <tr>
-            <td colspan="4">MEDICAMENTO ACTUAL</td>
+          <tr>-->
+            <td colspan="4">ESPECIE</td>
             <td class="total">{{$pacientes->medicamento_actual}}</td>
           </tr>
           <tr>
-            <td colspan="4">ENFERMEDAD</td>
+            <td colspan="4">OBSERVACIONES</td>
             <td class="total">{{$pacientes->enfermedad}}</td>
           </tr>
         </tbody>

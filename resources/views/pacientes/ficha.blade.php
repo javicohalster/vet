@@ -70,20 +70,20 @@
                                     <th>Peso:</th>
                                     <td id="peso2"></td>
                                 </tr>
-                                <tr>
+                                <!--<tr>
                                     <th>Estatura:</th>
                                     <td id="altura2"></td>
                                 </tr>
                                 <tr>
                                     <th>Alergia:</th>
                                     <td id="alergia2"></td>
-                                </tr>
+                                </tr>-->
                                 <tr>
-                                    <th>Medicamento:</th>
+                                    <th>Especie:</th>
                                     <td id="medicamento2"></td>
                                 </tr>
                                 <tr>
-                                    <th>Enfermedad:</th>
+                                    <th>Observaciones:</th>
                                     <td id="enfermedad2"></td>
                                 </tr>
                             </tbody>
