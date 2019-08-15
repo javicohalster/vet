@@ -1614,6 +1614,7 @@ function carga_paciente(id)//carga datos del paciente en el modal editar.
            type: 'GET',
         success:function(data){
             $("#id_paciente").val(data.id)
+            $("#id_avatar").val(data.id)
             $(".avatarImage").attr('src', 'assets/img/perfiles/'+data.avatar+'?'+ new Date().getTime())
             $('#rut_e').val(data.rut)
             $('#nombres_e').val(data.nombres)
