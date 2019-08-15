@@ -1283,7 +1283,7 @@ $( "#ingresar" ).click(function(event){
         $avatarInput = $('#avatarInput')
         $avatarImage = $('.avatarImage')
         $avatarForm = $('#avatarForm')
-        avatarUrl = "/users/avatar"
+        avatarUrl = "./users/avatar"
         $id = $('#id_avatar').val();
 
         $avatarImage.on('click', function(){    
@@ -1333,7 +1333,7 @@ $( "#ingresar" ).click(function(event){
         $txt_input = $('#txt_input');
         $avatar_img = $('.avatar_img');
         $formAvatar = $('#formAvatar');
-        Url = "/users/avatar";
+        Url = "./users/avatar";
         $id = $('#id_img').val();
 
         $avatar_img.on('click', function(){    
