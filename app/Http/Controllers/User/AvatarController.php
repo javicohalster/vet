@@ -16,6 +16,7 @@ class AvatarController extends Controller
     {
        if ($request->hasFile('avatar')) {
             $user = User::findOrFail($request->id);
+            var_dump($user); exit;
             $extension = $request->file('avatar')->getClientOriginalExtension();
             $file_name = $user->id . '.' . $extension;
             $avatar = $user->avatar;
