@@ -158,7 +158,7 @@
                         <div class="row sinpadding">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label class="control-label">ENFERMEDAD</label>
+                                    <label class="control-label">OBSERVACIONES</label>
                                     <input id="enfermedad_e" name="enfermedad_e" type="text" class="form-control" />            
                                 </div>
                             </div>

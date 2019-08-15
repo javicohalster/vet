@@ -157,7 +157,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
-                                    <label class="control-label">Enfermedad</label>
+                                    <label class="control-label">Observaciones</label>
                                     <input id="enfermedad_add" name="enfermedad_add" type="text" class="form-control" />            
                                 </div>
                             </div>
