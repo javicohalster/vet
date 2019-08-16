@@ -601,11 +601,12 @@ $('.timepicker').datetimepicker({
 });
 
 $("#tratamiento1").click(function(){ 
-
-        var fecha = new Date($('#tratamiento1').val());
+    var shortDateFormat = 'dd-MM-yyyy';
+    
+        var fecha = new Date($.format.date($('#tratamiento1').val(), shortDateFormat));
         var dias = $('#sintomas1').val(); // Número de días a agregar
         fecha.setDate(fecha.getDate() + dias);
-        $('#observacion1').val(fecha.formatDate('d-m-Y', new Date()));
+        $('#observacion1').val($.format.date(fecha, shortDateFormat));
         
        console.info(fecha)
     
