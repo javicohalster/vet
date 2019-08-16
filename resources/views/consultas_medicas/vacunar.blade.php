@@ -5,11 +5,11 @@
                     <div class="table-responsive">
                         <table class="table">
                                 <th>Paciente:</th>
-                                <td id="paciente"></td>
+                                <td id="paciente1"></td>
                                 <th>Edad:</th>
-                                <td id="edad"></td>
+                                <td id="edad1"></td>
                                 <th>Visitas:</th>
-                                <td id="visitas"></td>
+                                <td id="visitas1"></td>
                                 <tr>
                                     <td></td>
                                     <td></td>
@@ -27,13 +27,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">DIAS REVACUNAR:</label>
-                            <textarea rows="6" type="text" class="form-control" id="sintomas" name="sintomas"></textarea>
+                            <textarea rows="6" type="text" class="form-control" id="sintomas1" name="sintomas1"></textarea>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">TIPO:</label>
-                            <textarea rows="6" type="text" class="form-control" id="examenes" name="examenes"></textarea>
+                            <textarea rows="6" type="text" class="form-control" id="examenes1" name="examenes1"></textarea>
                         </div>
                     </div>
                 </div>
@@ -41,13 +41,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">FECHA VACUNA:</label>
-                            <textarea rows="6" type="text" class="form-control" id="tratamiento" name="tratamiento"></textarea>
+                            <textarea rows="6" type="text" class="form-control" id="tratamiento1" name="tratamiento1"></textarea>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">FECHA SIGUIENTE VACUNA:</label>
-                            <textarea rows="6" type="text" class="form-control" id="observacion" name="observacion"></textarea>
+                            <textarea rows="6" type="text" class="form-control" id="observacion1" name="observacion1"></textarea>
                         </div>
                     </div>
                 </div>
