@@ -27,13 +27,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">DIAS REVACUNAR:</label>
-                            <textarea rows="6" type="text" class="form-control" id="diasrevacunar" name="diasrevacunar"></textarea>
+                            <textarea rows="6" type="text" class="form-control" id="sintomas" name="sintomas"></textarea>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">TIPO:</label>
-                            <textarea rows="6" type="text" class="form-control" id="tipo" name="tipo"></textarea>
+                            <textarea rows="6" type="text" class="form-control" id="examenes" name="examenes"></textarea>
                         </div>
                     </div>
                 </div>
