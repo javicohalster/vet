@@ -164,6 +164,7 @@ class ConsultasMedicasController extends Controller
             'observacion'  => $cita_atendida->observaciones,
             'temperatura'  => $cita_atendida->temperatura,
             'peso'         => $cita_atendida->peso,
+            'tipo'         => $cita_atendida->tipo,
             'diagnostico'  => $cita_atendida->diagnostico,
             'receta'       => $cita_atendida->receta,
         ]);
@@ -182,6 +183,7 @@ class ConsultasMedicasController extends Controller
             $consulta->observaciones = $request->observacion;
             $consulta->temperatura   = $request->temperatura;
             $consulta->peso          = $request->peso;
+            $consulta->tipo          = $request->tipo;
             $consulta->diagnostico   = $request->diagnostico;
             $consulta->receta        = $request->receta;
             $consulta->save();
