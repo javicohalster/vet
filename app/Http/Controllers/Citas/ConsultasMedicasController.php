@@ -130,6 +130,20 @@ class ConsultasMedicasController extends Controller
             ]);
     }
 
+    public function vacunar(ValidarAtenderRequest $request, Vacunar $vacunar, User $users, $id)
+    {
+        $atender =   $vacunar->findOrFail($id);
+        $paciente =  $users->findOrFail($atender->paciente_id);
+        $visitas =   $vacunar->all()->where('paciente_id', '=', $atender->paciente_id)->where('estado', '=', 'atendido')->count();
+        return response()->json([
+                'success' => true,
+                "paciente"=> $paciente->nombres . ' '. $paciente->apellidos,
+                "edad"    => $paciente->getYearsAttribute(),
+                "visitas" => $visitas,
+                "id"      => $atender->id
+            ]);
+    }
+
     public function edit(Query $queries, User $users, $id) //carga los datos al formulario modal de citas pendientes en el modulo "consultas medicas"
     {
 
