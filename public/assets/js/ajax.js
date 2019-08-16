@@ -2021,6 +2021,10 @@ function atender(id)
             $('#examenes').val(data.examenes)
             $('#tratamiento').val(data.tratamiento)
             $('#observacion').val(data.observacion)
+            $('#temperatura').val(data.temperatura)
+            $('#diagnostico').val(data.diagnostico)
+            $('#receta').val(data.receta)
+            $('#peso').val(data.peso)
             $('#id').val(data.id)
           },
        error:function(){
