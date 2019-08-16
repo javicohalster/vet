@@ -27,7 +27,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">DIAS REVACUNAR:</label>                           
-                            <select id="sintomas1" name="sintomas1" class="form-control" data-style="select-with-transition">
+                            <select id="sintomas" name="sintomas" class="form-control" data-style="select-with-transition">
                                     <option value="">-- Seleccione --</option>
                                     <option value="15">15</option> 
                                     <option value="18">18</option>
@@ -42,7 +42,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">TIPO:</label>
-                            <select id="examenes1" name="examenes1" class="form-control" data-style="select-with-transition">
+                            <select id="examenes" name="examenes" class="form-control" data-style="select-with-transition">
                                 <option value="">-- Seleccione --</option>
                                 <option value="PFIZER 5L">PFIZER 5L</option> 
                                 <option value="PFIZER 5L4">PFIZER 5L4</option>                                                                                                            
@@ -54,13 +54,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">FECHA VACUNA:</label>
-                            <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="tratamiento1" name="tratamiento1">                            
+                            <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="tratamiento" name="tratamiento">                            
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">FECHA SIGUIENTE VACUNA:</label>
-                            <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="observacion1" name="observacion1">                            
+                            <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="observacion" name="observacion">                            
                         </div>
                     </div>
                 </div>
