@@ -600,16 +600,16 @@ $('.timepicker').datetimepicker({
  
 });
 
-    $("#tratamiento1").change(function(){
-        
+$("#tratamiento1").change(function(){ 
+
         var fecha = new Date($('#tratamiento1').val());
         var dias = $('#sintomas1').val(); // Número de días a agregar
         fecha.setDate(fecha.getDate() + dias);
         $('#observacion1').val(fecha);
         
-       // console.info(fecha)
+       console.info(fecha)
     
-    });
+});
     $("#fonasa").click(function(event){
         var html = "";
         html+="<select id='prevision_select' data-style='select-with-transition'>";
