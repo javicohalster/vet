@@ -24,6 +24,7 @@
                 <form id="form_consulta">
                 <div class="row sinpadding">
                     <input id="id" name="id" type="text" hidden="true" />
+                    <input id="tipo" name="tipo" type="text" value="REC" hidden="true" />
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">ANAMNESIS:</label>
