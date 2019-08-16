@@ -605,7 +605,7 @@ $("#tratamiento1").click(function(){
         var fecha = new Date($('#tratamiento1').val());
         var dias = $('#sintomas1').val(); // Número de días a agregar
         fecha.setDate(fecha.getDate() + dias);
-        $('#observacion1').val(fecha);
+        $('#observacion1').val(getFormattedDate(fecha));
         
        console.info(fecha)
     
