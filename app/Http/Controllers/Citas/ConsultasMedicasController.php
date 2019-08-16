@@ -98,12 +98,16 @@ class ConsultasMedicasController extends Controller
                 $ver ="";
                 $editar ="";
                 $eliminar ="";
+                $vacunar ="";
                 if (Auth::user()->can('leer-citas')) {
                 $ver = '<a href="#" onclick="ver_cita('.$consulta->id.')" data-toggle="modal" data-target="#modal_ver" rel="tooltip" title="Ver consulta" class="btn btn-simple btn-primary btn-icon edit"><i class="material-icons">remove_red_eye</i></a>';
             }
             if (Auth::user()->can('editar-atender')) {
                 $editar = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_atender" rel="tooltip" title="Editar" class="btn btn-simple btn-success btn-icon edit"><i class="material-icons">edit</i></a>';
             }
+            if (Auth::user()->can('editar-vacunar')) {
+                $vacunar = '<a href="#" onclick="vacunar('.$consulta->id.')" data-toggle="modal" data-target="#modal_vacunar" rel="tooltip" title="Vacunar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">add_location</i></a>';
+             }
             if (Auth::user()->can('eliminar-consultas')) {
                 $eliminar = '<a href="#" onclick="delete_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#eliminar_paciente" rel="tooltip" title="Eliminar" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>';
             }
