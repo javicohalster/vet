@@ -162,6 +162,10 @@ class ConsultasMedicasController extends Controller
             'examenes'     => $cita_atendida->examenes,
             'tratamiento'  => $cita_atendida->tratamiento,
             'observacion'  => $cita_atendida->observaciones,
+            'temperatura'  => $cita_atendida->temperatura,
+            'peso'         => $cita_atendida->peso,
+            'diagnostico'  => $cita_atendida->diagnostico,
+            'receta'       => $cita_atendida->receta,
         ]);
     }
 
@@ -176,6 +180,10 @@ class ConsultasMedicasController extends Controller
             $consulta->examenes      = $request->examenes;
             $consulta->tratamiento   = $request->tratamiento;
             $consulta->observaciones = $request->observacion;
+            $consulta->temperatura   = $request->temperatura;
+            $consulta->peso          = $request->peso;
+            $consulta->diagnostico   = $request->diagnostico;
+            $consulta->receta        = $request->receta;
             $consulta->save();
             return response()->json([
              "message" => "La consulta médica se ha guardado exitosamente!"

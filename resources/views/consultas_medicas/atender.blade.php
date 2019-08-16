@@ -26,28 +26,56 @@
                     <input id="id" name="id" type="text" hidden="true" />
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label">SÍNTOMAS:</label>
+                            <label class="control-label">ANAMNESIS:</label>
                             <textarea rows="6" type="text" class="form-control" id="sintomas" name="sintomas"></textarea>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label">EXÁMENES:</label>
-                            <textarea rows="6" type="text" class="form-control" id="examenes" name="examenes"></textarea>
+                            <label class="control-label">PESO KG:</label>
+                            <textarea rows="6" type="text" class="form-control" id="peso" name="peso"></textarea>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label">TRATAMIENTO/RECETA:</label>
+                            <label class="control-label">TEMPERATURA :</label>
+                            <textarea rows="6" type="text" class="form-control" id="temperatura" name="temperatura"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">DIAGNOSTICO:</label>
+                            <textarea rows="6" type="text" class="form-control" id="diagnostico" name="diagnostico"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">PRUEBAS REALIZADAS:</label>
+                            <textarea rows="6" type="text" class="form-control" id="examenes" name="examenes"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">RESULTADOS:</label>
+                            <textarea rows="6" type="text" class="form-control" id="observacion" name="observacion"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">TRATAMIENTO:</label>
                             <textarea rows="6" type="text" class="form-control" id="tratamiento" name="tratamiento"></textarea>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label">OBSERVACIÓN:</label>
-                            <textarea rows="6" type="text" class="form-control" id="observacion" name="observacion"></textarea>
+                            <label class="control-label">RECETA:</label>
+                            <textarea rows="6" type="text" class="form-control" id="receta" name="receta"></textarea>
                         </div>
                     </div>
                 </div>
