@@ -892,6 +892,38 @@ $( "#update_consulta" ).click(function(event){
             }
         }) 
     })
+
+    $( "#update_vacuna" ).click(function(event){ 
+    
+        var id= $( '#id' ).val()
+         var route = "./consultas/"+id+""
+         var dataString  = $( '#form_vacunas' ).serializeArray()
+         $.ajax({
+             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+             url: route,
+             type: 'PUT',
+             datatype: 'json',
+             data:dataString,
+             success:function(data){
+                 $.notify({icon: "add_alert", message: data.message},{type: 'success', timer: 1000})
+                 document.getElementById("form_vacunas").reset()
+                 $('#pendientes').DataTable().ajax.reload()
+                 $('#table_atendidos').DataTable().ajax.reload()
+                 $("#citas_medicas").fullCalendar('refetchEvents')
+                 $("#modal_atender").modal("hide")
+                 $("#modal_vacunar").modal("hide")
+             },
+             error:function(data){
+                 var error = data.responseJSON.errors;
+                 for(var i in error){
+                     for(var j in error[i]){
+                         var message = error[i][j];
+                        $.notify({icon: "add_alert", message: message},{type: 'warning', timer: 1000})
+                     }
+                 }
+             }
+         }) 
+     })
 $( "#update_role_user" ).click(function(event){ 
         var id= $( '#id' ).val()
         var route = "./update-roles/"+id+""

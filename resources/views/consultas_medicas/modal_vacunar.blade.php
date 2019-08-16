@@ -10,7 +10,7 @@
                 @include('consultas_medicas.vacunar')
             </div>
             <div class="modal-footer text-center">
-                <a href="#" id="update_consulta" class="btn btn-primary pull-right">Guardar</a>
+                <a href="#" id="update_vacuna" class="btn btn-primary pull-right">Guardar</a>
             </div>
         </div>
     </div>
