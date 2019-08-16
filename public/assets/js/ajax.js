@@ -895,7 +895,7 @@ $( "#update_consulta" ).click(function(event){
 
     $( "#update_vacuna" ).click(function(event){ 
     
-        var id= $( '#id' ).val()
+        var id= $( '#id1' ).val()
          var route = "./consultas/"+id+""
          var dataString  = $( '#form_vacunas' ).serializeArray()
          $.ajax({
