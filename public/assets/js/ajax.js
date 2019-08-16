@@ -600,7 +600,7 @@ $('.timepicker').datetimepicker({
  
 });
 
-$("#tratamiento1").change(function(){ 
+$("#tratamiento1").click(function(){ 
 
         var fecha = new Date($('#tratamiento1').val());
         var dias = $('#sintomas1').val(); // Número de días a agregar
