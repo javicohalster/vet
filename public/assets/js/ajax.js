@@ -605,11 +605,22 @@ $("#tratamiento1").click(function(){
         var fecha = new Date($('#tratamiento1').val());
         var dias = $('#sintomas1').val(); // Número de días a agregar
         fecha.setDate(fecha.getDate() + dias);
-        $('#observacion1').val(fecha.formatDate('dd-mm-yyyy', new Date()));
+        $('#observacion1').val(fecha);
         
        console.info(fecha)
     
 });
+function getFormattedDate(date) {
+    var year = date.getFullYear();
+  
+    var month = (1 + date.getMonth()).toString();
+    month = month.length > 1 ? month : '0' + month;
+  
+    var day = date.getDate().toString();
+    day = day.length > 1 ? day : '0' + day;
+    
+    return month + '/' + day + '/' + year;
+  }
     $("#fonasa").click(function(event){
         var html = "";
         html+="<select id='prevision_select' data-style='select-with-transition'>";
