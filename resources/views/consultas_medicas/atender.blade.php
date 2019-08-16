@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label">PESO KG:</label>
+                            <label class="control-label">PESO Kg:</label>
                             <input type="number" class="form-control" id="peso" name="peso"/>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label">TEMPERATURA :</label>
+                            <label class="control-label">TEMPERATURA ºC:</label>
                             <input type="number" class="form-control" id="temperatura" name="temperatura"/>
                         </div>
                     </div>
