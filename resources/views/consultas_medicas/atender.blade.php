@@ -33,7 +33,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">PESO KG:</label>
-                            <textarea rows="6" type="text" class="form-control" id="peso" name="peso"></textarea>
+                            <input type="number" class="form-control" id="peso" name="peso"/>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">TEMPERATURA :</label>
-                            <textarea rows="6" type="text" class="form-control" id="temperatura" name="temperatura"></textarea>
+                            <input type="number" class="form-control" id="temperatura" name="temperatura"/>
                         </div>
                     </div>
                     <div class="col-md-6">
