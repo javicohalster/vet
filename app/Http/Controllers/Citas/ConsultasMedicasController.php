@@ -148,7 +148,7 @@ class ConsultasMedicasController extends Controller
 
     public function edit(Query $queries, User $users, $id) //carga los datos al formulario modal de citas pendientes en el modulo "consultas medicas"
     {
-
+        var_dump($queries); exit;
         $cita_atendida = $queries->findOrFail($id);
         $paciente =  $users->findOrFail($cita_atendida->paciente_id);
         $visitas =   $queries->all()->where('paciente_id', '=', $cita_atendida->paciente_id)->where('estado', '=', 'atendido')->count();
@@ -167,7 +167,7 @@ class ConsultasMedicasController extends Controller
 
     public function update(ValidarAtenderRequest $request, Query $queries,$id)
     {
-        var_dump($queries); exit;
+       
         if($request->ajax()){
             $consulta = $queries->findOrFail($id);
             $consulta->color         = '#1a4483';
