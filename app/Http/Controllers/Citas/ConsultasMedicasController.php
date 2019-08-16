@@ -49,12 +49,16 @@ class ConsultasMedicasController extends Controller
             })
             ->addColumn('action', function ($consulta) {
                  $atender ="";
+                 $vacunar ="";
                  $editar ="";
                  $eliminar = "";
                  $pagar = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_pago" rel="tooltip" title="Pagar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">attach_money</i></a>';
                  if (Auth::user()->can('editar-atender')) {
                    $atender = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_atender" rel="tooltip" title="Atender" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">done_all</i></a>';
                 }
+                if (Auth::user()->can('editar-vacunar')) {
+                    $vacunar = '<a href="#" onclick="vacunar('.$consulta->id.')" data-toggle="modal" data-target="#modal_vacunar" rel="tooltip" title="Vacunar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">add_location</i></a>';
+                 }
                 if (Auth::user()->can('editar-citas')) {
                 $editar = '<a href="#" onclick="update_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#modal_update_cita" rel="tooltip" title="Editar" class="btn btn-simple btn-success btn-icon edit"><i class="material-icons">edit</i></a>';
                 }
@@ -62,7 +66,7 @@ class ConsultasMedicasController extends Controller
                 $eliminar = '<a href="#" onclick="delete_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#eliminar_paciente" rel="tooltip" title="Eliminar" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>';
                 }
 
-                return $pagar.$atender.$editar.$eliminar;
+                return $pagar.$atender.$vacunar.$editar.$eliminar;
             })->make(true);
     }
     
