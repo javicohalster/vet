@@ -136,7 +136,7 @@ class ConsultasMedicasController extends Controller
         $atender =   $queries->findOrFail($id);
         $paciente =  $users->findOrFail($atender->paciente_id);
         $visitas =   $queries->all()->where('paciente_id', '=', $atender->paciente_id)->where('estado', '=', 'atendido')->count();
-        var_dump($paciente); exit;
+       
         return response()->json([
                 'success' => true,
                 "paciente1"=> $paciente->nombres . ' '. $paciente->apellidos,
@@ -167,6 +167,7 @@ class ConsultasMedicasController extends Controller
 
     public function update(ValidarAtenderRequest $request, Query $queries,$id)
     {
+        var_dump($queries); exit;
         if($request->ajax()){
             $consulta = $queries->findOrFail($id);
             $consulta->color         = '#1a4483';
