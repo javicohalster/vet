@@ -26,14 +26,27 @@
                     <input id="id1" name="id1" type="text" hidden="true" />
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label">DIAS REVACUNAR:</label>
-                            <textarea rows="6" type="text" class="form-control" id="sintomas1" name="sintomas1"></textarea>
+                            <label class="control-label">DIAS REVACUNAR:</label>                           
+                            <select id="sintomas1" name="sintomas1" class="form-control" data-style="select-with-transition">
+                                    <option value="">-- Seleccione --</option>
+                                    <option value="15">15</option> 
+                                    <option value="18">18</option>
+                                    <option value="21">21</option> 
+                                    <option value="30">30</option>
+                                    <option value="120">120</option> 
+                                    <option value="365">365</option>                                                                               
+                              </select>   
+                            
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">TIPO:</label>
-                            <textarea rows="6" type="text" class="form-control" id="examenes1" name="examenes1"></textarea>
+                            <select id="examenes1" name="examenes1" class="form-control" data-style="select-with-transition">
+                                <option value="">-- Seleccione --</option>
+                                <option value="PFIZER 5L">PFIZER 5L</option> 
+                                <option value="PFIZER 5L4">PFIZER 5L4</option>                                                                                                            
+                            </select>                             
                         </div>
                     </div>
                 </div>
@@ -41,13 +54,13 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">FECHA VACUNA:</label>
-                            <textarea rows="6" type="text" class="form-control" id="tratamiento1" name="tratamiento1"></textarea>
+                            <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="tratamiento1" name="tratamiento1">                            
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">FECHA SIGUIENTE VACUNA:</label>
-                            <textarea rows="6" type="text" class="form-control" id="observacion1" name="observacion1"></textarea>
+                            <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="observacion1" name="observacion1">                            
                         </div>
                     </div>
                 </div>
