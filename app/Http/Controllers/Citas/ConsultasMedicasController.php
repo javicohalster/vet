@@ -130,11 +130,11 @@ class ConsultasMedicasController extends Controller
             ]);
     }
 
-    public function vacunar(ValidarAtenderRequest $request, Vacunar $vacunar, User $users, $id)
+    public function vacunar(ValidarAtenderRequest $request, Vacunar $queries, User $users, $id)
     {
-        $atender =   $vacunar->findOrFail($id);
+        $atender =   $queries->findOrFail($id);
         $paciente =  $users->findOrFail($atender->paciente_id);
-        $visitas =   $vacunar->all()->where('paciente_id', '=', $atender->paciente_id)->where('estado', '=', 'atendido')->count();
+        $visitas =   $queries->all()->where('paciente_id', '=', $atender->paciente_id)->where('estado', '=', 'atendido')->count();
         return response()->json([
                 'success' => true,
                 "paciente"=> $paciente->nombres . ' '. $paciente->apellidos,
