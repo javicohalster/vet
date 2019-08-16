@@ -23,7 +23,7 @@
                 </div>
                 <form id="form_vacunas">
                 <div class="row sinpadding">
-                    <input id="id" name="id" type="text" hidden="true" />
+                    <input id="id1" name="id1" type="text" hidden="true" />
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">DIAS REVACUNAR:</label>
