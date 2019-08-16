@@ -1983,14 +1983,14 @@ function vacunar(id)
            url: route,
            type: 'GET',
         success:function(data){
-            $('#edad').html(data.edad)
-            $('#visitas').html(data.visitas)
-            $('#paciente').html(data.paciente)
-            $('#sintomas').val(data.sintomas)
-            $('#examenes').val(data.examenes)
-            $('#tratamiento').val(data.tratamiento)
-            $('#observacion').val(data.observacion)
-            $('#id').val(data.id)
+            $('#edad1').html(data.edad)
+            $('#visitas1').html(data.visitas)
+            $('#paciente1').html(data.paciente)
+            $('#sintomas1').val(data.sintomas)
+            $('#examenes1').val(data.examenes)
+            $('#tratamiento1').val(data.tratamiento)
+            $('#observacion1').val(data.observacion)
+            $('#id1').val(data.id)
           },
        error:function(){
            alert('la operación falló');
