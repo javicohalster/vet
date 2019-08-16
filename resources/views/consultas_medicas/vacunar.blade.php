@@ -21,7 +21,7 @@
                         </table>
                     </div>
                 </div>
-                <form id="form_consulta">
+                <form id="form_vacunas">
                 <div class="row sinpadding">
                     <input id="id" name="id" type="text" hidden="true" />
                     <div class="col-md-6">
