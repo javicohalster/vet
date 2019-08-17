@@ -25,7 +25,7 @@
                 <div class="row sinpadding">
                     <input id="id2" name="id2" type="text" hidden="true" />
                     <input id="tipo" name="tipo" type="text" value="HOS" hidden="true" />                   
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group">
                             <label class="control-label">PESO Kg:</label>
                             <input type="number" class="form-control" id="peso" name="peso"/>
