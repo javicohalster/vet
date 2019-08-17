@@ -34,10 +34,10 @@
                         <div class="form-group">
                             <label class="control-label">TEMPERATURA ºC:</label>
                             <input type="number" class="form-control" id="temperatura" name="temperatura" step=".01"/>
-                            <input type="text" class="form-control" id="sintomas" name="sintomas" value="N" hidden="true"/>
-                            <input type="text" class="form-control" id="examenes" name="examenes" value="N" hidden="true"/>
-                            <input type="text" class="form-control" id="tratamiento" name="tratamiento" value="N" hidden="true"/>
-                            <input type="text" class="form-control" id="observacion" name="observacion" value="N" hidden="true"/>
+                            <input type="text"  id="sintomas" name="sintomas" value="N" hidden="true"/>
+                            <input type="text"  id="examenes" name="examenes" value="N" hidden="true"/>
+                            <input type="text"  id="tratamiento" name="tratamiento" value="N" hidden="true"/>
+                            <input type="text"  id="observacion" name="observacion" value="N" hidden="true"/>
                         </div>
                     
                     </div>
