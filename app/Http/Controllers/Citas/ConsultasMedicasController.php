@@ -52,12 +52,16 @@ class ConsultasMedicasController extends Controller
                  $vacunar ="";
                  $editar ="";
                  $eliminar = "";
+                 $hospitalizar = "";
                  $pagar = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_pago" rel="tooltip" title="Pagar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">attach_money</i></a>';
                  if (Auth::user()->can('editar-atender')) {
                    $atender = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_atender" rel="tooltip" title="Atender" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">done_all</i></a>';
                 }
                 if (Auth::user()->can('editar-atender')) {
                     $vacunar = '<a href="#" onclick="vacunar('.$consulta->id.')" data-toggle="modal" data-target="#modal_vacunar" rel="tooltip" title="Vacunar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">add_location</i></a>';
+                 }
+                 if (Auth::user()->can('editar-atender')) {
+                    $hospitalizar = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_hospitalizar" rel="tooltip" title="Hospitalizar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">local_hospital</i></a>';
                  }
                 if (Auth::user()->can('editar-citas')) {
                 $editar = '<a href="#" onclick="update_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#modal_update_cita" rel="tooltip" title="Editar" class="btn btn-simple btn-success btn-icon edit"><i class="material-icons">edit</i></a>';
@@ -66,7 +70,7 @@ class ConsultasMedicasController extends Controller
                 $eliminar = '<a href="#" onclick="delete_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#eliminar_paciente" rel="tooltip" title="Eliminar" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>';
                 }
 
-                return $pagar.$atender.$vacunar.$editar.$eliminar;
+                return $pagar.$atender.$vacunar.$hospitalizar.$editar.$eliminar;
             })->make(true);
     }
     
@@ -99,6 +103,7 @@ class ConsultasMedicasController extends Controller
                 $editar ="";
                 $eliminar ="";
                 $vacunar ="";
+                $hospitalizar ="";
                 if (Auth::user()->can('leer-citas')) {
                 $ver = '<a href="#" onclick="ver_cita('.$consulta->id.')" data-toggle="modal" data-target="#modal_ver" rel="tooltip" title="Ver consulta" class="btn btn-simple btn-primary btn-icon edit"><i class="material-icons">remove_red_eye</i></a>';
             }
@@ -108,10 +113,13 @@ class ConsultasMedicasController extends Controller
             if (Auth::user()->can('editar-atender')) {
                 $vacunar = '<a href="#" onclick="vacunar('.$consulta->id.')" data-toggle="modal" data-target="#modal_vacunar" rel="tooltip" title="Vacunar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">add_location</i></a>';
              }
+             if (Auth::user()->can('editar-atender')) {
+                $hospitalizar = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_hospitalizar" rel="tooltip" title="Hospitalizar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">local_hospital</i></a>';
+             }
             if (Auth::user()->can('eliminar-consultas')) {
                 $eliminar = '<a href="#" onclick="delete_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#eliminar_paciente" rel="tooltip" title="Eliminar" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>';
             }
-                return $ver.$editar.$vacunar.$eliminar;
+                return $ver.$editar.$vacunar.$hospitalizar.$eliminar;
             })->make(true);
     }
     
