@@ -38,11 +38,11 @@
          <!-- <tr>
             <td colspan="4">VIH</td>
             <td class="total">{{$pacientes->vih}}</td>
-          </tr>-->
+          </tr>
           <tr>
             <td colspan="4">PESO</td>
             <td class="total">{{$pacientes->peso}} Kg.</td>
-          </tr>
+          </tr>-->
           <!--<tr>
             <td colspan="4">ESTATURA</td>
             <td class="total">{{$pacientes->altura}} Cm.</td>
