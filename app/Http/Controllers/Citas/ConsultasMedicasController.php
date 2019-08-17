@@ -114,7 +114,7 @@ class ConsultasMedicasController extends Controller
                 $vacunar = '<a href="#" onclick="vacunar('.$consulta->id.')" data-toggle="modal" data-target="#modal_vacunar" rel="tooltip" title="Vacunar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">add_location</i></a>';
              }
              if (Auth::user()->can('editar-atender')) {
-                $hospitalizar = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_hospitalizar" rel="tooltip" title="Hospitalizar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">local_hospital</i></a>';
+                $hospitalizar = '<a href="#" onclick="hospitalizar('.$consulta->id.')" data-toggle="modal" data-target="#modal_hospitalizar" rel="tooltip" title="Hospitalizar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">local_hospital</i></a>';
              }
             if (Auth::user()->can('eliminar-consultas')) {
                 $eliminar = '<a href="#" onclick="delete_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#eliminar_paciente" rel="tooltip" title="Eliminar" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>';
