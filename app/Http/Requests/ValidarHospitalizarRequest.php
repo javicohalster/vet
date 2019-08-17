@@ -24,20 +24,22 @@ class ValidarHospitalizarRequest extends FormRequest
     public function rules()
     {
          return [
-            'sintomas'      => 'required',
-            'examenes'      => 'required',
+            'peso'      => 'required',
+            'temperatura'      => 'required',
+            'diagnostico'   => 'required',
             'tratamiento'   => 'required',
-            'observacion'   => 'required'
+            'receta'   => 'required'
             
         ];
     }
     public function messages()
     {
         return [
-            'sintomas.required'    => 'El campo síntoma es obligatorio.',
-            'examenes.required'    => 'El campo exámenes es obligatorio.',
-            'tratamiento.required' => 'El campo tratamiento es obligatorio.',
-            'observacion.required' => 'El campo observación es obligatorio.',
+            'peso.required'    => 'El campo peso es obligatorio.',
+            'temperatura.required'    => 'El campo temperatura es obligatorio.',
+            'diagnostico.required' => 'El campo Diagnostico es obligatorio.',
+            'tratamiento.required' => 'El campo Tratamiento es obligatorio.',
+            'receta.required' => 'El campo Medicación Recetada es obligatorio.'
         ];
     }
 }
