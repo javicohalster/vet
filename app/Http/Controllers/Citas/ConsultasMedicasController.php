@@ -134,7 +134,7 @@ class ConsultasMedicasController extends Controller
             ]);
     }
 
-    public function hospitalizar(ValidarAtenderRequest $request, Query $queries, User $users, $id)
+    public function hospitalizar(ValidarHospitalizarRequest $request, Query $queries, User $users, $id)
     {
         $atender =   $queries->findOrFail($id);
         $paciente =  $users->findOrFail($atender->paciente_id);
