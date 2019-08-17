@@ -958,6 +958,39 @@ $( "#update_consulta" ).click(function(event){
              }
          }) 
      })
+     $( "#update_cirugia" ).click(function(event){ 
+    
+        var id= $( '#id3' ).val()
+         var route = "./consultas/"+id+""
+         var dataString  = $( '#form_cirugia' ).serializeArray()
+         $.ajax({
+             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+             url: route,
+             type: 'PUT',
+             datatype: 'json',
+             data:dataString,
+             success:function(data){
+                 $.notify({icon: "add_alert", message: data.message},{type: 'success', timer: 1000})
+                 document.getElementById("form_cirugia").reset()
+                 $('#pendientes').DataTable().ajax.reload()
+                 $('#table_atendidos').DataTable().ajax.reload()
+                 $("#citas_medicas").fullCalendar('refetchEvents')
+                 $("#modal_atender").modal("hide")
+                 $("#modal_hospitalizar").modal("hide")
+                 $("#modal_cirugia").modal("hide")
+                 $("#modal_vacunar").modal("hide")
+             },
+             error:function(data){
+                 var error = data.responseJSON.errors;
+                 for(var i in error){
+                     for(var j in error[i]){
+                         var message = error[i][j];
+                        $.notify({icon: "add_alert", message: message},{type: 'warning', timer: 1000})
+                     }
+                 }
+             }
+         }) 
+     })
 $( "#update_role_user" ).click(function(event){ 
         var id= $( '#id' ).val()
         var route = "./update-roles/"+id+""
@@ -2053,6 +2086,26 @@ function hospitalizar(id)
             $('#paciente2').html(data.paciente)                
             $('#tratamiento2').val(data.tratamiento)           
             $('#id2').val(data.id)
+          },
+       error:function(){
+           alert('la operación falló');
+          }
+    });
+}
+
+function cirugia(id)
+{ //Carga mestra el modal para realizar una atención.
+    var route = "./consultas/"+id+"/edit";
+    var csrf_token = $('meta[name="csrf-token"]').attr('content');
+    $.ajax({
+           url: route,
+           type: 'GET',
+        success:function(data){
+            $('#edad3').html(data.edad)
+            $('#visitas3').html(data.visitas)
+            $('#paciente3').html(data.paciente)                
+            $('#tratamiento3').val(data.tratamiento)           
+            $('#id3').val(data.id)
           },
        error:function(){
            alert('la operación falló');

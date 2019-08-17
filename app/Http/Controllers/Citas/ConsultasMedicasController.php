@@ -54,6 +54,7 @@ class ConsultasMedicasController extends Controller
                  $editar ="";
                  $eliminar = "";
                  $hospitalizar = "";
+                 $cirugia = "";
                  $pagar = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_pago" rel="tooltip" title="Pagar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">attach_money</i></a>';
                  if (Auth::user()->can('editar-atender')) {
                    $atender = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_atender" rel="tooltip" title="Atender" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">done_all</i></a>';
@@ -64,6 +65,9 @@ class ConsultasMedicasController extends Controller
                  if (Auth::user()->can('editar-atender')) {
                     $hospitalizar = '<a href="#" onclick="hospitalizar('.$consulta->id.')" data-toggle="modal" data-target="#modal_hospitalizar" rel="tooltip" title="Hospitalizar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">local_hospital</i></a>';
                  }
+                 if (Auth::user()->can('editar-atender')) {
+                    $cirugia = '<a href="#" onclick="cirugia('.$consulta->id.')" data-toggle="modal" data-target="#modal_cirugia" rel="tooltip" title="Cirugía" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">colorize</i></a>';
+                 }
                 if (Auth::user()->can('editar-citas')) {
                 $editar = '<a href="#" onclick="update_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#modal_update_cita" rel="tooltip" title="Editar" class="btn btn-simple btn-success btn-icon edit"><i class="material-icons">edit</i></a>';
                 }
@@ -71,7 +75,7 @@ class ConsultasMedicasController extends Controller
                 $eliminar = '<a href="#" onclick="delete_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#eliminar_paciente" rel="tooltip" title="Eliminar" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>';
                 }
 
-                return $pagar.$atender.$vacunar.$hospitalizar.$editar.$eliminar;
+                return $pagar.$atender.$vacunar.$hospitalizar.$cirugia.$editar.$eliminar;
             })->make(true);
     }
     
@@ -149,6 +153,20 @@ class ConsultasMedicasController extends Controller
             ]);
     }
 
+    public function cirugia(ValidarHospitalizarRequest $request, Query $queries, User $users, $id)
+    {
+        $atender =   $queries->findOrFail($id);
+        $paciente =  $users->findOrFail($atender->paciente_id);
+        $visitas =   $queries->all()->where('paciente_id', '=', $atender->paciente_id)->where('estado', '=', 'atendido')->count();
+        return response()->json([
+                'success' => true,
+                "paciente3"=> $paciente->nombres . ' '. $paciente->apellidos,
+                "edad3"    => $paciente->getYearsAttribute(),
+                "visitas3" => $visitas,
+                "id3"      => $atender->id
+            ]);
+    }
+
     public function vacunar(ValidarAtenderRequest $request, Query $queries, User $users, $id)
     {
 
@@ -174,7 +192,7 @@ class ConsultasMedicasController extends Controller
            return response()->json([
             'success'      => true,
             'id'           => $cita_atendida->id,
-            'paciente'     => $paciente->nombres . ' '. $paciente->apellidos,
+            'paciente'     => $paciente->nombres . ' / '. $paciente->apellidos,
             'edad'         => $paciente->getYearsAttribute(),
             'visitas'      => $visitas,
             'sintomas'     => $cita_atendida->sintomas,
