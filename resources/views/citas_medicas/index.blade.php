@@ -24,11 +24,12 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
+                <a href="./consultas">
                     <div class="card-header" data-background-color="rose">
                         <i class="material-icons">equalizer</i>
                     </div>
                     <div class="card-content">
-                        <p class="category">Reservas</p>
+                        <p class="category">Consultas Pendientes</p>
                         <h3 class="card-title" id="reserva">{{$reservas}}</h3>
                     </div>
                     <div class="card-footer">
@@ -36,6 +37,7 @@
                             <i class="material-icons">local_offer</i> Tracked from Google Analytics
                         </div>
                     </div>
+                </a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
