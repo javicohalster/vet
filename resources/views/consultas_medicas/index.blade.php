@@ -53,6 +53,7 @@
 </div>
 @include('consultas_medicas.modal_atender')
 @include('consultas_medicas.modal_vacunar')
+@include('consultas_medicas.modal_hospitalizar')
 @include('consultas_medicas.modal_ver')
 @include('consultas_medicas.updateCitaPendiente')
 @include('consultas_medicas.modal_pago')
