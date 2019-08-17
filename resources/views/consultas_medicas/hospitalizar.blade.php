@@ -21,7 +21,7 @@
                         </table>
                     </div>
                 </div>
-                <form id="form_consulta">
+                <form id="form_hospitalizar">
                 <div class="row sinpadding">
                     <input id="id2" name="id2" type="text" hidden="true" />
                     <input id="tipo" name="tipo" type="text" value="HOS" hidden="true" />                   

@@ -926,6 +926,38 @@ $( "#update_consulta" ).click(function(event){
              }
          }) 
      })
+     $( "#update_hospitalizar" ).click(function(event){ 
+    
+        var id= $( '#id2' ).val()
+         var route = "./consultas/"+id+""
+         var dataString  = $( '#form_hospitalizar' ).serializeArray()
+         $.ajax({
+             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+             url: route,
+             type: 'PUT',
+             datatype: 'json',
+             data:dataString,
+             success:function(data){
+                 $.notify({icon: "add_alert", message: data.message},{type: 'success', timer: 1000})
+                 document.getElementById("form_hospitalizar").reset()
+                 $('#pendientes').DataTable().ajax.reload()
+                 $('#table_atendidos').DataTable().ajax.reload()
+                 $("#citas_medicas").fullCalendar('refetchEvents')
+                 $("#modal_atender").modal("hide")
+                 $("#modal_hospitalizar").modal("hide")
+                 $("#modal_vacunar").modal("hide")
+             },
+             error:function(data){
+                 var error = data.responseJSON.errors;
+                 for(var i in error){
+                     for(var j in error[i]){
+                         var message = error[i][j];
+                        $.notify({icon: "add_alert", message: message},{type: 'warning', timer: 1000})
+                     }
+                 }
+             }
+         }) 
+     })
 $( "#update_role_user" ).click(function(event){ 
         var id= $( '#id' ).val()
         var route = "./update-roles/"+id+""
@@ -2018,11 +2050,8 @@ function hospitalizar(id)
         success:function(data){
             $('#edad2').html(data.edad)
             $('#visitas2').html(data.visitas)
-            $('#paciente2').html(data.paciente)
-            $('#sintomas').val(data.sintomas)
-            $('#examenes').val(data.examenes)            
-            $('#tratamiento').val(data.tratamiento)
-            $('#observacion').val(data.observacion)
+            $('#paciente2').html(data.paciente)                
+            $('#tratamiento2').val(data.tratamiento)           
             $('#id2').val(data.id)
           },
        error:function(){
