@@ -28,12 +28,12 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label class="control-label">PESO Kg:</label>
-                            <input type="number" class="form-control" id="peso" name="peso"/>
+                            <input type="number" class="form-control" id="peso" name="peso" step=".01"/>
                         </div>
                         
                         <div class="form-group">
                             <label class="control-label">TEMPERATURA ºC:</label>
-                            <input type="number" class="form-control" id="temperatura" name="temperatura"/>
+                            <input type="number" class="form-control" id="temperatura" name="temperatura" step=".01"/>
                         </div>
                     
                     </div>
