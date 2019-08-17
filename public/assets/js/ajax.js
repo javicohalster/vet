@@ -1507,7 +1507,7 @@ $( "#ingresar" ).click(function(event){
 
 function guardar_especialidad()
 {
-    var route = "./especialidades/"
+    var route = "./especialidades"
     var dataString  = $( '#form_especialidades' ).serializeArray()
     $.ajax({
         headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
