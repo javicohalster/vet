@@ -24,7 +24,7 @@
                 <form id="form_vacunas">
                 <div class="row sinpadding">
                     <input id="id1" name="id1" type="text" hidden="true" />
-                    <input id="tipo1" name="tipo1" type="text" hidden="true" value="VAC" />
+                    <input id="tipo" name="tipo" type="text" hidden="true" value="VAC" />
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">DIAS REVACUNAR:</label>                           
