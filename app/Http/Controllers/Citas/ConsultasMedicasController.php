@@ -7,6 +7,7 @@ use App\Query;
 use App\Speciality;
 use Illuminate\Http\Request;
 use App\Http\Requests\ValidarAtenderRequest;
+use App\Http\Requests\ValidarHospitalizarRequest;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 
