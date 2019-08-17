@@ -61,7 +61,7 @@ class ConsultasMedicasController extends Controller
                     $vacunar = '<a href="#" onclick="vacunar('.$consulta->id.')" data-toggle="modal" data-target="#modal_vacunar" rel="tooltip" title="Vacunar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">add_location</i></a>';
                  }
                  if (Auth::user()->can('editar-atender')) {
-                    $hospitalizar = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_hospitalizar" rel="tooltip" title="Hospitalizar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">local_hospital</i></a>';
+                    $hospitalizar = '<a href="#" onclick="hospitalizar('.$consulta->id.')" data-toggle="modal" data-target="#modal_hospitalizar" rel="tooltip" title="Hospitalizar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">local_hospital</i></a>';
                  }
                 if (Auth::user()->can('editar-citas')) {
                 $editar = '<a href="#" onclick="update_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#modal_update_cita" rel="tooltip" title="Editar" class="btn btn-simple btn-success btn-icon edit"><i class="material-icons">edit</i></a>';
@@ -125,6 +125,20 @@ class ConsultasMedicasController extends Controller
     
 
     public function atender(ValidarAtenderRequest $request, Query $queries, User $users, $id)
+    {
+        $atender =   $queries->findOrFail($id);
+        $paciente =  $users->findOrFail($atender->paciente_id);
+        $visitas =   $queries->all()->where('paciente_id', '=', $atender->paciente_id)->where('estado', '=', 'atendido')->count();
+        return response()->json([
+                'success' => true,
+                "paciente"=> $paciente->nombres . ' '. $paciente->apellidos,
+                "edad"    => $paciente->getYearsAttribute(),
+                "visitas" => $visitas,
+                "id"      => $atender->id
+            ]);
+    }
+
+    public function hospitalizar(ValidarAtenderRequest $request, Query $queries, User $users, $id)
     {
         $atender =   $queries->findOrFail($id);
         $paciente =  $users->findOrFail($atender->paciente_id);

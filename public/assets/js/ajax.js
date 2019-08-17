@@ -879,6 +879,7 @@ $( "#update_consulta" ).click(function(event){
                 $('#table_atendidos').DataTable().ajax.reload()
                 $("#citas_medicas").fullCalendar('refetchEvents')
                 $("#modal_atender").modal("hide")
+                $("#modal_hospitalizar").modal("hide")
                 $("#modal_vacunar").modal("hide")
             },
             error:function(data){
@@ -911,6 +912,7 @@ $( "#update_consulta" ).click(function(event){
                  $('#table_atendidos').DataTable().ajax.reload()
                  $("#citas_medicas").fullCalendar('refetchEvents')
                  $("#modal_atender").modal("hide")
+                 $("#modal_hospitalizar").modal("hide")
                  $("#modal_vacunar").modal("hide")
              },
              error:function(data){
@@ -2005,6 +2007,32 @@ function del_recepcionista(id)
                 alert('la operación falló');
             }
        })
+}
+function hospitalizar(id)
+{ //Carga mestra el modal para realizar una atención.
+    var route = "./consultas/"+id+"/edit";
+    var csrf_token = $('meta[name="csrf-token"]').attr('content');
+    $.ajax({
+           url: route,
+           type: 'GET',
+        success:function(data){
+            $('#edad').html(data.edad)
+            $('#visitas').html(data.visitas)
+            $('#paciente').html(data.paciente)
+            $('#sintomas').val(data.sintomas)
+            $('#examenes').val(data.examenes)            
+            $('#tratamiento').val(data.tratamiento)
+            $('#observacion').val(data.observacion)
+            $('#temperatura').val(data.temperatura)
+            $('#diagnostico').val(data.diagnostico)
+            $('#receta').val(data.receta)
+            $('#peso').val(data.peso)
+            $('#id').val(data.id)
+          },
+       error:function(){
+           alert('la operación falló');
+          }
+    });
 }
 function atender(id)
 { //Carga mestra el modal para realizar una atención.
