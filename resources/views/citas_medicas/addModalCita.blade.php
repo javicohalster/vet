@@ -80,7 +80,7 @@
                                   <select id="paciente_id" name="paciente_id" class="selectpicker show-tick" data-dropup-auto="false" data-size="5" data-live-search="true" data-live-search="true" data-style="select-with-transition">
                                         <option value="">-- Seleccione --</option>
                                          @foreach($pacientes as $paciente)
-                                            <option value="{{ $paciente->id }}">{{ $paciente->apellidos }} {{ $paciente->nombres }}</option>
+                                            <option value="{{ $paciente->id }}">{{ $paciente->id }} {{ $paciente->apellidos }} - {{ $paciente->nombres }}</option>
                                         @endforeach
                                   </select>
                                 </div>

@@ -55,6 +55,7 @@
 @include('consultas_medicas.modal_vacunar')
 @include('consultas_medicas.modal_hospitalizar')
 @include('consultas_medicas.modal_cirugia')
+@include('consultas_medicas.modal_parasitario')
 @include('consultas_medicas.modal_ver')
 @include('consultas_medicas.updateCitaPendiente')
 @include('consultas_medicas.modal_pago')
