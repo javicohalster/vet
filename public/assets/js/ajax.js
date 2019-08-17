@@ -2050,6 +2050,7 @@ function vacunar(id)
             $('#tratamiento1').val(data.tratamiento)
             $('#observacion1').val(data.observacion)
             $('#id1').val(data.id)
+          
           },
        error:function(){
            alert('la operación falló');
