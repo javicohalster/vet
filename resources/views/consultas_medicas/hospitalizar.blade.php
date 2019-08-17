@@ -5,11 +5,11 @@
                     <div class="table-responsive">
                         <table class="table">
                                 <th>Paciente:</th>
-                                <td id="paciente"></td>
+                                <td id="paciente2"></td>
                                 <th>Edad:</th>
-                                <td id="edad"></td>
+                                <td id="edad2"></td>
                                 <th>Visitas:</th>
-                                <td id="visitas"></td>
+                                <td id="visitas2"></td>
                                 <tr>
                                     <td></td>
                                     <td></td>
@@ -23,7 +23,7 @@
                 </div>
                 <form id="form_consulta">
                 <div class="row sinpadding">
-                    <input id="id" name="id" type="text" hidden="true" />
+                    <input id="id2" name="id2" type="text" hidden="true" />
                     <input id="tipo" name="tipo" type="text" value="HOS" hidden="true" />                   
                     <div class="col-md-6">
                         <div class="form-group">

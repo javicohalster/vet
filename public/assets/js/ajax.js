@@ -2016,18 +2016,14 @@ function hospitalizar(id)
            url: route,
            type: 'GET',
         success:function(data){
-            $('#edad').html(data.edad)
-            $('#visitas').html(data.visitas)
-            $('#paciente').html(data.paciente)
+            $('#edad2').html(data.edad)
+            $('#visitas2').html(data.visitas)
+            $('#paciente2').html(data.paciente)
             $('#sintomas').val(data.sintomas)
             $('#examenes').val(data.examenes)            
             $('#tratamiento').val(data.tratamiento)
             $('#observacion').val(data.observacion)
-            $('#temperatura').val(data.temperatura)
-            $('#diagnostico').val(data.diagnostico)
-            $('#receta').val(data.receta)
-            $('#peso').val(data.peso)
-            $('#id').val(data.id)
+            $('#id2').val(data.id)
           },
        error:function(){
            alert('la operación falló');
