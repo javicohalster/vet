@@ -53,7 +53,7 @@
                     </div>
                 </div>               
                 <div class="row">                    
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group">
                             <label class="control-label">MEDICACION RECETADA:</label>
                             <textarea rows="6" type="text" class="form-control" id="receta" name="receta"></textarea>
