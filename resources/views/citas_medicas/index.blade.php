@@ -9,7 +9,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header" data-background-color="orange">
-                        <i class="material-icons">person</i>
+                        <i class="material-icons">pets</i>
                     </div>
                     <div class="card-content">
                         <p class="category">Pacientes</p>
