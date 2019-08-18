@@ -17,7 +17,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">remove_red_eye</i>  <a href="./pacientes">Obtener mas información</a>
+                            <i class="material-icons">pets</i>  <a href="./pacientes">Obtener mas información</a>
                         </div>
                     </div>
                 </div>
