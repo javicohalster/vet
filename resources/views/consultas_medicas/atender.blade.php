@@ -1,3 +1,12 @@
+<ul class="nav st-nav-tabs">
+    <li class="active"><a href="#tab1" data-toggle="tab">First Tab</a></li>
+    <li><a href="#tab2" data-toggle="tab">Second Tab</a></li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="tab1"></div>
+    <div class="tab-pane active" id="tab2"></div>
+</div>
 <div class="col-md-12">
     <div class="row">
         <div class="col-md-12">
