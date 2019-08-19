@@ -146,10 +146,10 @@ class ConsultasMedicasController extends Controller
         $visitas =   $queries->all()->where('paciente_id', '=', $atender->paciente_id)->where('estado', '=', 'atendido')->count();
         return response()->json([
                 'success' => true,
-                "paciente"=> $paciente->nombres . ' '. $paciente->apellidos,
+                "paciente1"=> $paciente->nombres . ' / '. $paciente->apellidos,
                 "edad"    => $paciente->getYearsAttribute(),
                 "visitas" => $visitas,
-                "id"      => $atender->id
+                "id1"      => $atender->id
             ]);
     }
 

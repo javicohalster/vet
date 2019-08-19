@@ -2253,7 +2253,7 @@ function ver_atencion(id)
             $('#fecharegistra').val(data.fecharegistra)
             
             
-            $('#id').val(data.id)
+            $('#id1').val(data.id)
           },
        error:function(){
            alert('la operación falló');

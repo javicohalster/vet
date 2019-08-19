@@ -4,7 +4,7 @@
                         <div class="table-responsive">
                             <table class="table">
                                     <th>Paciente:</th>
-                                    <td id="paciente"></td>
+                                    <td id="paciente1"></td>
                                     <th>Edad:</th>
                                     <td id="edad"></td>
                                     <th>Visitas:</th>
@@ -30,7 +30,7 @@
       </ul>
       <!-- Tab panes -->
       <form id="form_consulta">
-            <input id="id" name="id" type="text" hidden="true" />
+            <input id="id1" name="id1" type="text" hidden="true" />
             <input id="tipo" name="tipo" type="text" value="REC" hidden="true" />
             <div class="row sinpadding">  
                     <div class="col-md-12"> 
