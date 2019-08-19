@@ -10837,6 +10837,9 @@ footer .btn {
   transition: background-color .1s .2s;
 }
 
+.color_letra_ver{
+  color: #FFFFFF !important;
+}
 @media (min-width: 992px) {
   .navbar-form {
     margin-top: 21px;
