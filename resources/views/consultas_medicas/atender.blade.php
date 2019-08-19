@@ -5,7 +5,7 @@
     <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
     <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
     <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+    <li role="presentation"><a href="#cosas" aria-controls="cosas" role="tab" data-toggle="tab">Settings</a></li>
   </ul>
 
   <!-- Tab panes -->
@@ -13,7 +13,7 @@
     <div role="tabpanel" class="tab-pane active" id="home">..Home.</div>
     <div role="tabpanel" class="tab-pane" id="profile">..perfil.</div>
     <div role="tabpanel" class="tab-pane" id="messages">.mensaje..</div>
-    <div role="tabpanel" class="tab-pane" id="settings">..cosas.</div>
+    <div role="tabpanel" class="tab-pane" id="cosas">..cosas.</div>
   </div>
 
 </div>
