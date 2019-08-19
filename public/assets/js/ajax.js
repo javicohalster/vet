@@ -6,12 +6,18 @@ function redirect(ruta)
 $(document).ready(function() {
 
     getDoctoresO(1);
+    getDoctoresV(1);
 
 $('#dias').datepicker({
     multidate:true,
 });
 
 $('#myTabs a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+  });
+
+  $('#myTabsv a').click(function (e) {
     e.preventDefault();
     $(this).tab('show');
   });
@@ -1619,6 +1625,21 @@ function getDoctoresO(especialidad){
     })
 }
 
+function getDoctoresV(especialidad){
+    $.get("./get-doctor/"+especialidad+"",function(response,speciality){
+        $("#doctorConsultav").empty()
+        if (response == "") {
+             $("#doctorConsultav").html("<option>--Seleccione--</option>")
+        }else{
+            for(i = 0; i <response.length; i++) {
+                $("#doctorConsultav").append("<option value='"+response[i].id+"'>"+response[i].apellidos+" "+response[i].nombres+"</option>")
+            }
+            $('#doctorConsultav').val(event.doctor_id)
+            $('.selectpicker').selectpicker('refresh')
+        }
+    })
+}
+
 function getDoctorAdd(especialidad){
     $.get("./get-doctor/"+especialidad+"",function(response,speciality){
         $("#up_evento #doctor_id").empty()
@@ -2217,43 +2238,43 @@ function ver_atencion(id)
            url: route,
            type: 'GET',
         success:function(data){
-            $('#edad').html(data.edad)
-            $('#visitas').html(data.visitas)
-            $('#paciente').html(data.paciente)
-            $('#sintomas').val(data.sintomas)
-            $('#examenes').val(data.examenes)            
-            $('#tratamiento').val(data.tratamiento)
-            $('#observacion').val(data.observacion)
-            $('#temperatura').val(data.temperatura)
-            $('#diagnostico').val(data.diagnostico)
-            $('#receta').val(data.receta)
-            $('#peso').val(data.peso)
-            $('#fechavacuna').val(data.fechavacuna)
-            $('#tipovacuna').val(data.tipovacuna)
-            $('#diasrevacuna').val(data.diasrevacuna)
-            $('#fechavacunasiguiente').val(data.fechavacunasiguiente)
-            $('#pesodesparasitacion').val(data.pesodesparasitacion)
-            $('#descripciondesparacitacion').val(data.descripciondesparacitacion)
-            $('#posologia').val(data.posologia)
-            $('#dosis').val(data.dosis)
-            $('#diasdesparacitar').val(data.diasdesparacitar)
-            $('#fechasigueintedesparasitacion').val(data.fechasigueintedesparasitacion)            
-            $('#fechacirugia').val(data.fechacirugia)
-            $('#pesocirugia').val(data.pesocirugia)
-            $('#procedimientocirugia').val(data.procedimientocirugia)
-            $('#recetacirugia').val(data.recetacirugia)
+            $('#edadv').html(data.edad)
+            $('#visitasv').html(data.visitas)
+            $('#pacientev').html(data.paciente)
+            $('#sintomasv').val(data.sintomas)
+            $('#examenesv').val(data.examenes)            
+            $('#tratamientov').val(data.tratamiento)
+            $('#observacionv').val(data.observacion)
+            $('#temperaturav').val(data.temperatura)
+            $('#diagnosticov').val(data.diagnostico)
+            $('#recetav').val(data.receta)
+            $('#pesov').val(data.peso)
+            $('#fechavacunav').val(data.fechavacuna)
+            $('#tipovacunav').val(data.tipovacuna)
+            $('#diasrevacunav').val(data.diasrevacuna)
+            $('#fechavacunasiguientev').val(data.fechavacunasiguiente)
+            $('#pesodesparasitacionv').val(data.pesodesparasitacion)
+            $('#descripciondesparacitacionv').val(data.descripciondesparacitacion)
+            $('#posologiav').val(data.posologia)
+            $('#dosisv').val(data.dosis)
+            $('#diasdesparacitarv').val(data.diasdesparacitar)
+            $('#fechasigueintedesparasitacionv').val(data.fechasigueintedesparasitacion)            
+            $('#fechacirugiav').val(data.fechacirugia)
+            $('#pesocirugiav').val(data.pesocirugia)
+            $('#procedimientocirugiav').val(data.procedimientocirugia)
+            $('#recetacirugiav').val(data.recetacirugia)
 
-            $('#fechahospitalizacion').val(data.fechahospitalizacion)
-            $('#pesohospitalizar').val(data.pesohospitalizar)
-            $('#temperaturahospitalizar').val(data.temperaturahospitalizar)
-            $('#diagnosticohospitalizar').val(data.diagnosticohospitalizar)
-            $('#tratamientohotpitalizar').val(data.tratamientohotpitalizar)
-            $('#recetahospitalizar').val(data.recetahospitalizar)
-            $('#doctorConsulta').val(data.doctorConsulta)
-            $('#fecharegistra').val(data.fecharegistra)
+            $('#fechahospitalizacionv').val(data.fechahospitalizacion)
+            $('#pesohospitalizarv').val(data.pesohospitalizar)
+            $('#temperaturahospitalizarv').val(data.temperaturahospitalizar)
+            $('#diagnosticohospitalizarv').val(data.diagnosticohospitalizar)
+            $('#tratamientohotpitalizarv').val(data.tratamientohotpitalizar)
+            $('#recetahospitalizarv').val(data.recetahospitalizar)
+            $('#doctorConsultav').val(data.doctorConsulta)
+            $('#fecharegistrav').val(data.fecharegistra)
             
             
-            $('#id1').val(data.id)
+            $('#idv').val(data.id)
           },
        error:function(){
            alert('la operación falló');
