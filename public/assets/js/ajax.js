@@ -615,7 +615,7 @@ $("#diasrevacuna").change(function(){
         var fecha = new Date( moment($('#fechavacuna').val(), 'yyyy-mm-dd'));
         console.info(fecha)
         var dias = $('#diasrevacuna').val(); // Número de días a agregar
-        fecha.setDate(fecha.getDate() + dias);
+        fecha.setDate(fecha.getDate() + parseInt(dias));
         $('#fechavacunasiguiente').val(getFormattedDate(fecha));
         
        console.info(fecha)
