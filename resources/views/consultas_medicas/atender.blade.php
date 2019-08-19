@@ -36,7 +36,7 @@
                 <div class="col-md-12"> 
                     <div class="form-group">
                         <label class="control-label">DOCTOR:</label>
-                        <select id="doctorConsulta" name="doctorConsulta" onclick="getDoctoresO(1)" class="form-control" data-style="select-with-transition">                               
+                        <select id="doctorConsulta" name="doctorConsulta"  class="form-control" data-style="select-with-transition">                               
                         </select>
                     </div>
                 </div>

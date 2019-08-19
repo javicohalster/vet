@@ -2154,6 +2154,7 @@ function cirugia(id)
 }
 function atender(id)
 { //Carga mestra el modal para realizar una atención.
+    getDoctoresO(1);
     var route = "./consultas/"+id+"/edit";
     var csrf_token = $('meta[name="csrf-token"]').attr('content');
     $.ajax({
