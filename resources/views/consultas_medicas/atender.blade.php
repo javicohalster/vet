@@ -1,4 +1,4 @@
-<ul class="nav st-nav-tabs">
+<ul class="nav st-nav-tabs"  id="myTabs">
     <li class="active"><a href="#tab1" data-toggle="tab">First Tab</a></li>
     <li><a href="#tab2" data-toggle="tab">Second Tab</a></li>
 </ul>
