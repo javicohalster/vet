@@ -29,9 +29,12 @@
     <li role="presentation"><a href="#cosas" aria-controls="cosas" role="tab" data-toggle="tab">Hospitalización</a></li>
   </ul>
   <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="vacunasantiparasitario">..vacunasantiparasitario.</div>
-    <div role="tabpanel" class="tab-pane" id="reconocimientos">
+  <form id="form_consulta">
+        <input id="id" name="id" type="text" hidden="true" />
+        <input id="tipo" name="tipo" type="text" value="REC" hidden="true" />
+   <div class="tab-content">
+     <div role="tabpanel" class="tab-pane active" id="vacunasantiparasitario">..vacunasantiparasitario.</div>
+     <div role="tabpanel" class="tab-pane" id="reconocimientos">
             <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
@@ -55,10 +58,9 @@
                                         </table>
                                     </div>
                                 </div>-->
-                                <form id="form_consulta">
+                               
                                 <div class="row sinpadding">
-                                    <input id="id" name="id" type="text" hidden="true" />
-                                    <input id="tipo" name="tipo" type="text" value="REC" hidden="true" />
+                                    
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label">ANAMNESIS:</label>
@@ -114,12 +116,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            
                         </div>
                     </div>
                 </div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="cirugias">.cirugias..</div>
-    <div role="tabpanel" class="tab-pane" id="cosas">..cosas.</div>
-  </div>
+     </div>
+     <div role="tabpanel" class="tab-pane" id="cirugias">.cirugias..</div>
+     <div role="tabpanel" class="tab-pane" id="cosas">..cosas.</div>
+   </div>
+ </form>
 </div>
