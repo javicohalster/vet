@@ -11535,6 +11535,10 @@ footer .btn {
     font-size: 14px;
     margin: 0;
   }
+
+  .color_letra_ver{
+    color: #FFFFFF !important;
+  }
 }
 @media (min-width: 768px) {
   .navbar > .container-fluid .navbar-brand {
