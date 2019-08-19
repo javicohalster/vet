@@ -9,7 +9,10 @@ $('#dias').datepicker({
     multidate:true,
 });
 
-$('#myTabs a[href="#tab1"]').tab('show');
+$('#myTabs a').click(function (e) {
+    e.preventDefault()
+    $(this).tab('show')
+  })
 
 $('.datepicker').datetimepicker({
         format: 'DD-MM-YYYY',
