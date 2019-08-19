@@ -24,20 +24,24 @@
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
-                <a href="./consultas">
+                
                     <div class="card-header" data-background-color="rose">
+                    <a href="./consultas">
                         <i class="material-icons">equalizer</i>
+                    </a>
                     </div>
                     <div class="card-content">
+                        <a href="./consultas">
                         <p class="category">Consultas Pendientes</p>
                         <h3 class="card-title" id="reserva">{{$reservas}}</h3>
+                        </a>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
                             <i class="material-icons">local_offer</i> Tracked from Google Analytics
                         </div>
                     </div>
-                </a>
+                
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6">
