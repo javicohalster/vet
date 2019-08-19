@@ -36,7 +36,7 @@
      <div role="tabpanel" class="tab-pane active" id="vacunasantiparasitario"> 
          <!--vacunas -->
          <div class="row sinpadding">  
-                <div class="col-md-6"> 
+                <div class="col-md-12"> 
                         <div class="form-group">
                           <label class="control-label">DOCTOR</label>
                           <select id="doctor_id_ver" disabled="true" class="form-control" data-style="select-with-transition">                               
