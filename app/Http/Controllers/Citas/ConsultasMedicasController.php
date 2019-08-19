@@ -204,6 +204,29 @@ class ConsultasMedicasController extends Controller
             'tipo'         => $cita_atendida->tipo,
             'diagnostico'  => $cita_atendida->diagnostico,
             'receta'       => $cita_atendida->receta,
+            'fechavacuna'           => $cita_atendida->fechavacuna,
+            'tipovacuna'            => $cita_atendida->tipovacuna,
+            'diasrevacuna'          => $cita_atendida->diasrevacuna,
+            'fechavacunasiguiente'  => $cita_atendida->fechavacunasiguiente,
+            'pesodesparasitacion'            => $cita_atendida->pesodesparasitacion,
+            'descripciondesparacitacion'     => $cita_atendida->descripciondesparacitacion,
+            'posologia'                      => $cita_atendida->posologia,
+            'dosis'                          => $cita_atendida->dosis,
+            'diasdesparacitar'               => $cita_atendida->diasdesparacitar,
+            'fechasigueintedesparasitacion'  => $cita_atendida->fechasigueintedesparasitacion,            
+            'fechacirugia'          => $cita_atendida->fechacirugia,
+            'pesocirugia'           => $cita_atendida->pesocirugia,
+            'procedimientocirugia'  => $cita_atendida->procedimientocirugia,
+            'recetacirugia'         => $cita_atendida->recetacirugia,
+
+            'fechahospitalizacion'     => $cita_atendida->fechahospitalizacion,
+            'pesohospitalizar'         => $cita_atendida->pesohospitalizar,
+            'temperaturahospitalizar'  => $cita_atendida->temperaturahospitalizar,
+            'diagnosticohospitalizar'  => $cita_atendida->diagnosticohospitalizar,
+            'tratamientohotpitalizar'  => $cita_atendida->tratamientohotpitalizar,
+            'recetahospitalizar'       => $cita_atendida->recetahospitalizar,
+            
+            
         ]);
     }
 
@@ -223,6 +246,28 @@ class ConsultasMedicasController extends Controller
             $consulta->tipo          = $request->tipo;
             $consulta->diagnostico   = $request->diagnostico;
             $consulta->receta        = $request->receta;
+            $consulta->fechavacuna            = $request->fechavacuna;
+            $consulta->tipovacuna             = $request->tipovacuna;
+            $consulta->diasrevacuna           = $request->diasrevacuna;
+            $consulta->fechavacunasiguiente   = $request->fechavacunasiguiente;
+            $consulta->pesodesparasitacion            = $request->pesodesparasitacion;
+            $consulta->descripciondesparacitacion     = $request->descripciondesparacitacion;
+            $consulta->posologia                      = $request->posologia;
+            $consulta->dosis                          = $request->dosis;
+            $consulta->diasdesparacitar               = $request->diasdesparacitar;
+            $consulta->fechasigueintedesparasitacion  = $request->fechasigueintedesparasitacion;
+            $consulta->fechacirugia          = $request->fechacirugia;
+            $consulta->pesocirugia           = $request->pesocirugia;
+            $consulta->procedimientocirugia  = $request->procedimientocirugia;
+            $consulta->recetacirugia         = $request->recetacirugia;
+            
+            $consulta->fechahospitalizacion     = $request->fechahospitalizacion;
+            $consulta->pesohospitalizar         = $request->pesohospitalizar;
+            $consulta->temperaturahospitalizar  = $request->temperaturahospitalizar;
+            $consulta->diagnosticohospitalizar  = $request->diagnosticohospitalizar;
+            $consulta->tratamientohotpitalizar  = $request->tratamientohotpitalizar;
+            $consulta->recetahospitalizar       = $request->recetahospitalizar;
+
             $consulta->save();
             return response()->json([
              "message" => "La consulta médica se ha guardado exitosamente!"

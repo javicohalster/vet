@@ -26,7 +26,7 @@
     <li role="presentation" class="active"><a href="#vacunasantiparasitario" aria-controls="vacunasantiparasitario" role="tab" data-toggle="tab">Vacunas y Antiparasitario</a></li>
     <li role="presentation"><a href="#reconocimientos" aria-controls="reconocimientos" role="tab" data-toggle="tab">Reconocimientos</a></li>
     <li role="presentation"><a href="#cirugias" aria-controls="cirugias" role="tab" data-toggle="tab">Cirugías</a></li>
-    <li role="presentation"><a href="#hospitalizar" aria-controls="cosas" role="tab" data-toggle="tab">Hospitalización</a></li>
+    <li role="presentation"><a href="#hospitalizar" aria-controls="hospitalizar" role="tab" data-toggle="tab">Hospitalización</a></li>
   </ul>
   <!-- Tab panes -->
   <form id="form_consulta">
@@ -265,7 +265,6 @@
                         </div>
                     </div>
             </div>
-
      </div>
      <div role="tabpanel" class="tab-pane" id="hospitalizar">
             <div class="row sinpadding">    
