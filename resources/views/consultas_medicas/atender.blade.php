@@ -32,18 +32,19 @@
   <form id="form_consulta">
         <input id="id" name="id" type="text" hidden="true" />
         <input id="tipo" name="tipo" type="text" value="REC" hidden="true" />
+        <div class="row sinpadding">  
+                <div class="col-md-12"> 
+                    <div class="form-group">
+                        <label class="control-label">DOCTOR:</label>
+                        <select id="doctorConsulta" name="doctorConsulta" onclick="getDoctoresO(1)" class="form-control" data-style="select-with-transition">                               
+                        </select>
+                    </div>
+                </div>
+             </div>
    <div class="tab-content">
      <div role="tabpanel" class="tab-pane active" id="vacunasantiparasitario"> 
          <!--vacunas -->
-         <div class="row sinpadding">  
-                <div class="col-md-12"> 
-                        <div class="form-group">
-                          <label class="control-label">DOCTOR:</label>
-                          <select id="doctorConsulta" name="doctorConsulta" onclick="getDoctoresO(1)" class="form-control" data-style="select-with-transition">                               
-                          </select>
-                        </div>
-                    </div>
-         </div>
+         
          <div class="row sinpadding">            
              <div class="col-md-6">
                     <div class="form-group">
