@@ -24,20 +24,20 @@ class ValidarAtenderRequest extends FormRequest
     public function rules()
     {
          return [
-            'sintomas'      => 'required',
-            'examenes'      => 'required',
-            'tratamiento'   => 'required',
-            'observacion'   => 'required'
+           // 'sintomas'      => 'required',
+         ///   'examenes'      => 'required',
+         //   'tratamiento'   => 'required',
+         //   'observacion'   => 'required'
             
         ];
     }
     public function messages()
     {
         return [
-            'sintomas.required'    => 'El campo Anamnesis es obligatorio.',
-            'examenes.required'    => 'El campo Pruebas realizadas es obligatorio.',
-            'tratamiento.required' => 'El campo Tratamiento es obligatorio.',
-            'observacion.required' => 'El campo Resultados es obligatorio.',
+          //  'sintomas.required'    => 'El campo Anamnesis es obligatorio.',
+          //  'examenes.required'    => 'El campo Pruebas realizadas es obligatorio.',
+         //   'tratamiento.required' => 'El campo Tratamiento es obligatorio.',
+         //   'observacion.required' => 'El campo Resultados es obligatorio.',
         ];
     }
 }
