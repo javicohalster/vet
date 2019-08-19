@@ -136,7 +136,7 @@
             <div class="row">
                 <div class="col-md-6">
                             <div class="form-group">
-                                <label class="control-label">DIAS A DESPARACITAR:</label>                           
+                                <label class="control-label">DIAS A DESPARASITAR:</label>                           
                                 <select id="diasdesparacitar" name="diasdesparacitar" class="form-control" data-style="select-with-transition">
                                         <option value="">-- Seleccione --</option>
                                         <option value="15">15</option> 
