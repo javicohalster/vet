@@ -34,6 +34,7 @@
         <input id="tipo" name="tipo" type="text" value="REC" hidden="true" />
    <div class="tab-content">
      <div role="tabpanel" class="tab-pane active" id="vacunasantiparasitario"> 
+         <!--vacunas -->
          <div class="row sinpadding">            
              <div class="col-md-6">
                     <div class="form-group">
@@ -75,6 +76,76 @@
             </div>
                        
         </div>
+        <!-- parasitar-->
+            <div class="row sinpadding">
+                <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">FECHA DESPARASITACION:</label>
+                            <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="fechadesparasitacion" name="fechadesparasitacion">                            
+                        </div>
+                </div>
+                <div class="col-md-6">
+                        <div class="form-group">
+                        <label class="control-label">PESO Kg:</label>
+                            <input type="number" class="form-control" id="pesodesparasitacion" name="pesodesparasitacion"/>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">DESCRIPCION:</label>
+                            <select id="descripciondesparacitacion" name="descripciondesparacitacion" class="form-control" data-style="select-with-transition">
+                                <option value="">-- Seleccione --</option>
+                                <option value="ALCOBEST 25%">ALCOBEST 25%</option> 
+                                <option value="CANICUR">CANICUR</option>                                                                                                             
+                            </select>                             
+                        </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">POSOLOGIA:</label>
+                        <select id="posologia" name="posologia" class="form-control" data-style="select-with-transition">
+                            <option value="">-- Seleccione --</option>
+                            <option value="ORAL">ORAL</option> 
+                            <option value="INTRAMUSCULAR">INTRAMUSCULAR</option>   
+                            <option value="SUBCUTANEA">SUBCUTANEA</option>                                                                                                           
+                        </select>
+                    </div>
+                </div>               
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">DOSIS:</label>
+                        <input type="number" class="form-control" id="dosis" name="dosis"/>
+                    </div>
+                </div>                   
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">DIAS A DESPARACITAR:</label>                           
+                                <select id="diasdesparacitar" name="diasdesparacitar" class="form-control" data-style="select-with-transition">
+                                        <option value="">-- Seleccione --</option>
+                                        <option value="15">15</option> 
+                                        <option value="18">18</option>
+                                        <option value="21">21</option> 
+                                        <option value="30">30</option>
+                                        <option value="120">120</option> 
+                                        <option value="365">365</option>                                                                               
+                                  </select>   
+                                
+                            </div>
+                </div>                
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">FECHA SIGUIENTE:</label>
+                        <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="fechasigueintedesparasitacion" name="fechasigueintedesparasitacion">                            
+                    </div>
+                </div>
+            </div>
+        <!-- fin parasitar-->
     </div>    
      <div role="tabpanel" class="tab-pane" id="reconocimientos">
             <div class="col-md-12">

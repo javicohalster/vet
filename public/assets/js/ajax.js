@@ -605,6 +605,22 @@ $('.timepicker').datetimepicker({
  
 });
 
+$("#diasdesparacitar").change(function(){ 
+
+    //  $("#fechavacuna").datepicker({
+     //   dateFormat: 'dd/mm/yy'
+    //  });
+      
+     // $("#datepicker").datepicker('setDate', now.format('DD/MM/YYYY'));
+        var fecha = new Date( moment($('#fechadesparasitacion').val(), 'yyyy-mm-dd'));
+        console.info(fecha)
+        var dias = $('#diasdesparacitar').val(); // Número de días a agregar
+        fecha.setDate(fecha.getDate() + parseInt(dias));
+        $('#fechasigueintedesparasitacion').val(getFormattedDate(fecha));
+        
+       console.info(fecha)
+    
+});
 $("#diasrevacuna").change(function(){ 
 
     //  $("#fechavacuna").datepicker({
