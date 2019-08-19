@@ -29,7 +29,7 @@ class ExpedienteController extends Controller
         return response()->json([
            "array"    => $queries,
            "fecha"    => $fecha,
-           "paciente" => $paciente->nombres . " / " . $paciente->apellidos,
+           "paciente" => '('.$paciente->id.') ' . $paciente->nombres . " / " . $paciente->apellidos,
            "paciente_id" => $paciente->id,
         ]);
     }
