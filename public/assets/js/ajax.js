@@ -605,12 +605,12 @@ $('.timepicker').datetimepicker({
  
 });
 
-$("#tratamiento1").click(function(){ 
+$("#diasrevacuna").click(function(){ 
 
-        var fecha = new Date($('#tratamiento1').val());
-        var dias = $('#sintomas1').val(); // Número de días a agregar
+        var fecha = new Date($('#fechavacuna').val());
+        var dias = $('#diasrevacuna').val(); // Número de días a agregar
         fecha.setDate(fecha.getDate() + dias);
-        $('#observacion1').val(getFormattedDate(fecha));
+        $('#fechavacunasiguiente').val(getFormattedDate(fecha));
         
        console.info(fecha)
     
