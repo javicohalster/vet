@@ -59,7 +59,7 @@ class ConsultasMedicasController extends Controller
                  if (Auth::user()->can('editar-atender')) {
                    $atender = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_atender" rel="tooltip" title="Atender" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">done_all</i></a>';
                 }
-                if (Auth::user()->can('editar-atender')) {
+               /*  if (Auth::user()->can('editar-atender')) {
                     $vacunar = '<a href="#" onclick="vacunar('.$consulta->id.')" data-toggle="modal" data-target="#modal_vacunar" rel="tooltip" title="Vacunar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">add_location</i></a>';
                  }
                  if (Auth::user()->can('editar-atender')) {
@@ -67,7 +67,7 @@ class ConsultasMedicasController extends Controller
                  }
                  if (Auth::user()->can('editar-atender')) {
                     $cirugia = '<a href="#" onclick="cirugia('.$consulta->id.')" data-toggle="modal" data-target="#modal_cirugia" rel="tooltip" title="Cirugía" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">colorize</i></a>';
-                 }
+                 }*/
                 if (Auth::user()->can('editar-citas')) {
                 $editar = '<a href="#" onclick="update_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#modal_update_cita" rel="tooltip" title="Editar" class="btn btn-simple btn-success btn-icon edit"><i class="material-icons">edit</i></a>';
                 }
@@ -75,7 +75,7 @@ class ConsultasMedicasController extends Controller
                 $eliminar = '<a href="#" onclick="delete_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#eliminar_paciente" rel="tooltip" title="Eliminar" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>';
                 }
 
-                return $pagar.$atender.$vacunar.$hospitalizar.$cirugia.$editar.$eliminar;
+                return $pagar.$atender.$editar.$eliminar;
             })->make(true);
     }
     

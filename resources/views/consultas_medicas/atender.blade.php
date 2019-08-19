@@ -26,7 +26,7 @@
     <li role="presentation" class="active"><a href="#vacunasantiparasitario" aria-controls="vacunasantiparasitario" role="tab" data-toggle="tab">Vacunas y Antiparasitario</a></li>
     <li role="presentation"><a href="#reconocimientos" aria-controls="reconocimientos" role="tab" data-toggle="tab">Reconocimientos</a></li>
     <li role="presentation"><a href="#cirugias" aria-controls="cirugias" role="tab" data-toggle="tab">Cirugías</a></li>
-    <li role="presentation"><a href="#cosas" aria-controls="cosas" role="tab" data-toggle="tab">Hospitalización</a></li>
+    <li role="presentation"><a href="#hospitalizar" aria-controls="cosas" role="tab" data-toggle="tab">Hospitalización</a></li>
   </ul>
   <!-- Tab panes -->
   <form id="form_consulta">
@@ -88,7 +88,7 @@
                 <div class="col-md-6">
                         <div class="form-group">
                         <label class="control-label">PESO Kg:</label>
-                            <input type="number" class="form-control" id="pesodesparasitacion" name="pesodesparasitacion"/>
+                            <input type="number" class="form-control" id="pesodesparasitacion" name="pesodesparasitacion" step=".01"/>
                         </div>
                 </div>
             </div>
@@ -119,7 +119,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label class="control-label">DOSIS:</label>
-                        <input type="number" class="form-control" id="dosis" name="dosis"/>
+                        <input type="text" class="form-control" id="dosis" name="dosis"/>
                     </div>
                 </div>                   
             </div>
@@ -173,8 +173,7 @@
                                     </div>
                                 </div>-->
                                
-                                <div class="row sinpadding">
-                                    
+                                <div class="row sinpadding">                                    
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label">ANAMNESIS:</label>
@@ -184,7 +183,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label">PESO Kg:</label>
-                                            <input type="number" class="form-control" id="peso" name="peso"/>
+                                            <input type="number" class="form-control" id="peso" name="peso" step=".01"/>
                                         </div>
                                     </div>
                                 </div>
@@ -235,8 +234,88 @@
                     </div>
                 </div>
      </div>
-     <div role="tabpanel" class="tab-pane" id="cirugias">.cirugias..</div>
-     <div role="tabpanel" class="tab-pane" id="cosas">..cosas.</div>
+     <div role="tabpanel" class="tab-pane" id="cirugias">
+            <div class="row sinpadding">    
+                    <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">FECHA CIRUGIA:</label>
+                                <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="fechacirugia" name="fechacirugia">                            
+                            </div>
+                    </div>                                  
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">PESO CIRUGIA Kg:</label>                           
+                            <input type="number" class="form-control" id="pesocirugia" name="pesocirugia" step=".01"/>
+                        </div> 
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">PROCEDIMIENTO:</label>
+                            <textarea rows="6" type="text" class="form-control" id="procedimientocirugia" name="procedimientocirugia"></textarea>
+                        </div>
+                    </div>
+            </div>               
+            <div class="row">                    
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">MEDICACION RECETADA:</label>
+                            <textarea rows="6" type="text" class="form-control" id="recetacirugia" name="recetacirugia"></textarea>
+                        </div>
+                    </div>
+            </div>
+
+     </div>
+     <div role="tabpanel" class="tab-pane" id="hospitalizar">
+            <div class="row sinpadding">    
+                    <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="control-label">FECHA HOSPITALIZACION:</label>
+                                <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="fechahospitalizacion" name="fechahospitalizacion">                            
+                            </div>
+                    </div>                                  
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">PESO HOSPITALIZACION Kg:</label>
+                            <input type="number" class="form-control" id="pesohospitalizar" name="pesohospitalizar" step=".01"/>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="row">  
+                    <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">TEMPERATURA ºC:</label>
+                                    <input type="number" class="form-control" id="temperaturahospitalizar" name="temperaturahospitalizar" step=".01"/>
+                                    <input type="text"  id="sintomas" name="sintomas" value="N" hidden="true"/>
+                                    <input type="text"  id="examenes" name="examenes" value="N" hidden="true"/>
+                                    <input type="text"  id="tratamiento" name="tratamiento" value="N" hidden="true"/>
+                                    <input type="text"  id="observacion" name="observacion" value="N" hidden="true"/>
+                                </div>                            
+                    </div>                  
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">DIAGNOSTICO:</label>
+                            <textarea rows="6" type="text" class="form-control" id="diagnosticohospitalizar" name="diagnosticohospitalizar"></textarea>
+                        </div>
+                    </div>                    
+                </div>               
+                <div class="row">   
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">TRATAMIENTO:</label>
+                            <textarea rows="6" type="text" class="form-control" id="tratamientohotpitalizar" name="tratamientohotpitalizar"></textarea>
+                        </div>
+                    </div>                 
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">MEDICACION RECETADA:</label>
+                            <textarea rows="6" type="text" class="form-control" id="recetahospitalizar" name="recetahospitalizar"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+     </div>
    </div>
  </form>
 </div>
