@@ -10883,6 +10883,9 @@ footer .btn {
   .close-layer {
     display: none;
   }
+  .color_letra_ver{
+    color: #FFFFFF !important;
+  }
 }
 /*          Changes for small display      */
 @media (max-width: 991px) {
