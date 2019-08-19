@@ -1,5 +1,26 @@
 <div>
-
+    <div class="col-md-12">                
+            <div class="row">
+                    <div class="table-responsive">
+                        <table class="table">
+                                <th>Paciente:</th>
+                                <td id="paciente"></td>
+                                <th>Edad:</th>
+                                <td id="edad"></td>
+                                <th>Visitas:</th>
+                                <td id="visitas"></td>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                        </table>
+                    </div>
+            </div>
+    </div>
   <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist" id="myTabs">
     <li role="presentation" class="active"><a href="#vacunasantiparasitario" aria-controls="vacunasantiparasitario" role="tab" data-toggle="tab">Vacunas y Antiparasitario</a></li>
@@ -7,7 +28,6 @@
     <li role="presentation"><a href="#cirugias" aria-controls="cirugias" role="tab" data-toggle="tab">Cirugías</a></li>
     <li role="presentation"><a href="#cosas" aria-controls="cosas" role="tab" data-toggle="tab">Hospitalización</a></li>
   </ul>
-
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="vacunasantiparasitario">..vacunasantiparasitario.</div>
@@ -15,7 +35,7 @@
             <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
-                                <div class="row">
+                                <!--<div class="row">
                                     <div class="table-responsive">
                                         <table class="table">
                                                 <th>Paciente:</th>
@@ -34,7 +54,7 @@
                                                 </tr>
                                         </table>
                                     </div>
-                                </div>
+                                </div>-->
                                 <form id="form_consulta">
                                 <div class="row sinpadding">
                                     <input id="id" name="id" type="text" hidden="true" />
@@ -102,5 +122,4 @@
     <div role="tabpanel" class="tab-pane" id="cirugias">.cirugias..</div>
     <div role="tabpanel" class="tab-pane" id="cosas">..cosas.</div>
   </div>
-
 </div>
