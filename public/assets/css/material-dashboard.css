@@ -11544,11 +11544,17 @@ footer .btn {
   .navbar > .container-fluid .navbar-brand {
     margin-left: 0;
   }
+  .color_letra_ver{
+    color: #FFFFFF !important;
+  }
 }
 @media (max-width: 767px) {
   .main-panel .content {
     padding-left: 0;
     padding-right: 0;
+  }
+  .color_letra_ver{
+    color: #FFFFFF !important;
   }
 
   .fileinput {
@@ -11578,6 +11584,9 @@ footer .btn {
     margin-left: -20px;
     margin-right: -20px;
   }
+  .color_letra_ver{
+    color: #FFFFFF !important;
+  }
 
   .table-responsive {
     overflow: auto;
@@ -11586,5 +11595,8 @@ footer .btn {
 @media all and (max-width: 490px) {
   .nav-center .nav-pills-icons {
     max-width: 211px;
+  }
+  .color_letra_ver{
+    color: #FFFFFF !important;
   }
 }
