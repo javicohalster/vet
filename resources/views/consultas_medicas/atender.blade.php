@@ -38,7 +38,7 @@
          <div class="row sinpadding">  
                 <div class="col-md-12"> 
                         <div class="form-group">
-                          <label class="control-label">DOCTOR</label>
+                          <label class="control-label">DOCTOR:</label>
                           <select id="doctorConsulta" onclick="getDoctoresO(1)" class="form-control" data-style="select-with-transition">                               
                           </select>
                         </div>

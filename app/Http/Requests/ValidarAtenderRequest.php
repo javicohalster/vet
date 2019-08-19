@@ -34,10 +34,10 @@ class ValidarAtenderRequest extends FormRequest
     public function messages()
     {
         return [
-            'sintomas.required'    => 'El campo síntoma es obligatorio.',
-            'examenes.required'    => 'El campo exámenes es obligatorio.',
-            'tratamiento.required' => 'El campo tratamiento es obligatorio.',
-            'observacion.required' => 'El campo observación es obligatorio.',
+            'sintomas.required'    => 'El campo Anamnesis es obligatorio.',
+            'examenes.required'    => 'El campo Pruebas realizadas es obligatorio.',
+            'tratamiento.required' => 'El campo Tratamiento es obligatorio.',
+            'observacion.required' => 'El campo Resultados es obligatorio.',
         ];
     }
 }

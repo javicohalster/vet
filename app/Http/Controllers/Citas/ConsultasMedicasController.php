@@ -225,6 +225,7 @@ class ConsultasMedicasController extends Controller
             'diagnosticohospitalizar'  => $cita_atendida->diagnosticohospitalizar,
             'tratamientohotpitalizar'  => $cita_atendida->tratamientohotpitalizar,
             'recetahospitalizar'       => $cita_atendida->recetahospitalizar,
+            'doctorConsulta'            => $cita_atendida->doctorConsulta,
             
             
         ]);
@@ -260,13 +261,15 @@ class ConsultasMedicasController extends Controller
             $consulta->pesocirugia           = $request->pesocirugia;
             $consulta->procedimientocirugia  = $request->procedimientocirugia;
             $consulta->recetacirugia         = $request->recetacirugia;
-            
+
             $consulta->fechahospitalizacion     = $request->fechahospitalizacion;
             $consulta->pesohospitalizar         = $request->pesohospitalizar;
             $consulta->temperaturahospitalizar  = $request->temperaturahospitalizar;
             $consulta->diagnosticohospitalizar  = $request->diagnosticohospitalizar;
             $consulta->tratamientohotpitalizar  = $request->tratamientohotpitalizar;
             $consulta->recetahospitalizar       = $request->recetahospitalizar;
+            $consulta->doctorConsulta           = $request->doctorConsulta;
+            
 
             $consulta->save();
             return response()->json([
