@@ -1948,7 +1948,7 @@ function expediente_paciente(id) //carga datos en el expediente del paciente.
                         if(data.array[i].peso !== "undefined"){
                             html+="<li><h6><strong>peso</strong></h6><p align='justify'><small>"+data.array[i].peso+"</small></p></li>";  
                         } 
-                        if(data.array[i].temperatura !== "undefined"){
+                        if(data.array[i].temperatura){
                             html+="<li><h6><strong>temperatura</strong></h6><p align='justify'><small>"+data.array[i].temperatura+"</small></p></li>";  
                         }
                         html+="<li><h6><strong>TRATAMIENTO</strong></h6><p align='justify'><small>"+data.array[i].tratamiento+"</small></p></li>";
