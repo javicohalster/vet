@@ -2196,6 +2196,8 @@ function atender(id)
             $('#tratamientohotpitalizar').val(data.tratamientohotpitalizar)
             $('#recetahospitalizar').val(data.recetahospitalizar)
             $('#doctorConsulta').val(data.doctorConsulta)
+            $('#fecharegistra').val(data.fecharegistra)
+            
             
             $('#id').val(data.id)
           },

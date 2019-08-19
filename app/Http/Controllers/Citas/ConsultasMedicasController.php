@@ -226,6 +226,8 @@ class ConsultasMedicasController extends Controller
             'tratamientohotpitalizar'  => $cita_atendida->tratamientohotpitalizar,
             'recetahospitalizar'       => $cita_atendida->recetahospitalizar,
             'doctorConsulta'            => $cita_atendida->doctorConsulta,
+            'fecharegistra'            => $cita_atendida->fecharegistra,
+            
             
             
         ]);
@@ -269,6 +271,8 @@ class ConsultasMedicasController extends Controller
             $consulta->tratamientohotpitalizar  = $request->tratamientohotpitalizar;
             $consulta->recetahospitalizar       = $request->recetahospitalizar;
             $consulta->doctorConsulta           = $request->doctorConsulta;
+            $consulta->fecharegistra           = $request->fecharegistra;
+            
             
 
             $consulta->save();

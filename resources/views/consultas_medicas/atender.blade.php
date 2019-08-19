@@ -182,8 +182,17 @@
                                         </table>
                                     </div>
                                 </div>-->
+
+                                
                                
-                                <div class="row sinpadding">                                    
+                                <div class="row sinpadding">  
+                                        <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">FECHA:</label>
+                                                    <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="fecharegistra" name="fecharegistra">                            
+                                                </div>
+                                            </div>
+                                </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label">ANAMNESIS:</label>
