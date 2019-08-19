@@ -23,7 +23,7 @@
         <div><span>SEXO</span> {{$paciente->genero}}</div>
         <div><span>PROPIETARIO</span> {{$paciente->apellidos}}</div>
         <div><span>COLOR</span> {{$paciente->vih}}</div>
-        <div><span>EMAIL</span>  <a href="mailto:john@example.com">{{$paciente->email}}</a></div>
+        <div><span>EMAIL</span>  <a href="mailto:{{$paciente->email}}">{{$paciente->email}}</a></div>
         <div><span>DIRECCIÓN</span> {{$paciente->direccion}}</div>
         <div><span>TELÉFONO</span> {{$paciente->telefono}}</div>
         <div><span>EDAD</span> {{$edad}}</div>
@@ -71,7 +71,7 @@
       </div>
     </main>
     <footer>
-      Documento generado por el sistema de reservas y gestión administrativa javicohal, Todos los derechos reservados &copy; 2019.
+      Documento generado por el sistema de gvets, Todos los derechos reservados javicohal &copy; 2019.
     </footer>
   </body>
 </html>
