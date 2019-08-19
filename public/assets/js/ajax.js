@@ -605,7 +605,7 @@ $('.timepicker').datetimepicker({
  
 });
 
-$("#diasrevacuna").click(function(){ 
+$("#diasrevacuna").change(function(){ 
 
         var fecha = new Date($('#fechavacuna').val());
         console.info(fecha)
