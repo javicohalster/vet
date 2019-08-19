@@ -76,7 +76,7 @@
             </div>
                        
         </div>
-        <h2>DESPARASITACION</h2>
+        <h3>DESPARASITACION</h3>
         <!-- parasitar-->
             <div class="row sinpadding">
                 <div class="col-md-6">
