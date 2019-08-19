@@ -110,7 +110,7 @@ class ConsultasMedicasController extends Controller
                 $vacunar ="";
                 $hospitalizar ="";
                 if (Auth::user()->can('leer-citas')) {
-                $ver = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_ver" rel="tooltip" title="Ver consulta" class="btn btn-simple btn-primary btn-icon edit"><i class="material-icons">remove_red_eye</i></a>';
+                $ver = '<a href="#" onclick="ver_atencion('.$consulta->id.')" data-toggle="modal" data-target="#modal_ver" rel="tooltip" title="Ver consulta" class="btn btn-simple btn-primary btn-icon edit"><i class="material-icons">remove_red_eye</i></a>';
             }
             if (Auth::user()->can('editar-atender')) {
                 $editar = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_atender" rel="tooltip" title="Editar" class="btn btn-simple btn-success btn-icon edit"><i class="material-icons">edit</i></a>';

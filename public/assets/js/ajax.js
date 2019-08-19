@@ -2206,6 +2206,61 @@ function atender(id)
           }
     });
 }
+
+
+function ver_atencion(id)
+{ //Carga mestra el modal para realizar una atención.
+    
+    var route = "./consultas/"+id+"/edit";
+    var csrf_token = $('meta[name="csrf-token"]').attr('content');
+    $.ajax({
+           url: route,
+           type: 'GET',
+        success:function(data){
+            $('#edad').html(data.edad)
+            $('#visitas').html(data.visitas)
+            $('#paciente').html(data.paciente)
+            $('#sintomas').val(data.sintomas)
+            $('#examenes').val(data.examenes)            
+            $('#tratamiento').val(data.tratamiento)
+            $('#observacion').val(data.observacion)
+            $('#temperatura').val(data.temperatura)
+            $('#diagnostico').val(data.diagnostico)
+            $('#receta').val(data.receta)
+            $('#peso').val(data.peso)
+            $('#fechavacuna').val(data.fechavacuna)
+            $('#tipovacuna').val(data.tipovacuna)
+            $('#diasrevacuna').val(data.diasrevacuna)
+            $('#fechavacunasiguiente').val(data.fechavacunasiguiente)
+            $('#pesodesparasitacion').val(data.pesodesparasitacion)
+            $('#descripciondesparacitacion').val(data.descripciondesparacitacion)
+            $('#posologia').val(data.posologia)
+            $('#dosis').val(data.dosis)
+            $('#diasdesparacitar').val(data.diasdesparacitar)
+            $('#fechasigueintedesparasitacion').val(data.fechasigueintedesparasitacion)            
+            $('#fechacirugia').val(data.fechacirugia)
+            $('#pesocirugia').val(data.pesocirugia)
+            $('#procedimientocirugia').val(data.procedimientocirugia)
+            $('#recetacirugia').val(data.recetacirugia)
+
+            $('#fechahospitalizacion').val(data.fechahospitalizacion)
+            $('#pesohospitalizar').val(data.pesohospitalizar)
+            $('#temperaturahospitalizar').val(data.temperaturahospitalizar)
+            $('#diagnosticohospitalizar').val(data.diagnosticohospitalizar)
+            $('#tratamientohotpitalizar').val(data.tratamientohotpitalizar)
+            $('#recetahospitalizar').val(data.recetahospitalizar)
+            $('#doctorConsulta').val(data.doctorConsulta)
+            $('#fecharegistra').val(data.fecharegistra)
+            
+            
+            $('#id').val(data.id)
+          },
+       error:function(){
+           alert('la operación falló');
+          }
+    });
+}
+
 function vacunar(id)
 { //Carga mestra el modal para realizar una atención.
     var route = "./consultas/"+id+"/edit";
