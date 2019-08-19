@@ -1602,7 +1602,20 @@ function getDoctorUp(especialidad, id_doctor){
 
 
    
-
+function getDoctoresO(especialidad){
+    $.get("./get-doctor/"+especialidad+"",function(response,speciality){
+        $("#doctorConsulta").empty()
+        if (response == "") {
+             $("#doctorConsulta").html("<option>--Seleccione--</option>")
+        }else{
+            for(i = 0; i <response.length; i++) {
+                $("#doctorConsulta").append("<option value='"+response[i].id+"'>"+response[i].apellidos+" "+response[i].nombres+"</option>")
+            }
+            $('#doctorConsulta').val(event.doctor_id)
+            $('.selectpicker').selectpicker('refresh')
+        }
+    })
+}
 
 function getDoctorAdd(especialidad){
     $.get("./get-doctor/"+especialidad+"",function(response,speciality){
