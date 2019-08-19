@@ -50,7 +50,7 @@
             @permission('leer-pacientes')
                  <li>
                 <a href="{{ url('pacientes') }}">
-                    <i class="material-icons">account_box</i>
+                    <i class="material-icons">pets</i>
                     <p>Pacientes</p>
                 </a>
             </li>
