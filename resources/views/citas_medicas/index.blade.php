@@ -44,7 +44,7 @@
                 
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
+            <!--<div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header" data-background-color="green">
                         <i class="material-icons">store</i>
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     <div class="row">
         <div class="col-md-12">
