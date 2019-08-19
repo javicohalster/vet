@@ -139,17 +139,17 @@ class ConsultasMedicasController extends Controller
             ]);
     }
 
-    public function hospitalizar(ValidarHospitalizarRequest $request, Query $queries, User $users, $id)
+    public function ver_atencion(ValidarHospitalizarRequest $request, Query $queries, User $users, $id)
     {
         $atender =   $queries->findOrFail($id);
         $paciente =  $users->findOrFail($atender->paciente_id);
         $visitas =   $queries->all()->where('paciente_id', '=', $atender->paciente_id)->where('estado', '=', 'atendido')->count();
         return response()->json([
                 'success' => true,
-                "paciente2"=> $paciente->nombres . ' '. $paciente->apellidos,
-                "edad2"    => $paciente->getYearsAttribute(),
-                "visitas2" => $visitas,
-                "id2"      => $atender->id
+                "paciente"=> $paciente->nombres . ' '. $paciente->apellidos,
+                "edad"    => $paciente->getYearsAttribute(),
+                "visitas" => $visitas,
+                "id"      => $atender->id
             ]);
     }
 
