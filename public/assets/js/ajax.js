@@ -1945,17 +1945,40 @@ function expediente_paciente(id) //carga datos en el expediente del paciente.
                         if(data.array[i].examenes){
                             html+="<li><h6><strong>ANAMNESIS</strong></h6><p align='justify'><small>"+data.array[i].examenes+"</small></p></li>";  
                         }  
-                        if(data.array[i].peso !== "undefined"){
+                        if(data.array[i].peso){
                             html+="<li><h6><strong>peso</strong></h6><p align='justify'><small>"+data.array[i].peso+"</small></p></li>";  
                         } 
                         if(data.array[i].temperatura){
                             html+="<li><h6><strong>temperatura</strong></h6><p align='justify'><small>"+data.array[i].temperatura+"</small></p></li>";  
                         }
-                        html+="<li><h6><strong>TRATAMIENTO</strong></h6><p align='justify'><small>"+data.array[i].tratamiento+"</small></p></li>";
+                        if(data.array[i].tratamiento){
+                            html+="<li><h6><strong>tratamiento</strong></h6><p align='justify'><small>"+data.array[i].tratamiento+"</small></p></li>";  
+                        }             
                         html+="<li><h6><strong>RESULTADOS</strong></h6><p align='justify'><small>"+data.array[i].observaciones+"</small></p></li>";
                         if(data.array[i].fechacirugia){
-                            html+="<li><h6><strong>fechacirugia</strong></h6><p align='justify'><small>"+data.array[i].fechacirugia+"</small></p></li>";  
+                            html+="<li><h6><strong>Fecha Cirugia</strong></h6><p align='justify'><small>"+data.array[i].fechacirugia+"</small></p></li>";  
+                        }
+                        if(data.array[i].procedimientocirugia){
+                            html+="<li><h6><strong>Procedimiento</strong></h6><p align='justify'><small>"+data.array[i].procedimientocirugia+"</small></p></li>";  
                         }  
+                        if(data.array[i].fechahospitalizacion){
+                            html+="<li><h6><strong>Fecha Hospitalización</strong></h6><p align='justify'><small>"+data.array[i].fechahospitalizacion+"</small></p></li>";  
+                        }  
+                        if(data.array[i].diagnosticohospitalizar){
+                            html+="<li><h6><strong>Diagnóstico Hospitalización</strong></h6><p align='justify'><small>"+data.array[i].diagnosticohospitalizar+"</small></p></li>";  
+                        }
+                        if(data.array[i].fechavacuna){
+                            html+="<li><h6><strong>Fecha Vacuna</strong></h6><p align='justify'><small>"+data.array[i].fechavacuna+"</small></p></li>";  
+                        }
+                        if(data.array[i].tipovacuna){
+                            html+="<li><h6><strong>Vacuna</strong></h6><p align='justify'><small>"+data.array[i].tipovacuna+"</small></p></li>";  
+                        } 
+                        if(data.array[i].fechadesparasitacion){
+                            html+="<li><h6><strong>Fecha Desparasitación</strong></h6><p align='justify'><small>"+data.array[i].fechadesparasitacion+"</small></p></li>";  
+                        }
+                        if(data.array[i].descripciondesparacitacion){
+                            html+="<li><h6><strong>Descripción</strong></h6><p align='justify'><small>"+data.array[i].descripciondesparacitacion+"</small></p></li>";  
+                        } 
                         html+="</ol></div></div></div></div>";
                 }
             }
