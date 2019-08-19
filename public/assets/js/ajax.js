@@ -1367,7 +1367,7 @@ $( "#add_usuario" ).click(function(event){  //esta funcion agrega nuevos doctore
         var route = ""
         var dataString  = $( '#form_add_usuario' ).serializeArray()
         var tipo = $(".tipo").val()
-        if (tipo === "doctor"){route = "/doctores/"}else{route = "/recepcionistas/"}
+        if (tipo === "doctor"){route = "./doctores/"}else{route = "./recepcionistas/"}
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             url: route,
@@ -2172,7 +2172,7 @@ function atender(id)
             $('#pesocirugia').val(data.pesocirugia)
             $('#procedimientocirugia').val(data.procedimientocirugia)
             $('#recetacirugia').val(data.recetacirugia)
-            
+
             $('#fechahospitalizacion').val(data.fechahospitalizacion)
             $('#pesohospitalizar').val(data.pesohospitalizar)
             $('#temperaturahospitalizar').val(data.temperaturahospitalizar)
