@@ -607,7 +607,12 @@ $('.timepicker').datetimepicker({
 
 $("#diasrevacuna").change(function(){ 
 
-        var fecha = new Date($('#fechavacuna').val());
+    //  $("#fechavacuna").datepicker({
+     //   dateFormat: 'dd/mm/yy'
+    //  });
+      
+     // $("#datepicker").datepicker('setDate', now.format('DD/MM/YYYY'));
+        var fecha = new Date($('#fechavacuna').val().format('DD-MM-YYYY'));
         console.info(fecha)
         var dias = $('#diasrevacuna').val(); // Número de días a agregar
         fecha.setDate(fecha.getDate() + dias);
