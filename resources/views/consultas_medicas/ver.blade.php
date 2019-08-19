@@ -30,7 +30,7 @@
       </ul>
       <!-- Tab panes -->
       <form id="form_consultav">
-            <input id="id1" name="id1" type="text" hidden="true" />           
+            <input id="idv" name="idv" type="text" hidden="true" />           
             <div class="row sinpadding">  
                     <div class="col-md-12"> 
                         <div class="form-group">
