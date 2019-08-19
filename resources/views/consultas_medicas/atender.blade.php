@@ -285,11 +285,7 @@
                     <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="control-label">TEMPERATURA ºC:</label>
-                                    <input type="number" class="form-control" id="temperaturahospitalizar" name="temperaturahospitalizar" step=".01"/>
-                                    <input type="text"  id="sintomas" name="sintomas" value="N" hidden="true"/>
-                                    <input type="text"  id="examenes" name="examenes" value="N" hidden="true"/>
-                                    <input type="text"  id="tratamiento" name="tratamiento" value="N" hidden="true"/>
-                                    <input type="text"  id="observacion" name="observacion" value="N" hidden="true"/>
+                                    <input type="number" class="form-control" id="temperaturahospitalizar" name="temperaturahospitalizar" step=".01"/>                                  
                                 </div>                            
                     </div>                  
                     <div class="col-md-6">
