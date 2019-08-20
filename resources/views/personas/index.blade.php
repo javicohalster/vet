@@ -22,4 +22,5 @@
 	</div>
 </div>
 @include('personas.modal')
+@include('recepcionistas.modal_editar')
 @endsection
