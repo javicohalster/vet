@@ -3,11 +3,10 @@
     <thead>
         <tr>
             <th>Acciones</th>
-            <th>Rut</th>
+            <th>C.I.</th>
             <th>Nombre</th>
             <th>Apellidos</th>
-            <th>Email</th>
-           
+            <th>Email</th>           
         </tr>
     </thead>
     <tbody>
