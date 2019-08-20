@@ -132,7 +132,7 @@ class PacienteController extends Controller
             User::destroy($id);
             return response()->json([
                 'success' => true,
-                "message" => "los registros del paciente ".$user->apellidos." han sido eliminados correctamente !",
+                "message" => "los registros del paciente ".$user->nombres." han sido eliminados correctamente !",
                 "type"    => 'success'
 
             ]);
