@@ -210,6 +210,7 @@ class ConsultasMedicasController extends Controller
             'fechavacunasiguiente'  => $cita_atendida->fechavacunasiguiente,
             'pesodesparasitacion'            => $cita_atendida->pesodesparasitacion,
             'descripciondesparacitacion'     => $cita_atendida->descripciondesparacitacion,
+            'fechadesparasitacion'     => $cita_atendida->fechadesparasitacion,            
             'posologia'                      => $cita_atendida->posologia,
             'dosis'                          => $cita_atendida->dosis,
             'diasdesparacitar'               => $cita_atendida->diasdesparacitar,
@@ -259,11 +260,12 @@ class ConsultasMedicasController extends Controller
             $consulta->dosis                          = $request->dosis;
             $consulta->diasdesparacitar               = $request->diasdesparacitar;
             $consulta->fechasigueintedesparasitacion  = $request->fechasigueintedesparasitacion;
+            $consulta->fechadesparasitacion  = $request->fechadesparasitacion;
             $consulta->fechacirugia          = $request->fechacirugia;
             $consulta->pesocirugia           = $request->pesocirugia;
             $consulta->procedimientocirugia  = $request->procedimientocirugia;
             $consulta->recetacirugia         = $request->recetacirugia;
-
+            
             $consulta->fechahospitalizacion     = $request->fechahospitalizacion;
             $consulta->pesohospitalizar         = $request->pesohospitalizar;
             $consulta->temperaturahospitalizar  = $request->temperaturahospitalizar;
