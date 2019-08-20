@@ -222,7 +222,7 @@ var listar_pacientes = function()
         "responsive": true,
         "columns":[
             {data: 'action', name: 'action', orderable: false, searchable: false, class:"text-left"},
-            {data: 'rut', name: 'rut'},
+            {data: 'id', name: 'id'},
             {data: 'nombres', name: 'nombres'},
             {data: 'apellidos', name: 'apellidos'},
             {data: 'telefono', name: 'telefono'},

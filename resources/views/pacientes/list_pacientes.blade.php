@@ -3,7 +3,7 @@
     <thead>
         <tr>
             <th>Acciones</th>
-            <th>C.I. Prop.</th>
+            <th>Nro. Hist.</th>
             <th>Nombre Mascota</th>
             <th>Propietario</th>
             <th>Teléfono</th>
