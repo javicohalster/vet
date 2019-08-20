@@ -10838,7 +10838,7 @@ footer .btn {
 }
 
 .color_letra_ver{
-  color: #FFFFFF !important;
+  color: rgb(40, 139, 31) !important;
 }
 @media (min-width: 992px) {
   .navbar-form {
@@ -10884,7 +10884,7 @@ footer .btn {
     display: none;
   }
   .color_letra_ver{
-    color: #FFFFFF !important;
+    color: rgb(40, 139, 31) !important;
   }
 }
 /*          Changes for small display      */
@@ -11543,7 +11543,7 @@ footer .btn {
   }
 
   .color_letra_ver{
-    color: #FFFFFF !important;
+    color: rgb(40, 139, 31) !important;
   }
 }
 @media (min-width: 768px) {
@@ -11551,7 +11551,7 @@ footer .btn {
     margin-left: 0;
   }
   .color_letra_ver{
-    color: #FFFFFF !important;
+    color: rgb(40, 139, 31) !important;
   }
 }
 @media (max-width: 767px) {
@@ -11560,7 +11560,7 @@ footer .btn {
     padding-right: 0;
   }
   .color_letra_ver{
-    color: #FFFFFF !important;
+    color: rgb(40, 139, 31) !important;
   }
 
   .fileinput {
@@ -11591,7 +11591,7 @@ footer .btn {
     margin-right: -20px;
   }
   .color_letra_ver{
-    color: #FFFFFF !important;
+    color: rgb(40, 139, 31) !important;
   }
 
   .table-responsive {
@@ -11603,6 +11603,6 @@ footer .btn {
     max-width: 211px;
   }
   .color_letra_ver{
-    color: #FFFFFF !important;
+    color: rgb(40, 139, 31) !important;
   }
 }
