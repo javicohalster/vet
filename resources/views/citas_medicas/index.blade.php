@@ -38,7 +38,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">how_to_reg</i>Pendientes
+                            <i class="material-icons">how_to_reg</i><a href="./consultas">Pendientes</a>
                         </div>
                     </div>
                 
