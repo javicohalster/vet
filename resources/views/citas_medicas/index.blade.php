@@ -27,7 +27,7 @@
                 
                     <div class="card-header" data-background-color="rose">
                     <a href="./consultas">
-                        <i class="material-icons">equalizer</i>
+                        <i class="material-icons">how_to_reg</i>
                     </a>
                     </div>
                     <div class="card-content">
@@ -38,7 +38,7 @@
                     </div>
                     <div class="card-footer">
                         <div class="stats">
-                            <i class="material-icons">local_offer</i> Tracked from Google Analytics
+                            <i class="material-icons">how_to_reg</i>Pendientes
                         </div>
                     </div>
                 
