@@ -2249,7 +2249,8 @@ function atender(id)
             $('#pesocirugia').val(data.pesocirugia)
             $('#procedimientocirugia').val(data.procedimientocirugia)
             $('#recetacirugia').val(data.recetacirugia)
-
+            $('#fechadesparasitacion').val(data.fechadesparasitacion)
+            
             $('#fechahospitalizacion').val(data.fechahospitalizacion)
             $('#pesohospitalizar').val(data.pesohospitalizar)
             $('#temperaturahospitalizar').val(data.temperaturahospitalizar)
