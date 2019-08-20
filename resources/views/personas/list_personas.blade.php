@@ -6,7 +6,7 @@
             <th>Nombre</th>
             <th>Apellidos</th>
             <th>Email</th>
-            <th class="text-right">Acciones</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
