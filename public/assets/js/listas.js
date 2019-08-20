@@ -252,11 +252,12 @@ var listar_personas = function()
         },
         //"responsive": true,
         "columns":[
+            {data: 'action', name: 'action', orderable: false, searchable: false, class:"text-left"}
             {data: 'rut', name: 'rut'},
             {data: 'nombres', name: 'nombres'},
             {data: 'apellidos', name: 'apellidos'},
             {data: 'email', name: 'email'},
-            {data: 'action', name: 'action', orderable: false, searchable: false, class:"text-right"}
+            
         ],
     })
 }
