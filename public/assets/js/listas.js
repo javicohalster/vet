@@ -132,7 +132,7 @@ var listar_recepcionistas = function()
         "language": {
             url: "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
         },
-        //"responsive": true,
+        "responsive": true,
         "columns":[
             {data: 'action', name: 'action', orderable: false, searchable: false},
             {data: 'rut', name: 'rut'},
