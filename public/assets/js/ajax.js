@@ -1757,6 +1757,7 @@ function carga_usuario(id)//carga datos del doctor y recepcionista en el modal e
             $("INPUT[name=apellidos]").val([data.apellidos])
             $("INPUT[name=email]").val([data.email])
             $("INPUT[name=telefono]").val([data.telefono])
+            $("INPUT[name=rut]").val([data.rut])
             $("INPUT[name=direccion]").val([data.direccion])
             $("INPUT[name=nacimiento]").val([data.nacimiento])
             $("INPUT[name=id]").val(data.id)

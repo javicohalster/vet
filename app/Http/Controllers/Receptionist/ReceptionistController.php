@@ -66,6 +66,7 @@ class ReceptionistController extends ApiController
             'success'     => true,
             'id'          => $recepcionista->id,
             'avatar'      => $recepcionista->avatar,
+            'rut'         => $recepcionista->rut,
             'nombres'     => $recepcionista->nombres,
             'apellidos'   => $recepcionista->apellidos,
             'nacimiento'  => Carbon::parse($recepcionista->nacimiento)->format('d-m-Y'),
@@ -87,6 +88,7 @@ class ReceptionistController extends ApiController
             $recepcionista->telefono           = $request->telefono;
             $recepcionista->direccion          = $request->direccion;
             $recepcionista->genero             = $request->genero;
+            $recepcionista->rut                = $request->rut;
             $recepcionista->save();
             return response()->json([
              "tipo" => "recepcionista",

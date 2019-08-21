@@ -3,7 +3,15 @@
         <div class="col-md-8">
             <form class="form" id="form_editar_usuario">
                 <input type="text" name="id" id="id" hidden="true"> 
-                <input type="text" name="tipo" class="tipo" id="tipo" value="doctor" hidden="true">
+                <input type="text" name="tipo" class="tipo" id="tipo" value="recepciones" hidden="true">
+                <div class="row sinpadding">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">C.I:</label>
+                            <input type="text" class="form-control" id="rut" name="rut">
+                        </div>
+                    </div>
+                </div>
                 <div class="row sinpadding">
                     <div class="col-md-12">
                         <div class="form-group">

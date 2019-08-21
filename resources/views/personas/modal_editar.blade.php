@@ -1,5 +1,5 @@
 <!-- notice modal -->
-<div class="modal fade" id="modal_editar_doctor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal_editar_recepcionista" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header-red">
@@ -7,7 +7,7 @@
                 <h6>EDITAR PERSONA: <b><span class="title-name"></span></b></h6>
             </div>
             <div class="modal-body-edit">
-                @include('doctores.form_editar')
+                @include('personas.form_editar')
             </div>
             <div class="modal-footer text-center">
                 <a href="#" id="actualizar_usuario" class="btn btn-danger pull-right">Actualizar</a>
