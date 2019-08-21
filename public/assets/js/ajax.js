@@ -1375,7 +1375,7 @@ $( "#add_usuario" ).click(function(event){  //esta funcion agrega nuevos doctore
         var route = ""
         var dataString  = $( '#form_add_usuario' ).serializeArray()
         var tipo = $(".tipo").val()
-        if (tipo === "doctor"){route = "./doctores/"}else{route = "./recepcionistas/"}
+        if (tipo === "doctor"){route = "./doctores/"}else{route = "./recepcionistas"}
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             url: route,
