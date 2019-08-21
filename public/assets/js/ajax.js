@@ -12,6 +12,12 @@ $('#dias').datepicker({
     multidate:true,
 });
 
+$('#fecha_inicio').click(function (e) {
+    e.preventDefault();
+    getFormattedDateHora();
+});
+
+
 $('#myTabs a').click(function (e) {
     e.preventDefault();
     $(this).tab('show');
@@ -645,6 +651,16 @@ $("#diasrevacuna").change(function(){
        console.info(fecha)
     
 });
+
+function getFormattedDateHora() {
+    var date = new Date();
+    var horas = date.getHours() + ":" + date.getMinutes();
+    var horas2 = date.getHours() + ":" + (date.getMinutes() + 15);   
+    $('#hora_inicio').val(horas);
+    $('#hora_fin').val(horas2);
+    //return horas;
+  }
+
 function getFormattedDate(date) {
     var year = date.getFullYear();
   
