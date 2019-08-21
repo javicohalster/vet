@@ -4,11 +4,11 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="add_doc_1">
                     <form class="form" id="form_add_usuario">
-                    	<input type="text" name="tipo" class="tipo" value="doctor" hidden="true">
+                    	<input type="text" name="tipo" class="tipo" value="recepcionista" hidden="true">
                         <div class="row sinpadding">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
-                                    <label class="control-label">Rut:</label>
+                                    <label class="control-label">C.I.:</label>
                                     <input type="text" class="form-control" id="rut_add" name="rut_add">
                                 </div>
                             </div>
