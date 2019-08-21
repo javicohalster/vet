@@ -4,7 +4,7 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="add_doc_1">
                     <form class="form" id="form_add_usuario">
-                    	<input type="text" name="tipo" class="tipo" value="recepcionista" hidden="true">
+                    	<input type="text" name="tipo" class="tipo" value="doctor" hidden="true">
                         <div class="row sinpadding">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
