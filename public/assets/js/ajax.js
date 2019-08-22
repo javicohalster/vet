@@ -1945,6 +1945,9 @@ function expediente_paciente(id) //carga datos en el expediente del paciente.
                         if(data.array[i].sintomas){
                             html+="<li><h6><strong>sintomas</strong></h6><p align='justify'><small>"+data.array[i].sintomas+"</small></p></li>";  
                         }
+                        if(data.array[i].diagnostico{
+                            html+="<li><h6><strong>diagnostico</strong></h6><p align='justify'><small>"+data.array[i].diagnostico+"</small></p></li>";  
+                        }
                         if(data.array[i].examenes){
                             html+="<li><h6><strong>ANAMNESIS</strong></h6><p align='justify'><small>"+data.array[i].examenes+"</small></p></li>";  
                         }  
