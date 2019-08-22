@@ -126,7 +126,13 @@
                                 <select id="descripciondesparacitacionv" name="descripciondesparacitacionv" class="form-control" data-style="select-with-transition">
                                     <option value="">-- Seleccione --</option>
                                     <option value="ALCOBEST 25%">ALCOBEST 25%</option> 
-                                    <option value="CANICUR">CANICUR</option>                                                                                                             
+                                    <option value="ALBEX TABLETAS">ALBEX TABLETAS</option>
+                                    <option value="IVERMECTINA 1%">IVERMECTINA 1%</option>
+                                    <option value="ALBENDAZOL POTENCIADO">ALBENDAZOL POTENCIADO</option>
+                                    <option value="PIRANTEL + PRAZIQUANTEL">PIRANTEL + PRAZIQUANTEL</option>
+                                    <option value="CESTODAN">CESTODAN</option>                               
+                                    <option value="CANICUR">CANICUR</option> 
+                                    <option value="FEBENDAZOL">FEBENDAZOL</option>                                                                                                               
                                 </select>                             
                             </div>
                     </div>
