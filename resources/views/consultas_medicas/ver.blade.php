@@ -55,9 +55,27 @@
                         <div class="form-group">
                             <label class="control-label">TIPO:</label>
                             <select id="tipovacunav" name="tipovacunav" class="form-control" data-style="select-with-transition">
-                                <option value="">-- Seleccione --</option>
-                                <option value="PFIZER 5L">PFIZER 5L</option> 
-                                <option value="PFIZER 5L4">PFIZER 5L4</option>                                                                                                            
+                                <option value="">-- Seleccione --</option>                               
+                                <option value="BIOZOO PUPPY FENCE L5">BIOZOO PUPPY FENCE L5</option>
+                                <option value="HIPRADOG PV">HIPRADOG PV</option>
+                                <option value="HIPRADOG 7">HIPRADOG 7</option>
+                                <option value="PFIZER 5L">PFIZER 5L</option>
+                                <option value="PFIZER 5L + RABIGEN MONO">PFIZER 5L + RABIGEN MONO</option>
+                                <option value="PFIZER 5L4">PFIZER 5L4</option>
+                                <option value="PFIZER 5L4 CV">PFIZER 5L4 CV</option>
+                                <option value="PFIZER BRONCHICINE">PFIZER BRONCHICINE</option>
+                                <option value="BAGOVAC RABIA">BAGOVAC RABIA</option>
+                                <option value="VIRBAC CANIGEN MHA2PPi / LR">VIRBAC CANIGEN MHA2PPi / LR</option>
+                                <option value="HIPRADOG 7 - BAGOVAC RABIA">HIPRADOG 7 - BAGOVAC RABIA</option>
+                                <option value="PFIZER 5L - BAGOVAC RABIA">PFIZER 5L - BAGOVAC RABIA</option>
+                                <option value="PFIZER 5L4 - BAGOVAC RABIA">PFIZER 5L4 - BAGOVAC RABIA</option>
+                                <option value="VIRBAC FELIGEN CPR">VIRBAC FELIGEN CPR</option>
+                                <option value="VIRBAC FELIGEN CPR - BAGOVAC RABIA">VIRBAC FELIGEN CPR - BAGOVAC RABIA</option> 
+                                <option value="PFIZER FELOCELL 3">PFIZER FELOCELL 3</option> 
+                                <option value="PFIZER FELOCELL 3 - BAGOVAC RABIA">PFIZER FELOCELL 3 - BAGOVAC RABIA</option> 
+                                <option value="VIRBAC RABIGEN MONO">VIRBAC RABIGEN MONO</option> 
+                                <option value="VIRBAC CANIGEN MHA2PPi / L">VIRBAC CANIGEN MHA2PPi / L</option> 
+                                <option value="DEFENSOR">DEFENSOR</option>                                                                                                            
                             </select>                             
                         </div>
                 </div>                         
