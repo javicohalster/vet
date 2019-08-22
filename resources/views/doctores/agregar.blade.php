@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-12">
                 <form class="form" id="form_add_usuario">
-                    <input type="text" name="tipo" class="tipo" value="doctor" hidden="true">
+                    <input type="text" name="tipo" id="tipo" class="tipo" value="doctor" hidden="true">
                     <div class="row sinpadding">
                         <div class="col-md-12">
                             <div class="form-group label-floating">

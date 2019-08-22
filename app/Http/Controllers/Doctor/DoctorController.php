@@ -85,7 +85,7 @@ class DoctorController extends ApiController
         $doctor = User::findOrFail($id);
         return response()->json([
             'success'     => true,
-            'id'          => $doctor->id,
+            'id'          => $doctor->id,          
             'avatar'      => $doctor->avatar,
             'nombres'     => $doctor->nombres,
             'apellidos'   => $doctor->apellidos,
@@ -101,7 +101,7 @@ class DoctorController extends ApiController
     {
         if($request->ajax()){
             $doctor = User::findOrFail($id);
-            $doctor->nombres            = $request->nombres;
+            $doctor->nombres            = $request->nombres;              
             $doctor->apellidos          = $request->apellidos;
             $doctor->nacimiento         = Carbon::parse($request->nacimiento)->format('Y-m-d');
             $doctor->email              = $request->email;

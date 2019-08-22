@@ -12,6 +12,12 @@ $('#dias').datepicker({
     multidate:true,
 });
 
+$('#fecha_inicio').click(function (e) {
+    e.preventDefault();
+    getFormattedDateHora();
+});
+
+
 $('#myTabs a').click(function (e) {
     e.preventDefault();
     $(this).tab('show');
@@ -645,6 +651,16 @@ $("#diasrevacuna").change(function(){
        console.info(fecha)
     
 });
+
+function getFormattedDateHora() {
+    var date = new Date();
+    var horas = date.getHours() + ":" + date.getMinutes();
+    var horas2 = date.getHours() + ":" + (date.getMinutes() + 15);   
+    $('#hora_inicio').val(horas);
+    $('#hora_fin').val(horas2);
+    //return horas;
+  }
+
 function getFormattedDate(date) {
     var year = date.getFullYear();
   
@@ -1374,8 +1390,8 @@ $( "#add_paciente" ).click(function(event){
 $( "#add_usuario" ).click(function(event){  //esta funcion agrega nuevos doctores y recepcionistas.
         var route = ""
         var dataString  = $( '#form_add_usuario' ).serializeArray()
-        var tipo = $(".tipo").val()
-        if (tipo === "doctor"){route = "./doctores/"}else{route = "./recepcionistas/"}
+        var tipo = $("#tipo").val()
+        if (tipo === "doctor"){route = "./doctores"}else{route = "./recepcionistas"}
         $.ajax({
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             url: route,
@@ -1741,6 +1757,7 @@ function carga_usuario(id)//carga datos del doctor y recepcionista en el modal e
             $("INPUT[name=apellidos]").val([data.apellidos])
             $("INPUT[name=email]").val([data.email])
             $("INPUT[name=telefono]").val([data.telefono])
+            $("INPUT[name=rut]").val([data.rut])
             $("INPUT[name=direccion]").val([data.direccion])
             $("INPUT[name=nacimiento]").val([data.nacimiento])
             $("INPUT[name=id]").val(data.id)
