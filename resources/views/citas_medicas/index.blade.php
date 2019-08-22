@@ -8,7 +8,7 @@
     <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
-                    <div class="card-header" data-background-color="orange">
+                    <div class="card-header" data-background-color="blue">
                         <i class="material-icons">pets</i>
                     </div>
                     <div class="card-content">
@@ -25,7 +25,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                 
-                    <div class="card-header" data-background-color="rose">
+                    <div class="card-header" data-background-color="green">
                     <a href="./consultas">
                         <i class="material-icons">how_to_reg</i>
                     </a>
