@@ -9,11 +9,15 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header" data-background-color="blue">
-                        <i class="material-icons">pets</i>
+                            <a href="./pacientes">
+                               <i class="material-icons">pets</i>
+                            </a>
                     </div>
                     <div class="card-content">
+                        <a href="./pacientes">
                         <p class="category">Pacientes</p>
                         <h3 class="card-title" id="total_pacientes">{{$cantidad_pacientes}}</h3>
+                        </a>
                     </div>
                     <div class="card-footer">
                         <div class="stats">
