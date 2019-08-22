@@ -1,4 +1,4 @@
-<div class="sidebar" data-active-color="rose" data-background-color="green" data-image="{{ asset('assets/img/sidebar.jpg') }}">
+<div class="sidebar" data-active-color="green" data-background-color="blue" data-image="{{ asset('assets/img/sidebar.jpg') }}">
     <div class="logo">
         <a href="https://www.cvsanjosedelcondado.com/" class="simple-text">
         {{ config('app.name') }}
