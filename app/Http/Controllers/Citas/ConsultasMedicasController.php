@@ -82,16 +82,31 @@ class ConsultasMedicasController extends Controller
 
     public function carga_atendidos()
     {
+        //nuevo 
+        //doctorConsulta
         if (Auth::user()->hasRole('doctor')) {
-       $consultas = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
+            $consultas = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
+            ->join('users as doctor', 'queries.doctorConsulta', '=', 'doctor.id')
+            ->join('specialities as especialidad', 'queries.speciality_id', '=', 'especialidad.id')
+            ->select(['queries.id as id', 'queries.fecha_inicio', 'paciente.nombres as paciente', 'paciente.apellidos as apellidos', 'doctor.apellidos as doctor', 'especialidad.nombre as especialidad'])->where('queries.estado', '=' , 'atendido')->where('doctor_id', Auth::user()->id)->get();
+
+      /* $consultas = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
         ->join('users as doctor', 'queries.doctor_id', '=', 'doctor.id')
         ->join('specialities as especialidad', 'queries.speciality_id', '=', 'especialidad.id')
         ->select(['queries.id as id', 'queries.fecha_inicio', 'paciente.nombres as paciente', 'paciente.apellidos as apellidos', 'doctor.apellidos as doctor', 'especialidad.nombre as especialidad'])->where('queries.estado', '=' , 'atendido')->where('doctor_id', Auth::user()->id)->get();
+    */
     }else{
+
+        $consultas = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
+        ->join('users as doctor', 'queries.doctorConsulta', '=', 'doctor.id')
+        ->join('specialities as especialidad', 'queries.speciality_id', '=', 'especialidad.id')
+        ->select(['queries.id as id', 'queries.fecha_inicio', 'paciente.nombres as paciente', 'paciente.apellidos as apellidos', 'doctor.apellidos as doctor', 'especialidad.nombre as especialidad'])->where('queries.estado', '=' , 'atendido');
+        /*
         $consultas = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
         ->join('users as doctor', 'queries.doctor_id', '=', 'doctor.id')
         ->join('specialities as especialidad', 'queries.speciality_id', '=', 'especialidad.id')
         ->select(['queries.id as id', 'queries.fecha_inicio', 'paciente.nombres as paciente', 'paciente.apellidos as apellidos', 'doctor.apellidos as doctor', 'especialidad.nombre as especialidad'])->where('queries.estado', '=' , 'atendido');
+    */
     }
         return  datatables()->of($consultas)
             ->editColumn('paciente', function ($consulta) {
