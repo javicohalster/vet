@@ -19,7 +19,7 @@
 
           <div class="col-md-5">
                <div class="card card-login card-hidden">
-                    <div class="card-header text-center" data-background-color="rose">
+                    <div class="card-header text-center" data-background-color="green">
                            <h4 class="card-title">INFORMACIÓN BÁSICA</h4>
                     </div>
                     <div class="card-content">
@@ -67,7 +67,7 @@
 
           <div class="col-md-5">
                <div class="card card-login card-hidden">
-                    <div class="card-header text-center" data-background-color="rose">
+                    <div class="card-header text-center" data-background-color="green">
                            <h4 class="card-title">ANTECEDENTES PERSONALES</h4>
                     </div>
                     <div class="card-content">
