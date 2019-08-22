@@ -39,7 +39,7 @@
         </div>
     </nav>
     <div class="wrapper wrapper-full-page">
-        <div class="full-page login-page" filter-color="black" data-image="{{ asset('images/rawpixel-com-609002-unsplash.jpg') }}">
+        <div class="full-page login-page" filter-color="black" data-image="{{ asset('images/rawpixel-com-593598-unsplash.jpg') }}">
             <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
             <div class="content">
                 <div class="container">
@@ -48,7 +48,7 @@
                             <form id="form_login" role="form">
                             {{ csrf_field() }}
                                 <div class="card card-login card-hidden">
-                                    <div class="card-header text-center" data-background-color="red">
+                                    <div class="card-header text-center" data-background-color="blue">
                                         <h4 class="card-title">Iniciar Sesión</h4>
                                     </div>
                                     <div class="card-content">
