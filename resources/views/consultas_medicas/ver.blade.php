@@ -91,7 +91,7 @@
                     <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">FECHA DESPARASITACION:</label>
-                                <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="fechadesparasitacion" name="fechadesparasitacion">                            
+                                <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="fechadesparasitacionv" name="fechadesparasitacionv">                            
                             </div>
                     </div>
                     <div class="col-md-6">
@@ -128,7 +128,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">DOSIS:</label>
-                            <input type="text" class="form-control" id="dosis" name="dosis"/>
+                            <input type="text" class="form-control" id="dosisv" name="dosisv"/>
                         </div>
                     </div>                   
                 </div>
@@ -202,7 +202,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">PESO Kg:</label>
-                                                <input type="number" class="form-control" id="pesovv" name="peso" step=".01"/>
+                                                <input type="number" class="form-control" id="pesov" name="pesov" step=".01"/>
                                             </div>
                                         </div>
                                     </div>
