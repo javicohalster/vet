@@ -39,7 +39,7 @@
         </div>
     </nav>
     <div class="wrapper wrapper-full-page">
-        <div class="full-page login-page" filter-color="black" data-image="{{ asset('images/rawpixel-com-593598-unsplash.jpg') }}">
+        <div class="full-page login-page" filter-color="black" data-image="{{ asset('images/854888-clinica-veterinaria-venus-fondo.jpg') }}">
             <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
             <div class="content">
                 <div class="container">
