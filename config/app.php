@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Clínica Veterinaria "San José del Condado"'),
+    'name' => env('APP_NAME', 'VETERINARIA "SAN JOSÉ DEL CONDADO"'),
 
     /*
     |--------------------------------------------------------------------------
