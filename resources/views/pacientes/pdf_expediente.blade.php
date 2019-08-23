@@ -9,7 +9,7 @@
   <body>
     <header class="clearfix">
       <div id="logo">
-        <img src="https://irp-cdn.multiscreensite.com/1be65cd3/DESKTOP/jpg/995.jpg">
+        <img src="./images/logo.jpg">
       </div>
       <h1>EXPEDIENTE CLÍNICO DEL PACIENTE</h1>
       <div id="company" class="clearfix">
@@ -19,7 +19,10 @@
       </div>
       <div id="project">
         <div><span>C.I</span>{{$paciente->rut}}</div>
-        <div><span>PACIENTE</span> {{$paciente->nombres}} <span>RAZA</span>{{$paciente->sangre}}</div>
+        <div><span>PACIENTE</span> {{$paciente->nombres}} </div>
+        <div><span>RAZA</span> {{$paciente->sangre}} </div> 
+        <div><span>ESPECIE</span> {{$paciente->medicamento}} </div>  
+        <div><span>ESTERILIZADO</span> {{$paciente->alergias}} </div>    
         <div><span>SEXO</span> {{$paciente->genero}}</div>
         <div><span>PROPIETARIO</span> {{$paciente->apellidos}}</div>
         <div><span>COLOR</span> {{$paciente->vih}}</div>

@@ -23,7 +23,8 @@ class ValidateAddPacienteRequest extends FormRequest
      public function rules()
     {
          return [
-            'rut_add'       => 'required|unique:users,rut',
+            'rut_add'       => 'required',
+           // 'rut_add'       => 'required|unique:users,rut',
             'nombres_add'   => 'required|string',
             'apellidos_add' => 'required|string',
             'nacimiento_add'=> 'required',
@@ -38,7 +39,7 @@ class ValidateAddPacienteRequest extends FormRequest
     {
         return [
             'rut_add.required' => 'El campo rut es obligatorio.',
-            'rut_add.unique' => 'El campo rut pertenece a otro paciente.',
+            //'rut_add.unique' => 'El campo rut pertenece a otro paciente.',
             'nombres_add.required' => 'El campo nombres es obligatorio.',
             'nombres_add.string' => 'El campo nombres solo debe contener letras.',
             'apellidos_add.required' => 'El campo apellidos es obligatorio.',
