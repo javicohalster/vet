@@ -1957,6 +1957,7 @@ function expediente_paciente(id) //carga datos en el expediente del paciente.
                         html+="<div class='panel-heading' role='tab' id='"+data.array[i].id+"'>";
                         html+="<a class='collapsed' role='button' data-toggle='collapse' data-parent='#accordion' href='#"+data.array[i].id+"1' aria-expanded='false' aria-controls='"+data.array[i].id+"1'>";
                         html+="<h4 class='panel-title'>"+data.fecha[i]+"<i class='material-icons'>keyboard_arrow_down</i></h4></a></div>";
+                        html+='<a href="pdf-expediente/'+data.paciente_id+'/'+data.array[i].id+'" id="download_expediente" class="pull-right"><span class="btn-label"><i class="material-icons">save_alt</i></span></a>';
                         html+="<div id='"+data.array[i].id+"1' class='panel-collapse collapse' role='tabpanel' aria-labelledby='"+data.array[i].id+"'>";
                         html+="<div class='panel-body'><table><tbody><tr><th>Atendido por: </th><td>&nbsp;</td><td> Dr/a. "+data.array[i].nombres_doctor.ucwords()+" "+data.array[i].apellidos_doctor.ucwords()+"</td><td>&nbsp;</td><td>&nbsp;</td><th>Especialidad:</th><td>&nbsp;</td><td>"+data.array[i].especialidad.ucwords()+"</td></tr></tbody></table><div id='divider'></div><ol>"
                         if(data.array[i].sintomas){                            
@@ -2006,9 +2007,11 @@ function expediente_paciente(id) //carga datos en el expediente del paciente.
                             html+="<li><h6><strong>Descripción</strong></h6><p align='justify'><small>"+data.array[i].descripciondesparacitacion+"</small></p></li>";  
                         } 
                         html+="</ol></div></div></div></div>";
+                        
+                       // $('#boton').html('<a href="pdf-expediente/'+data.paciente_id+'/'+data.array[i].id+'" id="download_expediente" class="btn btn-info pull-right"><span class="btn-label"><i class="material-icons">file_download</i></span>Descargar</a>')
                 }
             }
-             $('#boton').html('<a href="pdf-expediente/'+data.paciente_id+'" id="download_expediente" class="btn btn-info pull-right"><span class="btn-label"><i class="material-icons">file_download</i></span>Descargar</a>')
+          //   $('#boton').html('<a href="pdf-expediente/'+data.paciente_id+'" id="download_expediente" class="btn btn-info pull-right"><span class="btn-label"><i class="material-icons">file_download</i></span>Descargar</a>')
             }else{
 
                 html+="<p>Este paciente no tiene historial clínico</p>";

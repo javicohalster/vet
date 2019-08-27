@@ -30,7 +30,7 @@ Route::middleware(['auth', 'role:administrador|doctor|recepcionista'])->group(fu
 	Route::get('api','Citas\CitasMedicasController@api')->middleware(['permission:leer-consultas']);
 	Route::get('dias-doctor/{id}','Doctor\DiasController@dias'); //carga los eventos en el fullcalendar.
 	Route::get('pdf/{id}', 'Paciente\FichaPacienteController@reporte')->middleware(['permission:leer-pacientes']);
-	Route::get('pdf-expediente/{id}', 'Paciente\ExpedienteController@reporte')->middleware(['permission:leer-pacientes']);
+	Route::get('pdf-expediente/{id}/{fi}', 'Paciente\ExpedienteController@reporte')->middleware(['permission:leer-pacientes']);
 	Route::get('/', 'Citas\CitasMedicasController@index');
 });
 

@@ -34,11 +34,11 @@ class ExpedienteController extends Controller
         ]);
     }
 
-    public function reporte($id)
+    public function reporte($id,$idq)
     {
         $paciente       = User::findOrFail($id);
         $edad           = $paciente->getYearsAttribute();
-        $query_paciente = Query::select('*')->where('estado', '=' , 'atendido')->where('paciente_id', '=', $paciente->id)->orderBy('queries.fecha_inicio', 'desc')->get();
+        $query_paciente = Query::select('*')->where('estado', '=' , 'atendido')->where('paciente_id', '=', $paciente->id)->where('queries.id', '=', $idq)->orderBy('queries.fecha_inicio', 'desc')->get();
         $query_paciente->fecha_inicio = "9 de mayo";
         $fecha          = Date::now()->toFormattedDateString();
         $pdf            = \PDF::loadView('pacientes.pdf_expediente', ['paciente' => $paciente, 'edad' => $edad, 'fecha' => $fecha, 'query_paciente' => $query_paciente]);
