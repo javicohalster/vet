@@ -84,13 +84,25 @@
         <tbody>
           <!--<tr>
             <td colspan="2">{{Date::parse($query->fecha_inicio)->toFormattedDateString()}}</td>
-          </tr>-->       
-             @if($query->sintomas)
-             <tr>
-              <td colspan="4">Síntomas</td>              
+          </tr>-->      
+              @if($query->sintomas)
+              <tr>
+              <td colspan="4">Anamnesis</td>              
               <td class="total">{{$query->sintomas}}</td>
-             </tr>
-             @endif
+              </tr>
+              @endif 
+              @if($query->peso)
+              <tr>
+               <td colspan="4">Peso</td>              
+               <td class="total">{{$query->peso}}</td>
+              </tr>
+              @endif
+              @if($query->temperatura)
+              <tr>
+               <td colspan="4">Temperatura</td>              
+               <td class="total">{{$query->temperatura}}</td>
+              </tr>
+              @endif            
              @if($query->diagnostico)
              <tr>
               <td colspan="4">Diagnóstico</td>              
@@ -99,22 +111,11 @@
              @endif            
              @if($query->examenes)
              <tr>
-              <td colspan="4">Anamnesis</td>              
+              <td colspan="4">Pruebas Realizadas</td>              
               <td class="total">{{$query->examenes}}</td>
              </tr>
              @endif
-             @if($query->peso)
-             <tr>
-              <td colspan="4">Peso</td>              
-              <td class="total">{{$query->peso}}</td>
-             </tr>
-             @endif
-             @if($query->temperatura)
-             <tr>
-              <td colspan="4">Temperatura</td>              
-              <td class="total">{{$query->temperatura}}</td>
-             </tr>
-             @endif
+            
              @if($query->tratamiento)
              <tr>
               <td colspan="4">Tratamiento</td>              
