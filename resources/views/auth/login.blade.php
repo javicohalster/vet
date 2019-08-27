@@ -57,8 +57,8 @@
                                                 <i class="material-icons">email</i>
                                             </span>
                                             <div class="form-group label-floating">
-                                                <label class="control-label">Email address</label>
-                                                <input type="email" name="email" class="form-control">
+                                                <label class="control-label">UserName</label>
+                                                <input type="username" name="username" class="form-control">
                                             </div>
                                         </div>
                                         <div class="input-group">

@@ -117,7 +117,7 @@
              @endif
              @if($query->tratamiento)
              <tr>
-              <td colspan="4">tratamiento</td>              
+              <td colspan="4">Tratamiento</td>              
               <td class="total">{{$query->tratamiento}}</td>
              </tr>
              @endif
@@ -184,6 +184,9 @@
         <!--<div>Advertencia:</div>-->
         <!--<div class="notice" align="justify">La información que se muestra en esta ficha clínica, de los estudios y demás documentos donde se registren procedimientos y tratamientos a los que fue sometido el paciente <b>{{$paciente->nombres}} {{$paciente->apellidos}}</b>, es considerada como <b>información sensible</b> y por tanto tiene la calidad de reservada. Quienes no estén relacionados directamente con la atención no tendrán acceso a la información, salvo las excepciones legales.</div>-->        <br>
         <div style="text-align: center; font-size: 6px;" align="center">
+            <br> 
+            <br> 
+            <br> 
        ________________________________<br>    
           Dr. Xavier Villacis Páez<br>
           Médico Veterinario<br>
