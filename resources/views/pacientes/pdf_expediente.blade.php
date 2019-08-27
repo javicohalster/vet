@@ -198,7 +198,7 @@
 
       
     </main>
-    <footer style="position: fixed">
+    <footer>
       <table>
         <tr>
           <td>
