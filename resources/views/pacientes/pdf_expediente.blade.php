@@ -8,13 +8,16 @@
   </head>
   <body>
     <header class="clearfix">     
-      <table>
+      <table style="height: 100px;">
         <tr>
           <td> 
             <div id="logo">
               <img src="./images/logo.jpg">             
-            </div>  </td>
-          <td><h4>CLÍNICA VETERINARIA SAN JOSÉ DEL CONDADO</h4></td>
+            </div>
+          </td>
+          <td style="text-align: center"><h3>CLÍNICA VETERINARIA <br>"SAN JOSÉ DEL CONDADO"</h3><br>
+            <h4>Bienestar y salud para su mascota</h4>
+          </td>
         </tr>
       </table> 
       <div id="company" class="clearfix">
@@ -23,21 +26,59 @@
       </div>
       </div>
       <div id="project">
-        <div><span>Nro.Historia </span>{{$paciente->id}}</div>
-        <div><span>Paciente</span> {{$paciente->nombres}} </div>
-        <div><span>Raza</span> {{$paciente->sangre}} </div> 
-        <div><span>Especie</span> {{$paciente->medicamento_actual}} </div>  
-        <div><span>Esterilizado</span> {{$paciente->alergia}} </div>    
-        <div><span>Sexo</span> {{$paciente->genero}}</div>
-        <div><span>Propietario</span> {{$paciente->apellidos}}</div>
-        <div><span>Color</span> {{$paciente->vih}}</div>
-        <div><span>Email</span>  <a href="mailto:{{$paciente->email}}">{{$paciente->email}}</a></div>
+        <table style="width: 70%;">
+          <tr>
+              <td><span>Nro.Historia </span></td>
+              <td>{{$paciente->id}}</td>
+          </tr>
+          <tr>
+              <td><span>Paciente</span></td>
+              <td>{{$paciente->nombres}}</td>
+          </tr>
+          <tr>
+              <td><span>Raza</span></td>
+              <td>{{$paciente->sangre}}</td>
+          </tr>
+          <tr>
+              <td><span>Especie</span></td>
+              <td>{{$paciente->medicamento_actual}}</td>
+          </tr>
+          <tr>
+              <td><span>Esterilizado</span></td>
+              <td>{{$paciente->alergia}}</td>
+          </tr>
+          <tr>
+              <td><span>Sexo</span></td>
+              <td>{{$paciente->genero}}</td>
+          </tr>         
+          <tr>
+              <td><span>Color</span></td>
+              <td>{{$paciente->vih}}</td>
+          </tr>
+          <tr>
+              <td><span>Edad</span></td>
+              <td>{{$edad}}</td>
+          </tr>
+          <tr>
+              <td><span>Propietario</span></td>
+              <td>{{$paciente->apellidos}}</td>
+          </tr>
+          <tr>
+              <td><span>Teléfono</span></td>
+              <td>{{$paciente->telefono}}</td>
+          </tr>
+        </table>
+        <div id="fecha">
+            {{ $fecha }}
+        </div>  
+      
+        <!--<div><span>Email</span>  <a href="mailto:{{$paciente->email}}">{{$paciente->email}}</a></div>
         <div><span>Dirección</span> {{$paciente->direccion}}</div>
         <div><span>Teléfono</span> {{$paciente->telefono}}</div>
-        <div><span>Edad</span> {{$edad}}</div>
+        <div><span>Edad</span> {{$edad}}</div>-->
       </div>
     </header>
-    <main>
+    <main style="font-size: 8px;">
       @foreach($query_paciente as $query)
       <table>
         <tbody>
@@ -142,7 +183,7 @@
       <div id="notices">
         <!--<div>Advertencia:</div>-->
         <!--<div class="notice" align="justify">La información que se muestra en esta ficha clínica, de los estudios y demás documentos donde se registren procedimientos y tratamientos a los que fue sometido el paciente <b>{{$paciente->nombres}} {{$paciente->apellidos}}</b>, es considerada como <b>información sensible</b> y por tanto tiene la calidad de reservada. Quienes no estén relacionados directamente con la atención no tendrán acceso a la información, salvo las excepciones legales.</div>-->        <br>
-        <div style="text-align: center;" align="center">
+        <div style="text-align: center; font-size: 6px;" align="center">
        ________________________________<br>    
           Dr. Xavier Villacis Páez<br>
           Médico Veterinario<br>
@@ -155,12 +196,23 @@
         <div class="notice">{{Auth::User()->nombres}} {{Auth::User()->apellidos}}</div>-->
       </div>
 
-      <div id="fecha">
-        {{ $fecha }}
-      </div>
+      
     </main>
-    <footer>
-      Documento generado por el sistema de gvets, Todos los derechos reservados &copy; 2019.
+    <footer style="position: fixed">
+      <table>
+        <tr>
+          <td>
+Piedras Negras N71-416 Y Av. Occidental<br>
+Telf. 2495-831<br>
+e-mail: x.villacis@hotmail.com
+          </td>
+          <td>
+            Celulares:<br>
+            0992458192<br>
+            0996007858
+            </td>
+        </tr>
+      </table>      
     </footer>
   </body>
 </html>
