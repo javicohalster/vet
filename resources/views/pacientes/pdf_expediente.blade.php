@@ -208,7 +208,7 @@
 
       
     </main>
-    <footer style="font-size: 6px;">
+    <footer style="font-size: 7px;" >
       <table>
         <tr>
           <td>
