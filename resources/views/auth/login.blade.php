@@ -57,7 +57,7 @@
                                                 <i class="material-icons">email</i>
                                             </span>
                                             <div class="form-group label-floating">
-                                                <label class="control-label">UserName</label>
+                                                <label class="control-label">Username</label>
                                                 <input type="username" name="username" class="form-control">
                                             </div>
                                         </div>
