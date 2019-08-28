@@ -8,15 +8,15 @@
   </head>
   <body>
     <header class="clearfix">     
-      <table style="height: 60px;">
+      <table style="height: 40px;">
         <tr>
           <td> 
             <div id="logo">
               <img src="./images/logo.jpg">             
             </div>
           </td>
-          <td style="text-align: center"><h4>CLÍNICA VETERINARIA <br>"SAN JOSÉ DEL CONDADO"</h4><br>
-            <h4>Bienestar y salud para su mascota</h4>
+          <td style="text-align: center"><h5>CLÍNICA VETERINARIA <br>"SAN JOSÉ DEL CONDADO"</h5><br>
+            <h5>Bienestar y salud para su mascota</h5>
           </td>
         </tr>
       </table> 
