@@ -66,11 +66,11 @@
                                     <th>Color:</th>
                                     <td id="vih2"></td>
                                 </tr>
-                                <tr>
+                                <!--<tr>
                                     <th>Peso:</th>
                                     <td id="peso2"></td>
                                 </tr>
-                                <!--<tr>
+                                <tr>
                                     <th>Estatura:</th>
                                     <td id="altura2"></td>
                                 </tr>

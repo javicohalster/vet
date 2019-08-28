@@ -2001,12 +2001,35 @@ function expediente_paciente(id) //carga datos en el expediente del paciente.
                         if(data.array[i].tipovacuna){
                             html+="<li><h6><strong>Vacuna</strong></h6><p align='justify'><small>"+data.array[i].tipovacuna+"</small></p></li>";  
                         } 
+                        if(data.array[i].diasrevacuna){
+                            html+="<li><h6><strong>Días Revacunar</strong></h6><p align='justify'><small>"+data.array[i].diasrevacuna+"</small></p></li>";  
+                        } 
+
+                        if(data.array[i].fechavacunasiguiente){
+                            html+="<li><h6><strong>Fecha siguiente Vacuna</strong></h6><p align='justify'><small>"+data.array[i].fechavacunasiguiente+"</small></p></li>";  
+                        }
+                        
                         if(data.array[i].fechadesparasitacion){
                             html+="<li><h6><strong>Fecha Desparasitación</strong></h6><p align='justify'><small>"+data.array[i].fechadesparasitacion+"</small></p></li>";  
+                        }
+                        if(data.array[i].pesodesparasitacion){
+                            html+="<li><h6><strong>Peso Kg.</strong></h6><p align='justify'><small>"+data.array[i].pesodesparasitacion+"</small></p></li>";  
                         }
                         if(data.array[i].descripciondesparacitacion){
                             html+="<li><h6><strong>Descripción</strong></h6><p align='justify'><small>"+data.array[i].descripciondesparacitacion+"</small></p></li>";  
                         } 
+                        if(data.array[i].posologia){
+                            html+="<li><h6><strong>Posología</strong></h6><p align='justify'><small>"+data.array[i].posologia+"</small></p></li>";  
+                        }
+                        if(data.array[i].dosis){
+                            html+="<li><h6><strong>Dosis</strong></h6><p align='justify'><small>"+data.array[i].dosis+"</small></p></li>";  
+                        }
+                        if(data.array[i].diasdesparacitar){
+                            html+="<li><h6><strong>Días desparasitar</strong></h6><p align='justify'><small>"+data.array[i].diasdesparacitar+"</small></p></li>";  
+                        }
+                        if(data.array[i].fechasigueintedesparasitacion){
+                            html+="<li><h6><strong>Fecha siguiente des.</strong></h6><p align='justify'><small>"+data.array[i].fechasigueintedesparasitacion+"</small></p></li>";  
+                        }
                         html+="</ol></div></div></div></div>";
                         
                        // $('#boton').html('<a href="pdf-expediente/'+data.paciente_id+'/'+data.array[i].id+'" id="download_expediente" class="btn btn-info pull-right"><span class="btn-label"><i class="material-icons">file_download</i></span>Descargar</a>')
