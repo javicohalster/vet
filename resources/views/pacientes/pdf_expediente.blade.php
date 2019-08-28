@@ -124,7 +124,7 @@
              @endif
              @if($query->observaciones)
              <tr>
-              <td colspan="4">Observaciones</td>              
+              <td colspan="4">Resultados</td>              
               <td class="total">{{$query->observaciones}}</td>
              </tr>
              @endif
@@ -184,7 +184,7 @@
       <div id="notices">
         <!--<div>Advertencia:</div>-->
         <!--<div class="notice" align="justify">La información que se muestra en esta ficha clínica, de los estudios y demás documentos donde se registren procedimientos y tratamientos a los que fue sometido el paciente <b>{{$paciente->nombres}} {{$paciente->apellidos}}</b>, es considerada como <b>información sensible</b> y por tanto tiene la calidad de reservada. Quienes no estén relacionados directamente con la atención no tendrán acceso a la información, salvo las excepciones legales.</div>-->        <br>
-        <div style="text-align: center; font-size: 8px;" align="center">
+        <div style="text-align: center; font-size: 9px;" align="center">
             <br> 
             <br> 
             <br> 
@@ -195,7 +195,7 @@
             <br> 
             <br> 
        ________________________________<br>    
-          Dr. Xavier Villacis Páez<br>
+          Dr. Xavier Villacís Páez<br>
           Médico Veterinario<br>
           MSP. L4 F90 No.370<br>
           Senescyt 1040-10-997207<br>
@@ -208,7 +208,7 @@
 
       
     </main>
-    <footer>
+    <footer style="font-size: 6px;">
       <table>
         <tr>
           <td>
