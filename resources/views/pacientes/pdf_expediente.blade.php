@@ -16,7 +16,7 @@
             </div>
           </td>
           <td style="text-align: center" class="total"><h5>CLÍNICA VETERINARIA <br>"SAN JOSÉ DEL CONDADO"</h5><br>
-            <h5>Bienestar y salud para su mascota</h5>
+            Bienestar y salud para su mascota
           </td>
         </tr>
       </table> 
