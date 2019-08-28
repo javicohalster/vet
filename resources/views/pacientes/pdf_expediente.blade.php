@@ -184,7 +184,13 @@
       <div id="notices">
         <!--<div>Advertencia:</div>-->
         <!--<div class="notice" align="justify">La información que se muestra en esta ficha clínica, de los estudios y demás documentos donde se registren procedimientos y tratamientos a los que fue sometido el paciente <b>{{$paciente->nombres}} {{$paciente->apellidos}}</b>, es considerada como <b>información sensible</b> y por tanto tiene la calidad de reservada. Quienes no estén relacionados directamente con la atención no tendrán acceso a la información, salvo las excepciones legales.</div>-->        <br>
-        <div style="text-align: center; font-size: 6px;" align="center">
+        <div style="text-align: center; font-size: 8px;" align="center">
+            <br> 
+            <br> 
+            <br> 
+            <br> 
+            <br> 
+            <br> 
             <br> 
             <br> 
             <br> 
@@ -208,7 +214,7 @@
           <td>
 Piedras Negras N71-416 Y Av. Occidental<br>
 Telf. 2495-831<br>
-e-mail: x.villacis@hotmail.com
+e-mail: vetsanjosecondado@gmail.com
           </td>
           <td>
             Celulares:<br>
