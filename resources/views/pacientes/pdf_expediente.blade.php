@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="clearfix">     
-      <table style="height: 40px;">
+      <table style="height: 30px;">
         <tr>
           <td> 
             <div id="logo">
