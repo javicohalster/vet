@@ -10,12 +10,12 @@
     <header class="clearfix">     
       <table style="height: 30px;">
         <tr>
-          <td> 
+          <td class="total"> 
             <div id="logo">
               <img src="./images/logo.jpg">             
             </div>
           </td>
-          <td style="text-align: center"><h5>CLÍNICA VETERINARIA <br>"SAN JOSÉ DEL CONDADO"</h5><br>
+          <td style="text-align: center" class="total"><h5>CLÍNICA VETERINARIA <br>"SAN JOSÉ DEL CONDADO"</h5><br>
             <h5>Bienestar y salud para su mascota</h5>
           </td>
         </tr>
