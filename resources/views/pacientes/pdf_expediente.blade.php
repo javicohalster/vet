@@ -15,7 +15,7 @@
               <img src="./images/logo.jpg">             
             </div>
           </td>
-          <td style="text-align: center" class="total"><h5>CLÍNICA VETERINARIA <br>"SAN JOSÉ DEL CONDADO"</h5><br>
+          <td style="text-align: center" class="total"><div style="font-size: 8px;"> CLÍNICA VETERINARIA <br>"SAN JOSÉ DEL CONDADO"</div><br>
             Bienestar y salud para su mascota
           </td>
         </tr>
