@@ -1961,13 +1961,13 @@ function expediente_paciente(id) //carga datos en el expediente del paciente.
                         html+="<div id='"+data.array[i].id+"1' class='panel-collapse collapse' role='tabpanel' aria-labelledby='"+data.array[i].id+"'>";
                         html+="<div class='panel-body'><table><tbody><tr><th>Atendido por: </th><td>&nbsp;</td><td> Dr/a. "+data.array[i].nombres_doctor.ucwords()+" "+data.array[i].apellidos_doctor.ucwords()+"</td><td>&nbsp;</td><td>&nbsp;</td><th>Especialidad:</th><td>&nbsp;</td><td>"+data.array[i].especialidad.ucwords()+"</td></tr></tbody></table><div id='divider'></div><ol>"
                         if(data.array[i].sintomas){                            
-                            html+="<li><h6><strong>sintomas</strong></h6><p align='justify'><small>"+data.array[i].sintomas+"</small></p></li>";  
+                            html+="<li><h6><strong>ANAMNESIS</strong></h6><p align='justify'><small>"+data.array[i].sintomas+"</small></p></li>";  
                         }
                         if(data.array[i].diagnostico){
                             html+="<li><h6><strong>diagnostico</strong></h6><p align='justify'><small>"+data.array[i].diagnostico+"</small></p></li>";  
                         }
                         if(data.array[i].examenes){
-                            html+="<li><h6><strong>ANAMNESIS</strong></h6><p align='justify'><small>"+data.array[i].examenes+"</small></p></li>";  
+                            html+="<li><h6><strong>Pruebas Realizadas</strong></h6><p align='justify'><small>"+data.array[i].examenes+"</small></p></li>";  
                         }  
                         if(data.array[i].peso){
                             html+="<li><h6><strong>peso</strong></h6><p align='justify'><small>"+data.array[i].peso+"</small></p></li>";  
