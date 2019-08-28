@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="clearfix">     
-      <table style="height: 100px;">
+      <table style="height: 60px;">
         <tr>
           <td> 
             <div id="logo">
@@ -208,7 +208,7 @@
 
       
     </main>
-    <footer style="font-size: 7px;" >
+    <footer style="font-size: 8px;" >
       <table>
         <tr>
           <td>
