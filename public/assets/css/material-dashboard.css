@@ -10226,7 +10226,7 @@ footer .btn {
   text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
 }
 .card .category:not([class*="text-"]) {
-  color: #999999;
+  color: #211e1efa;
   font-size: 14px;
 }
 .card .card-content {
