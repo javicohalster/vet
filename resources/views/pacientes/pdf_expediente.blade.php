@@ -164,16 +164,58 @@
               <td class="total">{{$query->tipovacuna}}</td>
              </tr>
              @endif
+             @if($query->diasrevacuna)
+             <tr>
+              <td colspan="4">Días revacunar</td>              
+              <td class="total">{{$query->diasrevacuna}}</td>
+             </tr>
+             @endif
+             @if($query->fechavacunasiguiente)
+             <tr>
+              <td colspan="4">Fecha Siguiente Vacuna</td>              
+              <td class="total">{{$query->fechavacunasiguiente}}</td>
+             </tr>
+             @endif
              @if($query->fechadesparasitacion)
              <tr>
               <td colspan="4">Fecha Desparasitación</td>              
               <td class="total">{{$query->fechadesparasitacion}}</td>
              </tr>
              @endif
+             @if($query->pesodesparasitacion)
+             <tr>
+              <td colspan="4">Peso Kg.</td>              
+              <td class="total">{{$query->pesodesparasitacion}}</td>
+             </tr>
+             @endif
              @if($query->descripciondesparacitacion)
              <tr>
               <td colspan="4">Descripción</td>              
               <td class="total">{{$query->descripciondesparacitacion}}</td>
+             </tr>
+             @endif
+             @if($query->posologia)
+             <tr>
+              <td colspan="4">Posología</td>              
+              <td class="total">{{$query->posologia}}</td>
+             </tr>
+             @endif
+             @if($query->dosis)
+             <tr>
+              <td colspan="4">Dosis</td>              
+              <td class="total">{{$query->dosis}}</td>
+             </tr>
+             @endif
+             @if($query->diasdesparacitar)
+             <tr>
+              <td colspan="4">Días a desparacitar</td>              
+              <td class="total">{{$query->diasdesparacitar}}</td>
+             </tr>
+             @endif
+             @if($query->fechasigueintedesparasitacion)
+             <tr>
+              <td colspan="4">Fecha siguiente Desparasitación</td>              
+              <td class="total">{{$query->fechasigueintedesparasitacion}}</td>
              </tr>
              @endif
          
