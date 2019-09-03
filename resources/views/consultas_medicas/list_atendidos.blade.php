@@ -4,7 +4,8 @@
 			<tr>
 				<th></th>
 				<th>Fecha</th>
-				<th>Pacientes</th>
+				<th>Paciente</th>
+				<th>Propietario</th>
 				<th>Doctor</th>
 				<th>Especialidad</th>
 			</tr>

@@ -110,7 +110,10 @@ class ConsultasMedicasController extends Controller
     }
         return  datatables()->of($consultas)
             ->editColumn('paciente', function ($consulta) {
-                return ucwords($consulta->apellidos. ' ' .$consulta->paciente);
+                return ucwords($consulta->paciente);
+            })
+            ->editColumn('propietario', function ($consulta) {
+                return ucwords($consulta->apellidos);
             })
             ->editColumn('doctor', function ($consulta) {
                 return ucwords('Dr. '.$consulta->doctor);
