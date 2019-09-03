@@ -39,7 +39,7 @@
         </div>
     </nav>
     <div class="wrapper wrapper-full-page">
-        <div class="full-page login-page" filter-color="black" data-image="{{ asset('images/logo.jpg') }}">
+        <div class="full-page login-page" filter-color="black" data-image="{{ asset('images/unnamed.jpg') }}">
             <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
             <div class="content">
                 <div class="container">
@@ -87,7 +87,7 @@
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        <a href="#">Javicohal</a>, Hecho para mejorar las gestiones administrativas.
+                        <a href="#">Gvets</a>, Hecho para mejorar las gestiones administrativas.
                     </p>
                 </div>
             </footer>
