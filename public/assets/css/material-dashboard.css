@@ -8333,16 +8333,16 @@ fieldset[disabled] .checkbox, fieldset[disabled] .checkbox input[type=checkbox],
   cursor: pointer;
   padding-left: 35px;
   position: relative;
-  color: rgba(0,0,0, 0.26);
+  color: rgba(37, 35, 35, 0.92);
 }
 .form-group.is-focused .radio label {
-  color: rgba(0,0,0, 0.26);
+  color: rgba(37, 35, 35, 0.92);
 }
 .form-group.is-focused .radio label:hover, .form-group.is-focused .radio label:focus {
   color: rgba(0,0,0, .54);
 }
 fieldset[disabled] .form-group.is-focused .radio label {
-  color: rgba(0,0,0, 0.26);
+  color: rgba(37, 35, 35, 0.92);
 }
 .radio label span {
   display: block;
