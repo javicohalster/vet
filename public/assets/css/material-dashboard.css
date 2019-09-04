@@ -11543,9 +11543,10 @@ footer .btn {
     margin: 0;
   }
 
-  .color_letra_ver{
-    color: rgb(40, 139, 31) !important;
-  }
+  .color_letra_ver {
+    color: rgb(14, 14, 14) !important;
+    background-color: #fef8ff;
+}
 }
 @media (min-width: 768px) {
   .navbar > .container-fluid .navbar-brand {
