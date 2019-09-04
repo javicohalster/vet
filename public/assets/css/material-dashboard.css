@@ -11592,9 +11592,10 @@ footer .btn {
     margin-left: -20px;
     margin-right: -20px;
   }
-  .color_letra_ver{
-    color: rgb(40, 139, 31) !important;
-  }
+  .color_letra_ver {
+    color: rgb(14, 14, 14) !important;
+    background-color: #fef8ff;
+}
 
   .table-responsive {
     overflow: auto;
