@@ -59,6 +59,10 @@
                     <table class="table">
                             <tbody class="text-left">
                                 <tr>
+                                    <th>Especie:</th>
+                                    <td id="medicamento2"></td>
+                                </tr>
+                                <tr>
                                     <th>Raza:</th>
                                     <td id="sangre2"></td>
                                 </tr>
@@ -82,10 +86,7 @@
                                     <th>Alergia:</th>
                                     <td id="alergia2"></td>
                                 </tr>-->
-                                <tr>
-                                    <th>Especie:</th>
-                                    <td id="medicamento2"></td>
-                                </tr>
+                                
                                 <tr>
                                     <th>Observaciones:</th>
                                     <td id="enfermedad2"></td>
