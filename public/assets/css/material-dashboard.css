@@ -7445,19 +7445,19 @@ output {
 .form-control::-moz-placeholder {
   font-size: 14px;
   line-height: 1.42857;
-  color: #AAAAAA;
+  color: #2b2a2a;
   font-weight: 400;
 }
 .form-control:-ms-input-placeholder {
   font-size: 14px;
   line-height: 1.42857;
-  color: #AAAAAA;
+  color: #2b2a2a;
   font-weight: 400;
 }
 .form-control::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 1.42857;
-  color: #AAAAAA;
+  color: #2b2a2a;
   font-weight: 400;
 }
 
@@ -7468,14 +7468,14 @@ label,
 .label-on-right {
   font-size: 14px;
   line-height: 1.42857;
-  color: #AAAAAA;
+  color: #2b2a2a;
   font-weight: 400;
 }
 
 label.control-label {
   font-size: 11px;
   line-height: 1.07143;
-  color: #AAAAAA;
+  color: #2b2a2a;
   font-weight: 400;
   margin: 16px 0 0 0;
 }
@@ -7492,19 +7492,19 @@ label.control-label {
 .form-group .form-control::-moz-placeholder {
   font-size: 14px;
   line-height: 1.42857;
-  color: #AAAAAA;
+  color: #2b2a2a;
   font-weight: 400;
 }
 .form-group .form-control:-ms-input-placeholder {
   font-size: 14px;
   line-height: 1.42857;
-  color: #AAAAAA;
+  color: #2b2a2a;
   font-weight: 400;
 }
 .form-group .form-control::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 1.42857;
-  color: #AAAAAA;
+  color: #2b2a2a;
   font-weight: 400;
 }
 .form-group .checkbox label,
@@ -7514,13 +7514,13 @@ label.control-label {
 .form-group .label-on-right {
   font-size: 14px;
   line-height: 1.42857;
-  color: #AAAAAA;
+  color: #2b2a2a;
   font-weight: 400;
 }
 .form-group label.control-label {
   font-size: 11px;
   line-height: 1.07143;
-  color: #AAAAAA;
+  color: #2b2a2a;
   font-weight: 400;
   margin: 16px 0 0 0;
 }
