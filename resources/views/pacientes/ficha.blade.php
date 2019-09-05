@@ -66,6 +66,10 @@
                                     <th>Color:</th>
                                     <td id="vih2"></td>
                                 </tr>
+                                <tr>
+                                    <th>Esterilizado:</th>
+                                    <td id="alergia2"></td>
+                                </tr>
                                 <!--<tr>
                                     <th>Peso:</th>
                                     <td id="peso2"></td>
