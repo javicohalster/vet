@@ -1,5 +1,5 @@
 <div>
-    <div class="col-md-12">                
+    <div class="col-md-12 color_letra_ver">                
             <div class="row">
                     <div class="table-responsive">
                         <table class="table">
