@@ -1978,6 +1978,9 @@ function expediente_paciente(id) //carga datos en el expediente del paciente.
                         }
                         if(data.array[i].tratamiento){
                             html+="<li><h6><strong>tratamiento</strong></h6><p align='justify'><small>"+data.array[i].tratamiento+"</small></p></li>";  
+                        } 
+                        if(data.array[i].receta){
+                            html+="<li><h6><strong>receta</strong></h6><p align='justify'><small>"+data.array[i].receta+"</small></p></li>";  
                         }     
                         if(data.array[i].observaciones){
                             html+="<li><h6><strong>resultados</strong></h6><p align='justify'><small>"+data.array[i].observaciones+"</small></p></li>";  
