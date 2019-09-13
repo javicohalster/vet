@@ -30,7 +30,7 @@ $('#myTabs a').click(function (e) {
 
 $('.datepicker').datetimepicker({
         format: 'DD-MM-YYYY',
-        locale:'es',
+        locale:'es',              
         icons: {
             time: "fa fa-clock-o",
             date: "fa fa-calendar",
@@ -42,6 +42,7 @@ $('.datepicker').datetimepicker({
             clear: 'fa fa-trash',
             close: 'fa fa-remove',
             inline: true
+            
         }
      });
 
@@ -624,9 +625,12 @@ $("#diasdesparacitar").change(function(){
     //  $("#fechavacuna").datepicker({
      //   dateFormat: 'dd/mm/yy'
     //  });
-      
+    
      // $("#datepicker").datepicker('setDate', now.format('DD/MM/YYYY'));
-        var fecha = new Date( moment($('#fechadesparasitacion').val(), 'yyyy-mm-dd'));
+      //  var fecha = new Date( moment($('#fechadesparasitacion').val(), 'yyyy-mm-dd'));
+        console.info($(".datepicker[name=fechadesparasitacion]").val());
+        var fecha = new Date( $(".datepicker[name=fechadesparasitacion]").val());
+       // var fecha = new Date( moment($(".datepicker[name=fechadesparasitacion]").val(), 'yyyy-mm-dd'));
         console.info(fecha)
         var dias = $('#diasdesparacitar').val(); // Número de días a agregar
         fecha.setDate(fecha.getDate() + parseInt(dias));
@@ -642,7 +646,9 @@ $("#diasrevacuna").change(function(){
     //  });
       
      // $("#datepicker").datepicker('setDate', now.format('DD/MM/YYYY'));
-        var fecha = new Date( moment($('#fechavacuna').val(), 'yyyy-mm-dd'));
+   //  $(".datepicker[name=fechadesparasitacion]").val()
+        var fecha = new Date($(".datepicker[name=fechavacuna]").val());
+       // var fecha = new Date( moment($(".datepicker[name=fechavacuna]").val(), 'yyyy-mm-dd'));
         console.info(fecha)
         var dias = $('#diasrevacuna').val(); // Número de días a agregar
         fecha.setDate(fecha.getDate() + parseInt(dias));
