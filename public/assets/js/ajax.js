@@ -2323,6 +2323,7 @@ function atender(id)
             $('#tratamientohotpitalizar').val(data.tratamientohotpitalizar)
             $('#recetahospitalizar').val(data.recetahospitalizar)
             $('#doctorConsulta').val(data.doctorConsulta)
+            $('#fechasiguientecita').val(data.fechasiguientecita)            
             $('#fecharegistra').val(data.fecharegistra)
             
             
@@ -2379,6 +2380,7 @@ function ver_atencion(id)
             $('#recetahospitalizarv').val(data.recetahospitalizar)
             $('#doctorConsultav').val(data.doctorConsulta)
             $('#fecharegistrav').val(data.fecharegistra)
+            $('#fechasiguientecitav').val(data.fechasiguientecitav)
             
             
             $('#idv').val(data.id)

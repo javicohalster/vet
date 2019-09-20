@@ -40,6 +40,15 @@
                         </div>
                     </div>
                  </div>
+                 <div class="row sinpadding">  
+                    <div class="col-md-12"> 
+                        <div class="form-group">
+                            <label class="control-label">FECHA SIGUIENTE CITA:</label>
+                            <input type="text" placeholder="dd/mm/aaaa" class="form-control datepicker" id="fechasiguientecitav" name="fechasiguientecitav"> 
+                            </select>
+                        </div>
+                    </div>
+                 </div>
        <div class="tab-content">
          <div role="tabpanel" class="tab-pane active" id="vacunasantiparasitariov"> 
              <!--vacunas -->
