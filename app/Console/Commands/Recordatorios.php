@@ -5,6 +5,8 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Avisos;
 
 class Recordatorios extends Command
 {
@@ -41,11 +43,33 @@ class Recordatorios extends Command
     {
         $fecha_actual = date("d-m-Y", time());
         $fecha_menos_uno = date("d-m-Y",strtotime($fecha_actual."- 1 days")); 
+        $fecha_mas_uno = date("d-m-Y",strtotime($fecha_actual."+ 1 days"));
         $boletosRevisar = DB::table('queries as que')
-        ->select("que.estado")
+        ->join('users as usr', function ($join) 
+        {
+            $join->on('usr.id', '=', 'que.paciente_id');
+        })
+        ->where('que.fechasiguientecita', '=', $fecha_mas_uno)
+        ->select("que.fechasiguientecita","que.fechavacunasiguiente","que.fechasigueintedesparasitacion","usr.nombres","usr.email","usr.apellidos")
         ->get();
         Log::info("Envio alertas para notificar users " . $fecha_actual);
         Log::info("Envio alertas para notificar users dia antes " . $fecha_menos_uno);
+       
+        
+        if($boletosRevisar){
+            foreach($boletosRevisar as $vas){
+                Log::info($vas->fechasiguientecita);
+                Log::info($vas->apellidos);
+                Log::info($vas->email);
+                $objDemo = new \stdClass();
+                $objDemo->propietario = $vas->apellidos;
+                $objDemo->paciente = $vas->nombres;
+                $objDemo->fecha_cita = $vas->fechasiguientecita;
+                $objDemo->subject = "Aviso nueva cita ".$vas->fechasiguientecita ;
+                Mail::to("elinatoro@outlook.com")->send(new Avisos($objDemo));
+             
+            }
+        }
         Log::info($boletosRevisar);
 
     }

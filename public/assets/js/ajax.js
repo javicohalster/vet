@@ -2380,7 +2380,7 @@ function ver_atencion(id)
             $('#recetahospitalizarv').val(data.recetahospitalizar)
             $('#doctorConsultav').val(data.doctorConsulta)
             $('#fecharegistrav').val(data.fecharegistra)
-            $('#fechasiguientecitav').val(data.fechasiguientecitav)
+            $('#fechasiguientecitav').val(data.fechasiguientecita)
             
             
             $('#idv').val(data.id)
