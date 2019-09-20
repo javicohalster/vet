@@ -76,6 +76,7 @@
                             <option value="PFIZER FELOCELL 3 - BAGOVAC RABIA">PFIZER FELOCELL 3 - BAGOVAC RABIA</option> 
                             <option value="VIRBAC RABIGEN MONO">VIRBAC RABIGEN MONO</option> 
                             <option value="VIRBAC CANIGEN MHA2PPi / L">VIRBAC CANIGEN MHA2PPi / L</option> 
+                            <option value="VIRBAC FELIGEN CPR - RABIGEN MONO">VIRBAC FELIGEN CPR - RABIGEN MONO</option>
                             <option value="DEFENSOR">DEFENSOR</option>                                                                                                           
                         </select>                             
                     </div>
