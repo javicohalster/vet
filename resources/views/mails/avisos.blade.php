@@ -3,13 +3,10 @@ Estimado <i>{{ $envio->propietario }}</i>,
  {!!$envio->fecha_cita!!}
  su mascota: </p>
 <p>{!!$envio->paciente!!}</p>
-Tiene una cita en la Clínica Veterinaria "San José del Condado".
-
-<div>
-<p></p>
-</div>
+<p>Tiene una cita en la Clínica Veterinaria "San José del Condado".</p>
  
-Atentamente,
+<p>Atentamente,</p>
 <br/>
 <i>gvets</i>
+<i>Por favor no responda este correo, el mismo es genero atomaticamente por el sistema Gvets</i>
 

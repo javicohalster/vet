@@ -50,23 +50,24 @@ class Recordatorios extends Command
             $join->on('usr.id', '=', 'que.paciente_id');
         })
         ->where('que.fechasiguientecita', '=', $fecha_mas_uno)
+        ->orWhere('que.fechavacunasiguiente','=', $fecha_mas_uno)
+        ->orWhere('que.fechasigueintedesparasitacion','=', $fecha_mas_uno)
         ->select("que.fechasiguientecita","que.fechavacunasiguiente","que.fechasigueintedesparasitacion","usr.nombres","usr.email","usr.apellidos")
         ->get();
-        Log::info("Envio alertas para notificar users " . $fecha_actual);
-        Log::info("Envio alertas para notificar users dia antes " . $fecha_menos_uno);
+     
        
         
         if($boletosRevisar){
             foreach($boletosRevisar as $vas){
-                Log::info($vas->fechasiguientecita);
-                Log::info($vas->apellidos);
-                Log::info($vas->email);
+               // Log::info($vas->fechasiguientecita);
+               // Log::info($vas->apellidos);
+               // Log::info($vas->email);
                 $objDemo = new \stdClass();
                 $objDemo->propietario = $vas->apellidos;
                 $objDemo->paciente = $vas->nombres;
-                $objDemo->fecha_cita = $vas->fechasiguientecita;
-                $objDemo->subject = "Aviso nueva cita ".$vas->fechasiguientecita ;
-                Mail::to("elinatoro@outlook.com")->send(new Avisos($objDemo));
+                $objDemo->fecha_cita = $vas->fechasiguientecita ? $vas->fechasiguientecita : $vas->fechavacunasiguiente ;
+                $objDemo->subject = "Aviso nueva cita ". $vas->fechasiguientecita ? $vas->fechasiguientecita : $vas->fechavacunasiguiente ;
+                Mail::to("javicohalster@gmail.com")->send(new Avisos($objDemo));
              
             }
         }
