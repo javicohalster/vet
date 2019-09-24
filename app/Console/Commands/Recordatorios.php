@@ -67,7 +67,7 @@ class Recordatorios extends Command
                 $objDemo->paciente = $vas->nombres;
                 $objDemo->fecha_cita = $vas->fechasiguientecita ? $vas->fechasiguientecita : $vas->fechavacunasiguiente ;
                 $objDemo->subject = "Aviso nueva cita ". $vas->fechasiguientecita ? $vas->fechasiguientecita : $vas->fechavacunasiguiente ;
-                Mail::to("elinatoro@outlook.com")->send(new Avisos($objDemo));
+                Mail::to($vas->email)->send(new Avisos($objDemo));
              
             }
         }
