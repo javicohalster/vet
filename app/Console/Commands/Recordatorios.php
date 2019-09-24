@@ -61,7 +61,7 @@ class Recordatorios extends Command
             foreach($boletosRevisar as $vas){
                // Log::info($vas->fechasiguientecita);
                // Log::info($vas->apellidos);
-               // Log::info($vas->email);
+                Log::info($vas->email);
                 $objDemo = new \stdClass();
                 $objDemo->propietario = $vas->apellidos;
                 $objDemo->paciente = $vas->nombres;
