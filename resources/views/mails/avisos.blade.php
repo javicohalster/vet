@@ -13,5 +13,5 @@ Saludos, <p>Le recordamos que el día de mañana
 <br/>
 <br/>
 <br/>
-<i>Por favor no responda este correo, el mismo se generó automaticamente por el sistema GVETS</i>
+<i>Por favor no responda este correo, el mismo se generó automaticamente por el sistema GEVETS</i>
 
