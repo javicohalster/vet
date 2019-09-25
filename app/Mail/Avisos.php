@@ -30,7 +30,7 @@ class Avisos extends Mailable
      */
     public function build()
     {
-        return $this->from('javicohal@gmail.com', 'Clínica Veterinaria San Jóse del Condado')
+        return $this->from('info@cvsanjosecondado.com', 'Clínica Veterinaria San Jóse del Condado')
         ->subject($this->envio->subject)
         ->view('mails.avisos');
     }
