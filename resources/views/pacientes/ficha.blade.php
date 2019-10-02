@@ -37,6 +37,10 @@
                                     <td id="edad"></td>
                                 </tr>
                                 <tr>
+                                    <th>Fecha Nacimiento:</th>
+                                    <td id="nacimiento"></td>
+                                </tr>
+                                <tr>
                                     <th>Email:</th>
                                     <td id="email"></td>
                                 </tr>

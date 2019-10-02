@@ -8,7 +8,8 @@
             <th>Propietario</th>
             <th>Teléfono</th>
             <th>Raza</th>
-            <th>Color</th>
+            <th>Color</th>            
+            <th>F. Nacim.</th>
             <th>Edad</th>
         </tr>
     </thead>

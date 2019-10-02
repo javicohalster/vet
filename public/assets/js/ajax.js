@@ -1936,6 +1936,7 @@ function ficha_paciente(id) //carga datos en la ficha del paciente.
             $('#rut').html(data.rut)
             $('#nombres').html(data.nombres)
             $('#edad').html(data.edad)
+            $('#nacimiento').html(data.nacimiento)
             $('#email').html(data.email)
             $('#telefono').html(data.telefono)
             $('#genero').html(data.genero)

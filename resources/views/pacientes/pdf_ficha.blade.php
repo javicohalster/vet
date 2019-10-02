@@ -25,6 +25,7 @@
         <div><span>EMAIL</span>  <a href="mailto:john@example.com">{{$pacientes->email}}</a></div>
         <div><span>DIRECCIÓN</span> {{$pacientes->direccion}}</div>
         <div><span>TELÉFONO</span> {{$pacientes->telefono}}</div>
+        <div><span>F.NACIMIENTO</span> {{$pacientes->nacimiento}}</div>
         <div><span>EDAD</span> {{$edad}}</div>
       </div>
     </header>

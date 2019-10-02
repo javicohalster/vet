@@ -51,11 +51,11 @@ class PacienteController extends Controller
 
     public function show()
     {
-        $users = User::select(['id', 'rut', 'nombres', 'apellidos', 'telefono', 'sangre','vih','nacimiento'])->withRole('paciente');
+        $users = User::select(['id', 'rut', 'nombres', 'apellidos', 'telefono', 'sangre','vih','nacimiento','nacimiento as edad'])->withRole('paciente');
         return  datatables()->of($users)
-                ->editColumn('nacimiento', function ($user) {
+                ->editColumn('edad', function ($user) {
                  return $user->getYearsAttribute();
-                    })
+                    })                   
                     ->addColumn('action', function ($user) {
                         $ficha = '<a href="#" onclick="ficha_paciente('.$user->id.')" data-toggle="modal" data-target="#modal_ficha" rel="tooltip" title="Ficha del paciente" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">folder_shared</i></a>';
                         $expediente = '<a href="#" onclick="expediente_paciente('.$user->id.')" data-toggle="modal" data-target="#modal_expediente" rel="tooltip" title="Expediente" class="btn btn-simple btn-info btn-icon"><i class="material-icons">content_paste</i></a>';

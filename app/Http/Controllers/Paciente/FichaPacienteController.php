@@ -74,6 +74,7 @@ class FichaPacienteController extends Controller
             'rut'         => $paciente->rut,
             'nombres'     => $paciente->nombres . " / " . $paciente->apellidos,
             'edad'        => $edad,
+            'nacimiento'  => $paciente->nacimiento,
             'email'       => $paciente->email,
             'telefono'    => $paciente->telefono,
             'genero'      => $paciente->genero,

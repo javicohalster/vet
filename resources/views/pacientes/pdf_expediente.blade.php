@@ -60,6 +60,10 @@
               <td>{{$edad}}</td>
           </tr>
           <tr>
+            <td><span>Fec.Nacimiento</span></td>
+            <td>{{$paciente->nacimiento}}</td>
+        </tr>
+          <tr>
               <td><span>Propietario</span></td>
               <td>{{$paciente->apellidos}}</td>
           </tr>

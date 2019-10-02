@@ -230,7 +230,8 @@ var listar_pacientes = function()
             {data: 'telefono', name: 'telefono'},
             {data: 'sangre', name: 'sangre'},
             {data: 'vih', name: 'vih'},
-            {data: 'nacimiento', name: 'nacimiento'}
+            {data: 'nacimiento', name: 'nacimiento'},
+            {data: 'edad', name: 'nacimiento'}
         ]
 	})
 }
