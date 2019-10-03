@@ -635,7 +635,7 @@ $("#diasdesparacitar").change(function(){
        // var fecha = new Date( moment($(".datepicker[name=fechadesparasitacion]").val(), 'yyyy-mm-dd'));
         console.info(fecha)
         var dias = $('#diasdesparacitar').val(); // Número de días a agregar
-        fecha.setDate(fecha.getDate() + parseInt(dias) + 1);
+        fecha.setDate(fecha.getDate() + parseInt(dias) );
         $('#fechasigueintedesparasitacion').val(getFormattedDate(fecha));
         
        console.info(fecha)
@@ -661,7 +661,7 @@ $("#diasrevacuna").change(function(){
        //Date.parse(new Date()).toString('yyyy-MM-dd H:i:s')
         console.info(fecha)
         var dias = $('#diasrevacuna').val(); // Número de días a agregar
-        fecha.setDate(fecha.getDate() + parseInt(dias) + 1);
+        fecha.setDate(fecha.getDate() + parseInt(dias) );
         $('#fechavacunasiguiente').val(getFormattedDate(fecha));
         
        console.info(fecha)
