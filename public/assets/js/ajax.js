@@ -662,7 +662,7 @@ $("#diasrevacuna").change(function(){
         console.info(fecha)
         var dias = $('#diasrevacuna').val(); // Número de días a agregar
         fecha.setDate(fecha.getDate() + parseInt(dias) );
-        $('#fechavacunasiguiente').val(fecha);
+        $('#fechavacunasiguiente').val(getFormattedDate(fecha));
         
        console.info(fecha)
     
@@ -681,7 +681,7 @@ function getFormattedDate(date) {
     var year = date.getFullYear();
   
     var month = (date.getMonth()).toString();
-    month = month.length > 1 ? month : '0' + month;
+  //  month = month.length > 1 ? month : '0' + month;
   
     var day = date.getDate().toString();
     day = day.length > 1 ? day : '0' + day;
