@@ -630,7 +630,7 @@ $("#diasdesparacitar").change(function(){
       //  var fecha = new Date( moment($('#fechadesparasitacion').val(), 'yyyy-mm-dd'));
       var starts = $(".datepicker[name=fechadesparasitacion]").val();
       var match = /(\d+)\-(\d+)\-(\d+)/.exec(starts)
-      var start_date = new Date(match[3], match[2], match[1]);;
+      var start_date = new Date(match[3], match[2]-1, match[1]);;
       var fecha = start_date;
        // var fecha = new Date( moment($(".datepicker[name=fechadesparasitacion]").val(), 'yyyy-mm-dd'));
         console.info(fecha)
@@ -655,8 +655,8 @@ $("#diasrevacuna").change(function(){
   
         var starts = $(".datepicker[name=fechavacuna]").val();
         var match = /(\d+)\-(\d+)\-(\d+)/.exec(starts)
-        var start_date = new Date(match[3], match[2], match[1]);;
-        var fecha = starts;
+        var start_date = new Date(match[3], match[2]-1, match[1]);;
+        var fecha = start_date;
        // var fecha = new Date( moment($(".datepicker[name=fechavacuna]").val(), 'yyyy-mm-dd'));
        //Date.parse(new Date()).toString('yyyy-MM-dd H:i:s')
         console.info(fecha)
@@ -680,7 +680,7 @@ function getFormattedDateHora() {
 function getFormattedDate(date) {
     var year = date.getFullYear();
   
-    var month = (date.getMonth()).toString();
+    var month = (date.getMonth()+1).toString();
    month = month.length > 1 ? month : '0' + month;
   
     var day = date.getDate().toString();
