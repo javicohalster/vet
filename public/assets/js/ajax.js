@@ -656,7 +656,7 @@ $("#diasrevacuna").change(function(){
         var starts = $(".datepicker[name=fechavacuna]").val();
         var match = /(\d+)\-(\d+)\-(\d+)/.exec(starts)
         var start_date = new Date(match[3], match[2], match[1]);;
-        var fecha = start_date;
+        var fecha = starts;
        // var fecha = new Date( moment($(".datepicker[name=fechavacuna]").val(), 'yyyy-mm-dd'));
        //Date.parse(new Date()).toString('yyyy-MM-dd H:i:s')
         console.info(fecha)
@@ -681,7 +681,7 @@ function getFormattedDate(date) {
     var year = date.getFullYear();
   
     var month = (date.getMonth()).toString();
-  //  month = month.length > 1 ? month : '0' + month;
+   month = month.length > 1 ? month : '0' + month;
   
     var day = date.getDate().toString();
     day = day.length > 1 ? day : '0' + day;
