@@ -172,7 +172,7 @@
                                                                                             <option value="Epagneul Papillón">Epagneul Papillón</option>
                                                                                             <option value="Esquimal Americano">Esquimal Americano</option>
                                                                                             <option value="Esquimal Canadiense">Esquimal Canadiense</option>
-                                                                                            <option value="Europeo ">Europeo </option>
+                                                                                            <option value="Europeo">Europeo </option>
                                                                                             <option value="Fila Brasileiro">Fila Brasileiro</option>
                                                                                             <option value="Fox Terrier">Fox Terrier</option>
                                                                                             <option value="Fox Terrier De Pelo Duro">Fox Terrier De Pelo Duro</option>

@@ -1821,7 +1821,9 @@ function carga_permiso(id)//carga datos de los permisos en el modal editar.
           }
     });
 }
-
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 function carga_paciente(id)//carga datos del paciente en el modal editar.
 {
    //event.preventDefault(); este evento no funciona con firefox y envia error, no cargan los datos en el modal.
@@ -1841,7 +1843,8 @@ function carga_paciente(id)//carga datos del paciente en el modal editar.
             $('#direccion_e').val(data.direccion)
             $('#nacimiento_e').val(data.nacimiento)
             $("INPUT[name=genero_e]").val([data.genero]) //carga valor de radiobutton desde mysql
-            $('#sangre_e').val(data.sangre)
+            $('#sangre_e').val(data.sangre.replace(/\b[a-z]/g,c=>c.toUpperCase()))
+            console.log(data.sangre.replace(/\b[a-z]/g,c=>c.toUpperCase()));
             $('#vih_e').val(data.vih)
             $('#peso_e').val(data.peso)
             $('#altura_e').val(data.altura)
