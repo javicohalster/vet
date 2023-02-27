@@ -231,7 +231,8 @@ var listar_pacientes = function()
             {data: 'sangre', name: 'sangre'},
             {data: 'vih', name: 'vih'},
             {data: 'nacimiento', name: 'nacimiento'},
-            {data: 'edad', name: 'nacimiento'}
+            {data: 'edad', name: 'nacimiento'},
+            {data: 'fecha_ult_atencion', name: 'fecha_ult_atencion',searchable: true,orderable: true, class:"text-left"},
         ]
 	})
 }

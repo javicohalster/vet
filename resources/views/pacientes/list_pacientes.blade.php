@@ -11,6 +11,7 @@
             <th>Color</th>            
             <th>F. Nacim.</th>
             <th>Edad</th>
+            <th>F. Ult. Ate.</th>
         </tr>
     </thead>
     <tbody>

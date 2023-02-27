@@ -71,6 +71,11 @@ class CitasMedicasController extends Controller
                 $cita->unity_id     = 1;
                 $cita->save();
                 $reservas = Query::where('estado', 'pendiente')->count();
+                //nueva
+                $user = User::findOrFail($request->paciente_id);
+                $user->fecha_ult_atencion = $Finicio;
+                $user->save();
+                //nueva
                 return response()->json([
                     "success"      => true,
                     "message"      => "La cita ha sido reservada correctamente",
@@ -123,6 +128,8 @@ class CitasMedicasController extends Controller
             $cita->fecha_inicio = $Finicio . " " . $request->hora_inicio;
             $cita->fecha_fin    = $Finicio . " " . $request->hora_fin;
             $cita->save();
+
+
             return response()->json([
                 "message" => "La cita ha sido actualizada correctamente",
                 ]);

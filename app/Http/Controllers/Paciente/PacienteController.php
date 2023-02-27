@@ -6,6 +6,7 @@ use App\User;
 use App\Role;
 use App\Query;
 use App\Razas;
+use Jenssegers\Date\Date;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ValidatePacienteRequest;
@@ -51,11 +52,32 @@ class PacienteController extends Controller
 
     public function show()
     {
-        $users = User::select(['id', 'rut', 'nombres', 'apellidos', 'telefono', 'sangre','vih','nacimiento','nacimiento as edad'])->withRole('paciente');
+        $users = User::select(['id', 'rut', 'nombres', 'apellidos', 'telefono', 'sangre','vih','nacimiento','nacimiento as edad','fecha_ult_atencion'])->withRole('paciente');
+        
+        //$fecha = collect($arreglo);
+
         return  datatables()->of($users)
                 ->editColumn('edad', function ($user) {
                  return $user->getYearsAttribute();
-                    })                   
+                    })    
+                   ->editColumn('fecha_ult_atencion', function ($user) {
+                        return str_replace("-","/",substr($user->fecha_ult_atencion,0,10)); 
+                        
+                        // Carbon::parse($queriesq[intval($num_fecha - 1)]->fecha)->format('d/m/Y'); 
+                      /* $queriesq = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
+                        ->join('users as doctor', 'queries.doctor_id', '=', 'doctor.id')
+                        ->join('specialities as especialidad', 'queries.speciality_id', '=', 'especialidad.id')
+                        ->select(['queries.*','queries.id as id', 'queries.fecha_inicio as fecha', 'queries.sintomas as sintomas', 'queries.examenes as examenes', 'queries.tratamiento as tratamiento', 'queries.observaciones as observaciones', 'paciente.nombres as nombres_paciente', 'paciente.apellidos as apellidos_paciente', 'doctor.nombres as nombres_doctor', 'doctor.apellidos as apellidos_doctor', 'especialidad.nombre as especialidad'])
+                        ->where('queries.paciente_id', '=',  $user->id)->where('queries.estado', '=', 'atendido')->orderBy('queries.fecha_inicio', 'asc')->get();
+                        $fecha_ultima = "9999/99/99";
+                        $num_fecha = count($queriesq);
+                        if($num_fecha > 0)
+                        {
+                          return str_replace("-","/",substr($queriesq[intval($num_fecha - 1)]->fecha,0,10)); // Carbon::parse($queriesq[intval($num_fecha - 1)]->fecha)->format('d/m/Y'); 
+                        } else {
+                           return $fecha_ultima;
+                        }*/
+                           })             
                     ->addColumn('action', function ($user) {
                         $ficha = '<a href="#" onclick="ficha_paciente('.$user->id.')" data-toggle="modal" data-target="#modal_ficha" rel="tooltip" title="Ficha del paciente" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">folder_shared</i></a>';
                         $expediente = '<a href="#" onclick="expediente_paciente('.$user->id.')" data-toggle="modal" data-target="#modal_expediente" rel="tooltip" title="Expediente" class="btn btn-simple btn-info btn-icon"><i class="material-icons">content_paste</i></a>';

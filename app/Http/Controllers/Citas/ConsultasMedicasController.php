@@ -301,6 +301,11 @@ class ConsultasMedicasController extends Controller
             
 
             $consulta->save();
+           /* $Finicio = Carbon::parse($request->fecha_inicio)->format('Y-m-d');
+            $user = User::findOrFail($queries->paciente_id);
+            $user->fecha_ult_atencion = $Finicio;
+            $user->save();*/
+
             return response()->json([
              "message" => "La consulta médica se ha guardado exitosamente!"
             ]);
