@@ -28,9 +28,9 @@
                     {{Auth::User()->nombres}} {{Auth::User()->apellidos}}
                     <b class="caret"></b>
                 </a>
-                <div>
+                <!--<div>
                     <marquee behavior="alternate" class="text-danger">FELIZ DÍA MUJER VALIOSA!</marquee>
-                </div>
+                </div>-->
                 <div class="collapse" id="collapseExample">
                     <ul class="nav">
                         <li>
