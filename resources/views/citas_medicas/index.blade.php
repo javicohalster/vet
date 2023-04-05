@@ -3,7 +3,7 @@
 @section('content')
 <div class="container-fluid">
     <div class="header text-center">
-        <h3 class="title">FullCalendar.io</h3>
+        <h3 class="title">Citas Gevets</h3>
     </div>
     <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
