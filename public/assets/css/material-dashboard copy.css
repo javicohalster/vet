@@ -2380,7 +2380,7 @@ NOTE: use percentage font sizes or else old IE chokes
   box-shadow: 0 2px 2px 0 rgba(156, 39, 176, 0.14), 0 3px 1px -2px rgba(156, 39, 176, 0.2), 0 1px 5px 0 rgba(156, 39, 176, 0.12);
 }
 .fc button, .fc button:hover, .fc button:focus, .fc button:active, .fc button.active, .fc button:active:focus, .fc button:active:hover, .fc button.active:focus, .fc button.active:hover, .open > .fc button.dropdown-toggle, .open > .fc button.dropdown-toggle:focus, .open > .fc button.dropdown-toggle:hover, .fc button.btn-primary, .fc button.btn-primary:hover, .fc button.btn-primary:focus, .fc button.btn-primary:active, .fc button.btn-primary.active, .fc button.btn-primary:active:focus, .fc button.btn-primary:active:hover, .fc button.btn-primary.active:focus, .fc button.btn-primary.active:hover, .open > .fc button.btn-primary.dropdown-toggle, .open > .fc button.btn-primary.dropdown-toggle:focus, .open > .fc button.btn-primary.dropdown-toggle:hover {
-  background-color: #337ab7;
+  background-color: #9c27b0;
   color: #FFFFFF;
 }
 .fc button:focus, .fc button:active, .fc button:hover, .fc button.btn-primary:focus, .fc button.btn-primary:active, .fc button.btn-primary:hover {
@@ -2391,12 +2391,12 @@ NOTE: use percentage font sizes or else old IE chokes
 }
 .fc button.btn-simple, .fc button.btn-primary.btn-simple {
   background-color: transparent;
-  color: #337ab7;
+  color: #9c27b0;
   box-shadow: none;
 }
 .fc button.btn-simple:hover, .fc button.btn-simple:focus, .fc button.btn-simple:active, .fc button.btn-primary.btn-simple:hover, .fc button.btn-primary.btn-simple:focus, .fc button.btn-primary.btn-simple:active {
   background-color: transparent;
-  color: #337ab7;
+  color: #9c27b0;
 }
 
 .fc button[disabled],
@@ -5526,7 +5526,6 @@ h2.title {
   position: relative;
   padding: 15px 15px;
   z-index: 4;
-  background-color: #0dc6cf24;
 }
 .sidebar .logo:after,
 .off-canvas-sidebar .logo:after {
@@ -5737,7 +5736,6 @@ h2.title {
   -webkit-transition-timing-function: linear,linear,ease;
   transition-timing-function: linear,linear,ease;
   -webkit-overflow-scrolling: touch;
-  background-color: #0dc6cf24;
 }
 
 .perfect-scrollbar-on .sidebar .sidebar-wrapper, .sidebar .sidebar-wrapper, .perfect-scrollbar-on
@@ -6888,7 +6886,7 @@ h2.title {
 }
 
 body {
-  background-color: #0dc6cf24;
+  background-color: #EEEEEE;
   color: #171819;
 }
 body.inverse {
@@ -6921,9 +6919,7 @@ blockquote p {
 }
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
- /* font-family: "Roboto", "Helvetica", "Arial", sans-serif;*/
-  font-family: 'Delicious Handrawn', cursive;
-  
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   line-height: 1.5em;
 }
@@ -8570,7 +8566,6 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   position: relative;
   top: 0;
   height: 100vh;
-  background-color: #0dc6cf24;
 }
 .wrapper:after {
   display: table;
@@ -9627,7 +9622,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   line-height: 1.42857;
 }
 .navbar, .navbar.navbar-default {
-  background-color: #0dc6cf24;
+  background-color: #FFFFFF;
   color: #555555;
 }
 .navbar .navbar-form .form-group input.form-control::-moz-placeholder,
@@ -10181,7 +10176,7 @@ footer .btn {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
   border-radius: 6px;
   color: rgba(0,0,0, 0.87);
-  background: rgba(255,255,255,.15);
+  background: #fff;
 }
 .card .card-height-indicator {
   margin-top: 100%;
