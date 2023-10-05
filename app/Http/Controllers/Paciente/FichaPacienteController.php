@@ -61,6 +61,19 @@ class FichaPacienteController extends Controller
         return $pdf->download($pacientes->nombres ." ". $pacientes->apellidos.".pdf");
     }
 
+    public function fichaqr($id)
+    {
+        $pacientes = User::findOrFail($id);
+       // $edad = $this->$pacientes->nacimiento->diff(Carbon::now())->format('%y años, %m mes, %d dias');
+       // $edad = Carbon::parse($pacientes->nacimiento)->age;
+        $edad     = $pacientes->getYearsAttribute();
+        $fecha = Date::now()->toFormattedDateString();
+       // $pdf = \PDF::loadView('pacientes.pdf_ficha', ['pacientes' => $pacientes, 'edad' => $edad, 'fecha' => $fecha]);
+
+        return view('pacientes.fichaqr', ['pacientes' => $pacientes, 'edad' => $edad, 'fecha' => $fecha]);
+        //return $pdf->download($pacientes->nombres ." ". $pacientes->apellidos.".pdf");
+    }
+
     public function show($id)
     {
         $paciente = User::findOrFail($id);

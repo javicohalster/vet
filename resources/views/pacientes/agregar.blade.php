@@ -15,6 +15,14 @@
                         <div class="row ">
                             <div class="col-md-12">
                                 <div class="form-group label-floating">
+                                    <label class="control-label">Chip Mascota:</label>
+                                    <input type="text" class="form-control" id="chip_add" name="chip_add">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-12">
+                                <div class="form-group label-floating">
                                     <label class="control-label">Nombre Mascota:</label>
                                     <input type="text" class="form-control" id="nombres_add" name="nombres_add">
                                 </div>

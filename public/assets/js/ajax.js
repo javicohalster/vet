@@ -1836,6 +1836,7 @@ function carga_paciente(id)//carga datos del paciente en el modal editar.
             $("#id_avatar").val(data.id)
             $(".avatarImage").attr('src', 'assets/img/perfiles/'+data.avatar+'?'+ new Date().getTime())
             $('#rut_e').val(data.rut)
+            $('#chip_e').val(data.chip)
             $('#nombres_e').val(data.nombres)
             $('#apellidos_e').val(data.apellidos)
             $('#email_e').val(data.email)
@@ -1937,6 +1938,7 @@ function ficha_paciente(id) //carga datos en la ficha del paciente.
         success:function(data){
             $(".img_pac").attr('src', 'assets/img/perfiles/'+data.avatar+'?'+ new Date().getTime());
             $('#rut').html(data.rut)
+            $('#chip').html(data.chip)
             $('#nombres').html(data.nombres)
             $('#edad').html(data.edad)
             $('#nacimiento').html(data.nacimiento)

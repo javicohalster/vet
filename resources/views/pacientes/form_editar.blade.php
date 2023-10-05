@@ -8,6 +8,14 @@
                         <div class="row sinpadding">
                             <div class="col-md-12">
                                 <div class="form-group">
+                                    <label class="control-label">CHIP MASCOTA:</label>
+                                    <input type="text" class="form-control" id="chip_e" name="chip_e">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row sinpadding">
+                            <div class="col-md-12">
+                                <div class="form-group">
                                     <label class="control-label">NOMBRE MASCOTA:</label>
                                     <input type="text" class="form-control" id="nombres_e" name="nombres_e">
                                 </div>

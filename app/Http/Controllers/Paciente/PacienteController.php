@@ -27,6 +27,7 @@ class PacienteController extends Controller
         if($request->ajax()){
             $paciente = new User();
             $paciente->rut                = $request->rut_add;
+            $paciente->chip               = $request->chip_add;
             $paciente->nombres            = $request->nombres_add;
             $paciente->apellidos          = $request->apellidos_add;
             $paciente->nacimiento         = Carbon::parse($request->nacimiento_add)->format('Y-m-d');
@@ -96,7 +97,7 @@ class PacienteController extends Controller
             'success'     => true,
             'id'          => $paciente->id,
             'avatar'      => $paciente->avatar,
-            'rut'         => $paciente->rut,
+            'rut'         => $paciente->rut,            
             'nombres'     => $paciente->nombres,
             'apellidos'   => $paciente->apellidos,
             'nacimiento'  => Carbon::parse($paciente->nacimiento)->format('Y-m-d'),
@@ -119,6 +120,7 @@ class PacienteController extends Controller
         if($request->ajax()){
             $user = User::findOrFail($id);
             $user->nombres            = $request->nombres_e;
+            $user->chip               = $request->chip_e;
             $user->apellidos          = $request->apellidos_e;
             $user->nacimiento         = Carbon::parse($request->nacimiento_e)->format('Y-m-d');
             $user->email              = $request->email_e;

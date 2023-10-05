@@ -29,6 +29,10 @@
                                     <td id="rut"></td>
                                 </tr>
                                 <tr>
+                                    <th>C.I:</th>
+                                    <td id="chip"></td>
+                                </tr>
+                                <tr>
                                     <th>Paciente:</th>
                                     <td id="nombres"></td>
                                 </tr>
@@ -90,7 +94,10 @@
                                     <th>Alergia:</th>
                                     <td id="alergia2"></td>
                                 </tr>-->
-                                
+                                <tr>
+                                    <th>Qr:</th>
+                                    <td id="pr"></td>
+                                </tr>
                                 <tr>
                                     <th>Observaciones:</th>
                                     <td id="enfermedad2"></td>
