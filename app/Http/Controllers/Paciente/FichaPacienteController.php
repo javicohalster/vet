@@ -82,7 +82,7 @@ class FichaPacienteController extends Controller
         //$edad = $paciente->nacimiento->diffInYears(now());
 
         
-        include(public_path('qr\\phpqrcode\\qrlib.php')); 
+        include(public_path('qr/phpqrcode/qrlib.php')); 
         $codesDir = "./qr/codes/";   
         $codeFile = date('d-m-Y-h-i-s').'.png';
         $host= $_SERVER["HTTP_HOST"];
