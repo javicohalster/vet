@@ -1939,6 +1939,7 @@ function ficha_paciente(id) //carga datos en la ficha del paciente.
             $(".img_pac").attr('src', 'assets/img/perfiles/'+data.avatar+'?'+ new Date().getTime());
             $('#rut').html(data.rut)
             $('#chip').html(data.chip)
+            $('#qr').html(data.qr)
             $('#nombres').html(data.nombres)
             $('#edad').html(data.edad)
             $('#nacimiento').html(data.nacimiento)

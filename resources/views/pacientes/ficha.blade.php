@@ -29,8 +29,9 @@
                                     <td id="rut"></td>
                                 </tr>
                                 <tr>
-                                    <th>C.I:</th>
-                                    <td id="chip"></td>
+                                    <th>Chip:</th>
+                                    <td id="chip"><div class="img qr" style="position: absolute; top: 0px;  right: 30px;"> 
+                                       </div></td>
                                 </tr>
                                 <tr>
                                     <th>Paciente:</th>
@@ -96,7 +97,7 @@
                                 </tr>-->
                                 <tr>
                                     <th>Qr:</th>
-                                    <td id="pr"></td>
+                                    <td id="qr"></td>
                                 </tr>
                                 <tr>
                                     <th>Observaciones:</th>

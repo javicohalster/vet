@@ -80,10 +80,24 @@ class FichaPacienteController extends Controller
         //$edad = $this->$paciente->nacimiento->diff(Carbon::now())->format('%y años, %m mes, %d dias');
          $edad     = $paciente->getYearsAttribute();
         //$edad = $paciente->nacimiento->diffInYears(now());
+
+        
+        include(public_path('qr\\phpqrcode\\qrlib.php')); 
+        $codesDir = "./qr/codes/";   
+        $codeFile = date('d-m-Y-h-i-s').'.png';
+        $host= $_SERVER["HTTP_HOST"];
+        $url= $_SERVER["REQUEST_URI"];
+        $str = "http://" . $host . "/vet/public/qr/ficha_qr.php?qr=".$paciente->id;
+        \QRcode::png($str, $codesDir.$codeFile, "H", "2"); 
+        $qr =  '<img class="img-thumbnail" src="'.$codesDir.$codeFile.'" />'; 
+
+
         return response()->json([
             'success'     => true,
             'id'          => $paciente->id,
             'avatar'      => $paciente->avatar,
+            'qr'          => $qr,
+            'chip'        => $paciente->chip,
             'rut'         => $paciente->rut,
             'nombres'     => $paciente->nombres . " / " . $paciente->apellidos,
             'edad'        => $edad,
