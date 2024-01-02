@@ -70,11 +70,11 @@ $consulta = "SELECT `users`.*,TIMESTAMPDIFF(YEAR,nacimiento,CURDATE()) AS edad F
           </tr>
           <tr>
             <td colspan="4"><b>COLOR</b></td>
-            <td class="total"><?php echo $columna['vih']  ?></td>
+            <td class=""><?php echo $columna['vih']  ?></td>
           </tr>
          <tr>
             <td colspan="4"><b>ESTERILIZADO/A</b></td>
-            <td class="total"><?php echo $columna['alergia']  ?></td>
+            <td class=""><?php echo $columna['alergia']  ?></td>
           </tr>
           <tr>
             <td colspan="4"><b>PROPIETARIO</td>
