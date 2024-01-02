@@ -99,11 +99,7 @@ $consulta = "SELECT `users`.*,TIMESTAMPDIFF(YEAR,nacimiento,CURDATE()) AS edad F
           <tr>
             <td colspan="4"><b>QR</b></td>
             <td class="total"><div class="img qr" > <?php QRcode::png($str, $codesDir.$codeFile, "H", "2") ?> <?php echo '<img class="img-thumbnail" src="'.$codesDir.$codeFile.'" />'; ?></td>
-          </tr>
-          <tr>
-            <td colspan="4"></td>
-            <td class="total"></td>
-          </tr>
+          </tr>          
           <tr>
             <td colspan="4">COLOR</td>
             <td class="total"><?php echo $columna['vih']  ?></td>
