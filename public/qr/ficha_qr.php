@@ -69,6 +69,14 @@ $consulta = "SELECT `users`.*,TIMESTAMPDIFF(YEAR,nacimiento,CURDATE()) AS edad F
             <td><?php echo $columna['genero']   ?></td>
           </tr>
           <tr>
+            <td colspan="4"><b>COLOR</b></td>
+            <td class="total"><?php echo $columna['vih']  ?></td>
+          </tr>
+         <tr>
+            <td colspan="4"><b>ESTERILIZADO/A</b></td>
+            <td class="total"><?php echo $columna['alergia']  ?></td>
+          </tr>
+          <tr>
             <td colspan="4"><b>PROPIETARIO</td>
             <td><?php echo $columna['apellidos']   ?></td>
           </tr>
@@ -99,14 +107,6 @@ $consulta = "SELECT `users`.*,TIMESTAMPDIFF(YEAR,nacimiento,CURDATE()) AS edad F
           <tr>
             <td colspan="4"><b>QR</b></td>
             <td class="total"><div class="img qr" > <?php QRcode::png($str, $codesDir.$codeFile, "H", "2") ?> <?php echo '<img class="img-thumbnail" src="'.$codesDir.$codeFile.'" />'; ?></td>
-          </tr>          
-          <tr>
-            <td colspan="4"><b>COLOR</b></td>
-            <td class="total"><?php echo $columna['vih']  ?></td>
-          </tr>
-         <tr>
-            <td colspan="4"><b>ESTERILIZADO/A</b></td>
-            <td class="total"><?php echo $columna['alergia']  ?></td>
           </tr>
           <tr>
             <td colspan="4"><b>ESPECIE</b></td>
