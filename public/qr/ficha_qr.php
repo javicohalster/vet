@@ -95,11 +95,7 @@ $consulta = "SELECT `users`.*,TIMESTAMPDIFF(YEAR,nacimiento,CURDATE()) AS edad F
           <tr>
             <td colspan="4"><b>FECHA NACIMIENTO</td>
             <td><?php echo $columna['nacimiento']   ?></td>
-          </tr>
-          <tr>
-            <td colspan="4"><b>TELEFONO</td>
-            <td><?php echo $columna['telefono']   ?></td>
-          </tr>
+          </tr>         
           <tr>
             <td colspan="4"><b>EDAD</b></td>
             <td class="total"><?php echo  $edad->format('%Y'). " años y " . $edad->format('%m') . " meses "  . $edad->format('%d') . " dias";  ?></td>
