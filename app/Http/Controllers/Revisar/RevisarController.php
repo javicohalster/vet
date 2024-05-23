@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Paciente;
+namespace App\Http\Controllers\Revisar;
 
 use App\User;
 use App\Role;
@@ -14,12 +14,12 @@ use App\Http\Requests\ValidateAddPacienteRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class PacienteController extends Controller
+class RevisarController extends Controller
 {
     public function index()
     {
         $razas = Razas::select(['id', 'nombre'])->orderBy('nombre', 'asc')->get();
-        return view('pacientes.index',compact('razas'));
+        return view('revisar.index',compact('razas'));
     }
 
     public function store(ValidateAddPacienteRequest $request)
@@ -53,41 +53,28 @@ class PacienteController extends Controller
 
     public function show()
     {
-        $users = User::select(['id', 'rut', 'nombres', 'apellidos', 'telefono', 'sangre','vih','nacimiento','nacimiento as edad','fecha_ult_atencion'])->withRole('paciente');
-        
-        //$fecha = collect($arreglo);
+        $queriesq = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
+        ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre', 'paciente.vih', 'paciente.nacimiento', 'paciente.nacimiento as edad', 'paciente.fecha_ult_atencion as fecha_ult_atencion', 'queries.fechasiguientecita as fechasiguientecita'])
+        ->where('queries.fechasiguientecita', '!=',  null)
+            ->where('queries.fechasiguientecita', '!=', "")
 
-        return  datatables()->of($users)
-                ->editColumn('edad', function ($user) {
-                 return $user->getYearsAttribute();
-                    })    
-                   ->editColumn('fecha_ult_atencion', function ($user) {
-                        return str_replace("-","/",substr($user->fecha_ult_atencion,0,10)); 
-                        
-                        // Carbon::parse($queriesq[intval($num_fecha - 1)]->fecha)->format('d/m/Y'); 
-                      /* $queriesq = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
-                        ->join('users as doctor', 'queries.doctor_id', '=', 'doctor.id')
-                        ->join('specialities as especialidad', 'queries.speciality_id', '=', 'especialidad.id')
-                        ->select(['queries.*','queries.id as id', 'queries.fecha_inicio as fecha', 'queries.sintomas as sintomas', 'queries.examenes as examenes', 'queries.tratamiento as tratamiento', 'queries.observaciones as observaciones', 'paciente.nombres as nombres_paciente', 'paciente.apellidos as apellidos_paciente', 'doctor.nombres as nombres_doctor', 'doctor.apellidos as apellidos_doctor', 'especialidad.nombre as especialidad'])
-                        ->where('queries.paciente_id', '=',  $user->id)->where('queries.estado', '=', 'atendido')->orderBy('queries.fecha_inicio', 'asc')->get();
-                        $fecha_ultima = "9999/99/99";
-                        $num_fecha = count($queriesq);
-                        if($num_fecha > 0)
-                        {
-                          return str_replace("-","/",substr($queriesq[intval($num_fecha - 1)]->fecha,0,10)); // Carbon::parse($queriesq[intval($num_fecha - 1)]->fecha)->format('d/m/Y'); 
-                        } else {
-                           return $fecha_ultima;
-                        }*/
-                           })             
-                    ->addColumn('action', function ($user) {
-                        $ficha = '<a href="#" onclick="ficha_paciente('.$user->id.')" data-toggle="modal" data-target="#modal_ficha" rel="tooltip" title="Ficha del paciente" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">folder_shared</i></a>';
-                        $expediente = '<a href="#" onclick="expediente_paciente('.$user->id.')" data-toggle="modal" data-target="#modal_expediente" rel="tooltip" title="Expediente" class="btn btn-simple btn-info btn-icon"><i class="material-icons">content_paste</i></a>';
-                        $editar = '<a href="#" onclick="carga_paciente('.$user->id.')" data-toggle="modal" data-target="#modal_editar_paciente" rel="tooltip" title="Editar" class="btn btn-simple btn-success btn-icon edit"><i class="material-icons">edit</i></a>';
-                        $eliminar = '<a href="#" onclick="delete_paciente('.$user->id.')" data-toggle="modal" data-target="#eliminar_paciente" rel="tooltip" title="Editar" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>';
 
-                        return $ficha.$expediente.$editar.$eliminar;
-                       
-                    })->make(true);
+            // ->where('fecha_ult_atencion', '!=',  "") 
+            // ->where('fecha_ult_atencion', '!=', null) 
+            ->orderBy('queries.fechasiguientecita', 'DESC')->get();
+
+
+        return datatables()->of($queriesq)
+            ->editColumn('edad', function ($queriesq) {
+                return $this->getYearsAttribute($queriesq->nacimiento);
+            })
+            ->editColumn('fecha_ult_atencion', function ($queriesq) {
+                return $queriesq->fecha_ult_atencion ? Carbon::parse($queriesq->fecha_ult_atencion)->format('Y-m-d') : null;
+            })
+            ->editColumn('fechasiguientecita', function ($queriesq) {
+                return $queriesq->fechasiguientecita ? Carbon::parse($queriesq->fechasiguientecita)->format('Y-m-d') : null;
+            })
+            ->make(true);
     }
 
     public function edit($id)

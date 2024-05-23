@@ -11,6 +11,8 @@ Route::middleware(['auth', 'role:administrador|doctor|recepcionista'])->group(fu
 	Route::resource('permisos-roles', 'Roles\PermisosRolesController', ['only' => ['edit', 'update']])->middleware(['permission:leer-roles']);
 	Route::resource('especialidades', 'Especialidad\EspecialidadController')->middleware(['permission:leer-especialidades']);
 	Route::resource('pacientes', 'Paciente\PacienteController')->middleware(['permission:leer-pacientes']);
+	Route::resource('revisar', 'Revisar\RevisarController')->middleware(['permission:leer-pacientes']);
+	
 	Route::resource('roles', 'Roles\RolController')->middleware(['permission:leer-roles']);
 	Route::resource('permisos', 'Permisos\PermisoController')->middleware(['permission:leer-permisos']);
 	//Route::resource('antecedentes', 'Paciente\AntecedenteController', ['only' => ['update', 'edit']]);
@@ -18,6 +20,7 @@ Route::middleware(['auth', 'role:administrador|doctor|recepcionista'])->group(fu
 	Route::resource('ficha', 'Paciente\FichaPacienteController', ['only' => ['show']]);
 	Route::resource('mi-cuenta', 'User\PerfilController', ['only' => 'update']); 
 	Route::resource('citas', 'Citas\CitasMedicasController', ['only' => ['index', 'store', 'update', 'destroy', 'edit']]);
+	//Route::resource('pacientes', 'Paciente\PacienteController', ['only' => ['index', 'store','show', 'update', 'destroy', 'edit','proximo']]);
 	Route::resource('consultas', 'Citas\ConsultasMedicasController')->middleware(['permission:leer-citas']);
 	Route::resource('dias','Doctor\DiasController');
 	Route::get('get-doctor/{id}','Doctor\DoctorController@getDoctor');
@@ -32,6 +35,8 @@ Route::middleware(['auth', 'role:administrador|doctor|recepcionista'])->group(fu
 	Route::get('pdf/{id}', 'Paciente\FichaPacienteController@reporte')->middleware(['permission:leer-pacientes']);
 	Route::get('pdf-expediente/{id}/{fi}', 'Paciente\ExpedienteController@reporte')->middleware(['permission:leer-pacientes']);
 	Route::get('/', 'Citas\CitasMedicasController@index');
+	//Route::get('/paciente/proximo', 'Paciente\PacienteController@proximo')->name('paciente.proximo');
+	
 });
 
 Route::get('login', 'Auth\AuthController@getLogin');

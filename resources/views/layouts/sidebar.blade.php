@@ -58,6 +58,14 @@
                 </a>
             </li>
             @endpermission
+            @permission('leer-pacientes')
+            <li>
+           <a href="{{ url('revisar') }}">
+               <i class="material-icons">pending_actions</i>
+               <p>Siguientes Citas</p>
+           </a>
+       </li>
+       @endpermission
            @permission('leer-citas')
             <li>
                 <a href="{{url('consultas')}}">

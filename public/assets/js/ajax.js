@@ -1667,7 +1667,8 @@ function getDoctoresO(especialidad){
 }
 
 function getDoctoresV(especialidad){
-    $.get("./get-doctor/"+especialidad+"",function(response,speciality){
+    $.get("./get-doctor/"+especialidad+"",function(response,speciality)
+    {
         $("#doctorConsultav").empty()
         if (response == "") {
              $("#doctorConsultav").html("<option>--Seleccione--</option>")
@@ -1868,6 +1869,7 @@ function carga_paciente(id)//carga datos del paciente en el modal editar.
           }
     })
 }
+
 function permisos_roles(id) //carga modal que contiene el select multiple de permisos del rol.
 {
    var route = "./permisos-roles/"+id+"/edit";

@@ -8,6 +8,7 @@ $(document).ready(function() {
     listar_roles()
     listar_citas_pendientes()
     listar_citas_atendidas()
+    listar_pacientes_proxima_cita()
   
 })
 
@@ -204,6 +205,7 @@ var listar_citas_atendidas = function()
 }
 var listar_pacientes = function()
 {
+  
     var table = $('#pacientes').DataTable({
         "headers": {'X-CSRF-TOKEN':$('input[name=_token]').attr('content')},
         "processing": true,
@@ -233,6 +235,42 @@ var listar_pacientes = function()
             {data: 'nacimiento', name: 'nacimiento'},
             {data: 'edad', name: 'nacimiento'},
             {data: 'fecha_ult_atencion', name: 'fecha_ult_atencion',searchable: true,orderable: true, class:"text-left"},
+        ]
+	})
+}
+
+var listar_pacientes_proxima_cita = function()
+{
+        var table = $('#proxima_cita').DataTable({
+        "headers": {'X-CSRF-TOKEN':$('input[name=_token]').attr('content')},
+        "processing": true,
+        "serverSide": true,
+        "order": [[ 3, "asc" ]],
+        "ajax": {
+             "url": "revisar/show",
+            },
+
+        "pagingType": "simple_numbers",
+        "lengthMenu": [
+            [10, 25, 50, -1],
+            [10, 25, 50, "Todos"]
+        ],
+        "language": {
+            url: "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+        },
+        "responsive": true,
+        "columns":[
+            {data: 'id', name: 'id'},
+            {data: 'nombres', name: 'nombres'},
+            {data: 'apellidos', name: 'apellidos'},
+            {data: 'telefono', name: 'telefono'},
+            {data: 'sangre', name: 'sangre'},
+            {data: 'vih', name: 'vih'},
+            {data: 'nacimiento', name: 'nacimiento'},
+            {data: 'edad', name: 'nacimiento'},
+            {data: 'fecha_ult_atencion', name: 'fecha_ult_atencion'},
+            {data: 'fechasiguientecita', name: 'fechasiguientecita',searchable: true,orderable: true, class:"text-left"},
+            
         ]
 	})
 }

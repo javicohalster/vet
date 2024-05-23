@@ -13,8 +13,12 @@
 						<table id="top-button-add">
 							<tr>
 								<td><h4 class="card-title"><small>LISTA DE PACIENTES</small></h4></td>         
-								<td class="pull-right"><a href="#" data-toggle="modal" data-target="#modal_agregar_paciente" rel="tooltip" title="Agregar paciente" class="btn btn-info btn-round btn-fab btn-fab-mini">
+								<td class="pull-right">
+									<a href="#" data-toggle="modal" data-target="#modal_agregar_paciente" rel="tooltip" title="Agregar paciente" class="btn btn-info btn-round btn-fab btn-fab-mini">
                                         <i class="material-icons">add</i>
+                                    </a>
+									<a href="#" data-toggle="modal" data-target="#modal_siguiente_cita" rel="tooltip" title="Ver Siguiente cita" class="btn btn-info btn-round btn-fab btn-fab-mini">
+                                        <i class="material-icons">view</i>
                                     </a>
                                 </td>
 							</tr>
@@ -28,9 +32,11 @@
        		</div>
 		</div>
 	</div>
+	@include('pacientes.modal_nextcita')
 </div>
 @include('pacientes.modal_ficha')
 @include('pacientes.modal_editar')
 @include('pacientes.modal_agregar')
 @include('pacientes.modal_expediente')
+
 @endsection
