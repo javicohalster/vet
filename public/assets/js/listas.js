@@ -245,7 +245,7 @@ var listar_pacientes_proxima_cita = function()
         "headers": {'X-CSRF-TOKEN':$('input[name=_token]').attr('content')},
         "processing": true,
         "serverSide": true,
-        "order": [[ 3, "asc" ]],
+        "order": [[ 9, "desc" ]],
         "ajax": {
              "url": "revisar/show",
             },
