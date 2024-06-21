@@ -97,7 +97,7 @@ class RevisarController extends Controller
                 return $this->getYearsAttribute($queriesq->nacimiento);
             })
             ->editColumn('fecha_ult_atencion', function ($queriesq) {
-                return $queriesq->fecha_ult_atencion ? Carbon::parse($queriesq->fecha_ult_atencion)->format('Y-m-d') : null;
+                return $queriesq->fecha_ult_atencion ? Carbon::parse($queriesq->fecha_ult_atencion)->format('Y/m/d') : null;
             })
             ->editColumn('fechasiguientecita', function ($queriesq) {
               //  echo  $queriesq->fechasiguientecita;
