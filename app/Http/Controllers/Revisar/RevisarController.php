@@ -64,7 +64,7 @@ class RevisarController extends Controller
             ->where('queries.fechasiguientecita', '!=', "")  
             
           // ->where('queries.fechasiguientecita', '>=', Carbon::now())    
-           ->whereBetween('queries.fechasiguientecita', array( Carbon::parse(Carbon::now())->format('d-m-Y') , Carbon::parse(Carbon::now()->addWeek())->format('d-m-Y')))    
+           ->whereBetween('queries.fechasiguientecita', array( Carbon::parse(Carbon::now())->format('Y-m-d') , Carbon::parse(Carbon::now()->addWeek())->format('Y-m-d')))    
        //    ->whereDate('queries.fechasiguientecita', '<=',  date('Y-m-d H:i:s', strtotime(Carbon::now()->addWeek().' 00:00:00')))
            
            //->where("queries.fechasiguientecita",'<',$fechabuscada)
