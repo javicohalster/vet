@@ -54,22 +54,25 @@ class RevisarController extends Controller
     public function show()
     {
         $dateHoy = Date::now()->toFormattedDateString();    
-        $fechabuscada = date('d-m-Y', strtotime($dateHoy. '+ 15 days'));
+        $fechabuscada = date('Y-m-d', strtotime($dateHoy. '+ 15 days'));
+        $fechaactual = date('Y-m-d', strtotime($dateHoy));
        // $Finicio = Date::parse($fechabuscada)->format('Y-m-d');
-      // echo  $Finicio;
-    //  die();
+      // echo  substr($fechabuscada,0,7) ;
+     // die();
         $queriesq = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
-        ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre', 'paciente.vih', 'paciente.nacimiento', 'paciente.nacimiento as edad', 'paciente.fecha_ult_atencion as fecha_ult_atencion', 'queries.fechasiguientecita as fechasiguientecita'])
+        ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre', 'paciente.vih', 'paciente.nacimiento', 'paciente.nacimiento as edad', 'paciente.fecha_ult_atencion as fecha_ult_atencion', "queries.fechasiguientecita  as fechasiguientecita"])
         ->where('queries.fechasiguientecita', '!=',  null)
-            ->where('queries.fechasiguientecita', '!=', "")
-            
-         
-            ->where('queries.fechasiguientecita', '>=',"21-06-2024")
-            ->where('queries.fechasiguientecita', '<=', "07-07-2024")
+            ->where('queries.fechasiguientecita', '!=', "")      
+            ->whereDate('queries.fechasiguientecita', '<=', $fechabuscada)
+            ->whereDate('queries.fechasiguientecita', '>=', $fechaactual)
+           //->where("queries.fechasiguientecita",'<',$fechabuscada)
+          // ->where("queries.fechasiguientecita",'>',$fechaactual)
+          //  ->where('queries.fechasiguientecita', '<=', "07-07-2024")
           //  ->where('queries.fechasiguientecita BETWEEN "'. date('Y-m-d H:i:s', strtotime($dateHoy.' 00:00:00')). '" and "'. date('Y-m-d H:i:s', strtotime($dateHoy.' 23:59:59')).'"')
            // ->where("queries.fechasiguientecita BETWEEN '{Carbon::parse($dateHoy)->format('d-m-Y')}' AND '{Carbon::parse($fechabuscada)->format('d-m-Y')}'")
             //->where('queries.fechasiguientecita <= date("'.$fechabuscada.'")')
-            //->where('DATE(queries.fechasiguientecita)', '<=', date('Y-m-d',strtotime($fechabuscada)))
+          //  ->where('sell_date BETWEEN "'. date('Y-m-d', strtotime($start_date)). '" and "'. date('Y-m-d', strtotime($end_date)).'"')
+         //   ->where("DATE_FORMAT(date,'%Y-%m-%d') > '2024-07-30'",NULL,FALSE)
          //   ->where('queries.fechasiguientecita', '>',  Carbon::parse($dateHoy)->format('d-m-Y') )
          //   ->where('queries.fechasiguientecita', '<',  Carbon::parse($fechabuscada)->format('d-m-Y'))
 
@@ -78,7 +81,7 @@ class RevisarController extends Controller
             // ->where('fecha_ult_atencion', '!=', null) 
             ->orderBy('queries.fechasiguientecita', 'DESC')->get();
         
-
+          //  $this->db->like('queries.fechasiguientecita',  substr($fechabuscada,0,7)); 
         return datatables()->of($queriesq)
             ->editColumn('edad', function ($queriesq) {
                 return $this->getYearsAttribute($queriesq->nacimiento);
