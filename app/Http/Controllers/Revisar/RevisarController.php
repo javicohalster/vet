@@ -53,10 +53,17 @@ class RevisarController extends Controller
 
     public function show()
     {
+        $dateHoy = new Date();
+
+        $fechabuscada = date('Y-m-d', strtotime($dateHoy. ' + 7 days'));
+      //  echo  $fechabuscada;
+     //  die();
         $queriesq = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
         ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre', 'paciente.vih', 'paciente.nacimiento', 'paciente.nacimiento as edad', 'paciente.fecha_ult_atencion as fecha_ult_atencion', 'queries.fechasiguientecita as fechasiguientecita'])
         ->where('queries.fechasiguientecita', '!=',  null)
             ->where('queries.fechasiguientecita', '!=', "")
+            ->where('queries.fechasiguientecita', '>=', $dateHoy)
+            ->where('queries.fechasiguientecita', '<=', $fechabuscada)
 
 
             // ->where('fecha_ult_atencion', '!=',  "") 
