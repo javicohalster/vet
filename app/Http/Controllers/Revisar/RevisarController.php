@@ -63,14 +63,14 @@ class RevisarController extends Controller
         ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre', 'paciente.vih', 'paciente.nacimiento', 'paciente.nacimiento as edad', 'paciente.fecha_ult_atencion as fecha_ult_atencion', 'queries.fechasiguientecita as fechasiguientecita'])
         ->where('queries.fechasiguientecita', '!=',  null)
             ->where('queries.fechasiguientecita', '!=', "")
-            ->where('queries.fechasiguientecita', '>',  Carbon::parse($dateHoy)->format('Y-m-d') )
-           // ->where('queries.fechasiguientecita', '<',  Carbon::parse($fechabuscada)->format('Y-m-d'))
+            ->where('queries.fechasiguientecita', '>',  Carbon::parse($dateHoy)->format('d-m-Y') )
+            ->where('queries.fechasiguientecita', '<',  Carbon::parse($fechabuscada)->format('d-m-Y'))
 
 
             // ->where('fecha_ult_atencion', '!=',  "") 
             // ->where('fecha_ult_atencion', '!=', null) 
             ->orderBy('queries.fechasiguientecita', 'DESC')->get();
-
+        
 
         return datatables()->of($queriesq)
             ->editColumn('edad', function ($queriesq) {
@@ -80,6 +80,8 @@ class RevisarController extends Controller
                 return $queriesq->fecha_ult_atencion ? Carbon::parse($queriesq->fecha_ult_atencion)->format('Y-m-d') : null;
             })
             ->editColumn('fechasiguientecita', function ($queriesq) {
+             //   echo  $queriesq->fechasiguientecita;
+               // die();
                 return $queriesq->fechasiguientecita ? Carbon::parse($queriesq->fechasiguientecita)->format('Y-m-d') : null;
             })
             ->make(true);
