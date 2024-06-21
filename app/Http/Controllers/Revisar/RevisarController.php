@@ -62,7 +62,7 @@ class RevisarController extends Controller
         ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre', 'paciente.vih', 'paciente.nacimiento', 'paciente.nacimiento as edad', 'paciente.fecha_ult_atencion as fecha_ult_atencion', 'queries.fechasiguientecita as fechasiguientecita'])
         ->where('queries.fechasiguientecita', '!=',  null)
             ->where('queries.fechasiguientecita', '!=', "")
-            ->whereBetween('queries.fechasiguientecita', array(date('Y-m-d', strtotime($dateHoy)),date('Y-m-d', strtotime($fechabuscada))))
+            ->whereBetween('queries.fechasiguientecita', array(date('d-m-Y', strtotime($dateHoy)),date('d-m-Y', strtotime($fechabuscada))))
            // ->where('queries.fechasiguientecita BETWEEN "'. date('Y-m-d', strtotime($dateHoy)). '" and "'. date('Y-m-d', strtotime($fechabuscada)).'"')
           //  ->where('queries.fechasiguientecita', '>=', Date::parse($dateHoy)->format('d-m-Y'))
            // ->where('queries.fechasiguientecita', '<=', $fechabuscada)
