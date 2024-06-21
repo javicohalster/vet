@@ -53,8 +53,7 @@ class RevisarController extends Controller
 
     public function show()
     {
-        $dateHoy = Date::now()->toFormattedDateString();
-    
+        $dateHoy = Date::now()->toFormattedDateString();    
         $fechabuscada = date('d-m-Y', strtotime($dateHoy. '+ 15 days'));
        // $Finicio = Date::parse($fechabuscada)->format('Y-m-d');
       // echo  $Finicio;
@@ -63,8 +62,10 @@ class RevisarController extends Controller
         ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre', 'paciente.vih', 'paciente.nacimiento', 'paciente.nacimiento as edad', 'paciente.fecha_ult_atencion as fecha_ult_atencion', 'queries.fechasiguientecita as fechasiguientecita'])
         ->where('queries.fechasiguientecita', '!=',  null)
             ->where('queries.fechasiguientecita', '!=', "")
-            ->where('queries.fechasiguientecita', '>=', Date::parse($dateHoy)->format('d-m-Y'))
-            ->where('queries.fechasiguientecita', '<=', $fechabuscada)
+            ->whereBetween('queries.fechasiguientecita', array(date('Y-m-d', strtotime($dateHoy)),date('Y-m-d', strtotime($fechabuscada))))
+           // ->where('queries.fechasiguientecita BETWEEN "'. date('Y-m-d', strtotime($dateHoy)). '" and "'. date('Y-m-d', strtotime($fechabuscada)).'"')
+          //  ->where('queries.fechasiguientecita', '>=', Date::parse($dateHoy)->format('d-m-Y'))
+           // ->where('queries.fechasiguientecita', '<=', $fechabuscada)
           //  ->where('queries.fechasiguientecita BETWEEN "'. date('Y-m-d H:i:s', strtotime($dateHoy.' 00:00:00')). '" and "'. date('Y-m-d H:i:s', strtotime($dateHoy.' 23:59:59')).'"')
            // ->where("queries.fechasiguientecita BETWEEN '{Carbon::parse($dateHoy)->format('d-m-Y')}' AND '{Carbon::parse($fechabuscada)->format('d-m-Y')}'")
             //->where('queries.fechasiguientecita <= date("'.$fechabuscada.'")')
