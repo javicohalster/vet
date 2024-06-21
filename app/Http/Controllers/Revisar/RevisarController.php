@@ -53,18 +53,18 @@ class RevisarController extends Controller
 
     public function show()
     {
-        $dateHoy = Date::now()->toFormattedDateString();    
-        $fechabuscada = date('Y-m-d', strtotime($dateHoy. '+ 15 days'));
-        $fechaactual = date('Y-m-d', strtotime($dateHoy));
+        $now = Carbon::now(); // Or whatever date you want to use as the start date.
+        $then = $now->clone()->addDays(10);
        // $Finicio = Date::parse($fechabuscada)->format('Y-m-d');
       // echo  substr($fechabuscada,0,7) ;
      // die();
         $queriesq = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
         ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre', 'paciente.vih', 'paciente.nacimiento', 'paciente.nacimiento as edad', 'paciente.fecha_ult_atencion as fecha_ult_atencion', "queries.fechasiguientecita  as fechasiguientecita"])
         ->where('queries.fechasiguientecita', '!=',  null)
-            ->where('queries.fechasiguientecita', '!=', "")      
-            ->whereDate('queries.fechasiguientecita', '<=', $fechabuscada)
-            ->whereDate('queries.fechasiguientecita', '>=', $fechaactual)
+            ->where('queries.fechasiguientecita', '!=', "")  
+            ->whereDate('queries.fechasiguientecita', '>=', $now)    
+            ->whereDate('queries.fechasiguientecita', '<=', $then)
+           
            //->where("queries.fechasiguientecita",'<',$fechabuscada)
           // ->where("queries.fechasiguientecita",'>',$fechaactual)
           //  ->where('queries.fechasiguientecita', '<=', "07-07-2024")
