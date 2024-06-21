@@ -53,19 +53,19 @@ class RevisarController extends Controller
 
     public function show()
     {
-        $now = Carbon::now(); // Or whatever date you want to use as the start date.
-        $then = $now->addDays(10);
+       
        // $Finicio = Date::parse($fechabuscada)->format('Y-m-d');
       // echo  substr($fechabuscada,0,7) ;
      // die();
+        //\DB::enableQueryLog();
         $queriesq = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
         ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre', 'paciente.vih', 'paciente.nacimiento', 'paciente.nacimiento as edad', 'paciente.fecha_ult_atencion as fecha_ult_atencion', "queries.fechasiguientecita  as fechasiguientecita"])
         ->where('queries.fechasiguientecita', '!=',  null)
             ->where('queries.fechasiguientecita', '!=', "")  
             
           // ->where('queries.fechasiguientecita', '>=', Carbon::now())    
-           ->whereBetween('queries.fechasiguientecita', array(Carbon::now(), Carbon::now()->addWeek()))    
-         //   ->whereDate('queries.fechasiguientecita', '<=', $then)
+           ->whereBetween('queries.fechasiguientecita', array( Carbon::parse(Carbon::now())->format('d-m-Y') , Carbon::parse(Carbon::now()->addWeek())->format('d-m-Y')))    
+       //    ->whereDate('queries.fechasiguientecita', '<=',  date('Y-m-d H:i:s', strtotime(Carbon::now()->addWeek().' 00:00:00')))
            
            //->where("queries.fechasiguientecita",'<',$fechabuscada)
           // ->where("queries.fechasiguientecita",'>',$fechaactual)
@@ -77,11 +77,19 @@ class RevisarController extends Controller
          //   ->where("DATE_FORMAT(date,'%Y-%m-%d') > '2024-07-30'",NULL,FALSE)
          //   ->where('queries.fechasiguientecita', '>',  Carbon::parse($dateHoy)->format('d-m-Y') )
          //   ->where('queries.fechasiguientecita', '<',  Carbon::parse($fechabuscada)->format('d-m-Y'))
-
-
+        
+        
             // ->where('fecha_ult_atencion', '!=',  "") 
             // ->where('fecha_ult_atencion', '!=', null) 
+            
             ->orderBy('queries.fechasiguientecita', 'DESC')->get();
+
+         
+           // Query::enableQueryLog();
+            //after queries using the DB facade you can write:
+            
+      //      var_dump(\DB::getQueryLog());
+      //     die();
         
           //  $this->db->like('queries.fechasiguientecita',  substr($fechabuscada,0,7)); 
         return datatables()->of($queriesq)
@@ -92,7 +100,7 @@ class RevisarController extends Controller
                 return $queriesq->fecha_ult_atencion ? Carbon::parse($queriesq->fecha_ult_atencion)->format('Y-m-d') : null;
             })
             ->editColumn('fechasiguientecita', function ($queriesq) {
-             //   echo  $queriesq->fechasiguientecita;
+              //  echo  $queriesq->fechasiguientecita;
                // die();
                 return $queriesq->fechasiguientecita ? Carbon::parse($queriesq->fechasiguientecita)->format('Y-m-d') : null;
             })
