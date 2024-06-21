@@ -55,7 +55,7 @@ class RevisarController extends Controller
     {
         $dateHoy = new Date();
 
-        $fechabuscada = date('Y-m-d', strtotime($dateHoy. ' + 7 days'));
+        $fechabuscada = date('Y-m-d', strtotime($dateHoy. ' + 15 days'));
       //  echo  $fechabuscada;
      //  die();
         $queriesq = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
