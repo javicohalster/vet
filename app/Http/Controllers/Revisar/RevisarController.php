@@ -63,8 +63,8 @@ class RevisarController extends Controller
         ->where('queries.fechasiguientecita', '!=',  null)
             ->where('queries.fechasiguientecita', '!=', "")  
             
-           ->whereDate('queries.fechasiguientecita', '>=', Carbon::now())    
-           ->whereDate('queries.fechasiguientecita', '<=',Carbon::now()->addWeek())    
+           ->where('queries.fechasiguientecita', '>=', Carbon::now())    
+           ->where('queries.fechasiguientecita', '<=',Carbon::now()->addWeek())    
          //   ->whereDate('queries.fechasiguientecita', '<=', $then)
            
            //->where("queries.fechasiguientecita",'<',$fechabuscada)
