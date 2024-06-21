@@ -55,16 +55,16 @@ class RevisarController extends Controller
     {
         $dateHoy = Date::now()->toFormattedDateString();
     
-        $fechabuscada = date('Y-m-d', strtotime($dateHoy. ' + 15 days'));
-        $Finicio = Date::parse($fechabuscada)->format('Y-m-d');
-      //  echo  $fechabuscada;
-     //  die();
+        $fechabuscada = date('Y-m-d', strtotime($dateHoy. '+ 15 days'));
+       // $Finicio = Date::parse($fechabuscada)->format('Y-m-d');
+      // echo  $Finicio;
+    //  die();
         $queriesq = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
         ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre', 'paciente.vih', 'paciente.nacimiento', 'paciente.nacimiento as edad', 'paciente.fecha_ult_atencion as fecha_ult_atencion', 'queries.fechasiguientecita as fechasiguientecita'])
         ->where('queries.fechasiguientecita', '!=',  null)
             ->where('queries.fechasiguientecita', '!=', "")
             ->where('queries.fechasiguientecita', '>', $dateHoy)
-            ->where('queries.fechasiguientecita', '<=',   $Finicio)
+            ->where('queries.fechasiguientecita', '<=',   $fechabuscada)
 
 
             // ->where('fecha_ult_atencion', '!=',  "") 
