@@ -54,7 +54,7 @@ class RevisarController extends Controller
     public function show()
     {
         $now = Carbon::now(); // Or whatever date you want to use as the start date.
-        $then = $now->clone()->addDays(10);
+        $then = $now->addDays(10);
        // $Finicio = Date::parse($fechabuscada)->format('Y-m-d');
       // echo  substr($fechabuscada,0,7) ;
      // die();
