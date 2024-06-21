@@ -62,8 +62,10 @@ class RevisarController extends Controller
         ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre', 'paciente.vih', 'paciente.nacimiento', 'paciente.nacimiento as edad', 'paciente.fecha_ult_atencion as fecha_ult_atencion', "queries.fechasiguientecita  as fechasiguientecita"])
         ->where('queries.fechasiguientecita', '!=',  null)
             ->where('queries.fechasiguientecita', '!=', "")  
-            ->whereDate('queries.fechasiguientecita', '>=', $now)    
-            ->whereDate('queries.fechasiguientecita', '<=', $then)
+            
+           ->whereDate('queries.fechasiguientecita', '>=', Carbon::now())    
+           ->whereDate('queries.fechasiguientecita', '<=',Carbon::now()->addWeek())    
+         //   ->whereDate('queries.fechasiguientecita', '<=', $then)
            
            //->where("queries.fechasiguientecita",'<',$fechabuscada)
           // ->where("queries.fechasiguientecita",'>',$fechaactual)
