@@ -64,7 +64,7 @@ class RevisarController extends Controller
         ->where('queries.fechasiguientecita', '!=',  null)
             ->where('queries.fechasiguientecita', '!=', "")
             ->where('queries.fechasiguientecita', '>',  Carbon::parse($dateHoy)->format('Y-m-d') )
-            ->where('queries.fechasiguientecita', '<',  Carbon::parse($fechabuscada)->format('Y-m-d'))
+           // ->where('queries.fechasiguientecita', '<',  Carbon::parse($fechabuscada)->format('Y-m-d'))
 
 
             // ->where('fecha_ult_atencion', '!=',  "") 
