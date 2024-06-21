@@ -64,8 +64,8 @@ class RevisarController extends Controller
             ->where('queries.fechasiguientecita', '!=', "")
             
          
-            ->where('queries.fechasiguientecita', '>=',"2024-06-21")
-            ->where('queries.fechasiguientecita', '<=', "2024-07-07")
+            ->where('queries.fechasiguientecita', '>=',"21-06-2024")
+            ->where('queries.fechasiguientecita', '<=', "07-07-2024")
           //  ->where('queries.fechasiguientecita BETWEEN "'. date('Y-m-d H:i:s', strtotime($dateHoy.' 00:00:00')). '" and "'. date('Y-m-d H:i:s', strtotime($dateHoy.' 23:59:59')).'"')
            // ->where("queries.fechasiguientecita BETWEEN '{Carbon::parse($dateHoy)->format('d-m-Y')}' AND '{Carbon::parse($fechabuscada)->format('d-m-Y')}'")
             //->where('queries.fechasiguientecita <= date("'.$fechabuscada.'")')
