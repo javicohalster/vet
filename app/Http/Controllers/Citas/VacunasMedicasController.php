@@ -95,6 +95,8 @@ class VacunasMedicasController extends Controller
                 $editar ="";
                 $eliminar ="";
                 if (Auth::user()->can('leer-citas')) {
+                    $receta = '<a href="/qr/receta.php?qr='.$consulta->id.'"    rel="tooltip" title="Receta" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">medication</i></a>';
+                
                 $ver = '<a href="#" onclick="ver_cita('.$consulta->id.')" data-toggle="modal" data-target="#modal_ver" rel="tooltip" title="Ver consulta" class="btn btn-simple btn-primary btn-icon edit"><i class="material-icons">remove_red_eye</i></a>';
             }
             if (Auth::user()->can('editar-atender')) {
@@ -103,7 +105,7 @@ class VacunasMedicasController extends Controller
             if (Auth::user()->can('eliminar-consultas')) {
                 $eliminar = '<a href="#" onclick="delete_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#eliminar_paciente" rel="tooltip" title="Eliminar" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>';
             }
-                return $ver.$editar.$eliminar;
+                return $ver.$receta.$editar.$eliminar;
             })->make(true);
     }
     

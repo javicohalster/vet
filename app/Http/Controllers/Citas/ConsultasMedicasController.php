@@ -59,6 +59,7 @@ class ConsultasMedicasController extends Controller
                  $hospitalizar = "";
                  $cirugia = "";
                  $pagar = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_pago" rel="tooltip" title="Pagar" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">attach_money</i></a>';
+                 $receta = '<a href="/qr/receta.php?qr='.$consulta->id.'"    rel="tooltip" title="Receta" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">receta</i></a>';
                  if (Auth::user()->can('editar-atender')) {
                    $atender = '<a href="#" onclick="atender('.$consulta->id.')" data-toggle="modal" data-target="#modal_atender" rel="tooltip" title="Atender" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">done_all</i></a>';
                 }
@@ -131,6 +132,8 @@ class ConsultasMedicasController extends Controller
                 $vacunar ="";
                 $hospitalizar ="";
                 if (Auth::user()->can('leer-citas')) {
+                    $receta = '<a href="../public/qr/receta.php?qr='.$consulta->id.'" target="_blank"   rel="tooltip" title="Receta" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">medication</i></a>';
+                
                 $ver = '<a href="#" onclick="ver_atencion('.$consulta->id.')" data-toggle="modal" data-target="#modal_ver" rel="tooltip" title="Ver consulta" class="btn btn-simple btn-primary btn-icon edit"><i class="material-icons">remove_red_eye</i></a>';
             }
             if (Auth::user()->can('editar-atender')) {
@@ -141,7 +144,7 @@ class ConsultasMedicasController extends Controller
             if (Auth::user()->can('eliminar-consultas')) {
                 $eliminar = '<a href="#" onclick="delete_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#eliminar_paciente" rel="tooltip" title="Eliminar" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>';
             }
-                return $ver.$editar.$eliminar;
+                return $ver.$receta.$editar.$eliminar;
             })->make(true);
     }
     

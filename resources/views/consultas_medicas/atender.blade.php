@@ -264,14 +264,14 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label">TRATAMIENTO:</label>
-                                            <textarea rows="6" type="text" class="form-control" id="tratamiento" name="tratamiento"></textarea>
+                                            <label class="control-label">MEDICAMENTOS:</label>
+                                            <textarea rows="6" type="text" class="form-control" id="tratamiento" name="tratamiento">1. Amoxicilina 500mg</textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label">RECETA:</label>
-                                            <textarea rows="6" type="text" class="form-control" id="receta" name="receta"></textarea>
+                                            <label class="control-label">INDICACIONES:</label>
+                                            <textarea rows="6" type="text" class="form-control" id="receta" name="receta">1. Tomar 200mg cada 8 horas.</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -344,7 +344,7 @@
                 <div class="row">   
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label class="control-label">TRATAMIENTO:</label>
+                            <label class="control-label">MEDICAMENTOS:</label>
                             <textarea rows="6" type="text" class="form-control" id="tratamientohotpitalizar" name="tratamientohotpitalizar"></textarea>
                         </div>
                     </div>                 
