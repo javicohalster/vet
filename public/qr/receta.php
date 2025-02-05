@@ -34,6 +34,7 @@ JOIN users AS paciente ON queries.paciente_id = paciente.id
 JOIN users AS doctor ON queries.doctor_id = doctor.id
 JOIN specialities AS especialidad ON queries.speciality_id = especialidad.id
 WHERE queries.id =  ". $_GET['qr'].";";
+mysqli_set_charset($conexion, "utf8");
 	$resultado = mysqli_query( $conexion, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
     while ($columna = mysqli_fetch_array( $resultado ))
 	{
