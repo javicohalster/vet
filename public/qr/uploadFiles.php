@@ -2,6 +2,9 @@
 // Incluir la conexión a la BD
 include "connect.php";
 
+// Variable para guardar el mensaje final
+$mensaje = "";
+
 // Verificamos si se ha enviado el formulario
 if (isset($_POST['submit'])) {
     // Obtenemos el ID de la consulta
@@ -40,26 +43,44 @@ if (isset($_POST['submit'])) {
                 mysqli_stmt_bind_param($stmt, "is", $query_id, $new_file_name);
                 
                 if (mysqli_stmt_execute($stmt)) {
-                    echo "El archivo se subió y se guardó correctamente en la base de datos.";
+                    $mensaje = "El archivo se subió y se guardó correctamente en la base de datos.";
                 } else {
-                    echo "Error al guardar la información del archivo en la base de datos.";
+                    $mensaje = "Error al guardar la información del archivo en la base de datos.";
                 }
                 
                 mysqli_stmt_close($stmt);
                 
             } else {
-                echo "Error al mover el archivo al directorio de destino.";
+                $mensaje = "Error al mover el archivo al directorio de destino.";
             }
         } else {
-            echo "Extensión de archivo no permitida. Solo se admiten pdf, doc, docx.";
+            $mensaje = "Extensión de archivo no permitida. Solo se admiten pdf, doc, docx.";
         }
     } else {
-        echo "Error en la subida del archivo. Verifica que hayas seleccionado un archivo válido.";
+        $mensaje = "Error en la subida del archivo. Verifica que hayas seleccionado un archivo válido.";
     }
 } else {
-    echo "No se recibió el formulario correctamente.";
+    $mensaje = "No se recibió el formulario correctamente.";
 }
 
 // Cerramos conexión (opcional)
 mysqli_close($conexion);
 ?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Subida de Archivos</title>
+</head>
+<body>
+    <p><?php echo $mensaje; ?></p>
+    
+    <!-- Script para cerrar la ventana automáticamente tras 2 segundos -->
+    <script>
+      setTimeout(function() {
+        window.close();
+      }, 2000);
+    </script>
+</body>
+</html>

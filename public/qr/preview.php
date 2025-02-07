@@ -51,8 +51,8 @@ if (!$res) {
                 } elseif ($extension === "doc" || $extension === "docx") {
                     // Para doc/docx, podemos usar Google Docs Viewer
                     // Necesitamos la URL absoluta pública
-                    $dominio      = "http://localhost/vet/public/qr";  // <--- ADAPTA ESTO a tu dominio real
-                  //  $dominio      = "http://cvsanjosecondado.com/vet/public/qr/";
+                  //  $dominio      = "http://localhost/vet/public/qr";  // <--- ADAPTA ESTO a tu dominio real
+                    $dominio      = "http://cvsanjosecondado.com/vet/public/qr";
                     $rutaCompleta = $dominio . "/" . $ruta;
                     $rutaEncode   = urlencode($rutaCompleta);
                     
