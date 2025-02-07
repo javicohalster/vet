@@ -133,6 +133,8 @@ class ConsultasMedicasController extends Controller
                 $hospitalizar ="";
                 if (Auth::user()->can('leer-citas')) {
                     $receta = '<a href="../public/qr/receta.php?qr='.$consulta->id.'" target="_blank"   rel="tooltip" title="Receta" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">medication</i></a>';
+                    $subirrx = '<a href="../public/qr/resultados.php?qr='.$consulta->id.'" target="_blank"   rel="tooltip" title="Subir Resultados" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">medical_services</i></a>';
+                    $verrx = '<a href="../public/qr/preview.php?qr='.$consulta->id.'" target="_blank"   rel="tooltip" title="Ver Resultados" class="btn btn-simple btn-primary btn-icon"><i class="material-icons">preview</i></a>';
                 
                 $ver = '<a href="#" onclick="ver_atencion('.$consulta->id.')" data-toggle="modal" data-target="#modal_ver" rel="tooltip" title="Ver consulta" class="btn btn-simple btn-primary btn-icon edit"><i class="material-icons">remove_red_eye</i></a>';
             }
@@ -144,7 +146,7 @@ class ConsultasMedicasController extends Controller
             if (Auth::user()->can('eliminar-consultas')) {
                 $eliminar = '<a href="#" onclick="delete_cita_pendiente('.$consulta->id.')" data-toggle="modal" data-target="#eliminar_paciente" rel="tooltip" title="Eliminar" class="btn btn-simple btn-danger btn-icon"><i class="material-icons">close</i></a>';
             }
-                return $ver.$receta.$editar.$eliminar;
+                return $ver.$receta.$subirrx.$verrx.$editar.$eliminar;
             })->make(true);
     }
     
