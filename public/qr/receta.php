@@ -53,14 +53,16 @@ mysqli_set_charset($conexion, "utf8");
   <body style="text-transform: uppercase;">
     <header class="clearfix">
       <div id="logo">
-        <img src="https://irp-cdn.multiscreensite.com/1be65cd3/DESKTOP/jpg/995.jpg">
+        <img src="../images/firmas/logo.jpg">
       </div>
       <h1>RECETA MEDICA</h1>
            
     </header>
     <main class="container">
     <div id="company" class="clearfix">
-        
+    <div id="img_perfil">
+        <img src="../images/firmas/fotoclinica.jpeg">
+      </div>
       </div> 
       <table class="service">
         <tbody>
