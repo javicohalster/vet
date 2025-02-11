@@ -90,7 +90,7 @@ class ConsultasMedicasController extends Controller
         //doctorConsulta
         if (Auth::user()->hasRole('doctor')) {
             $consultas = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
-          //  ->join('users as doctor', 'queries.doctorConsulta', '=', 'doctor.id')
+            ->join('users as doctor', 'queries.doctorConsulta', '=', 'doctor.id')
             ->join('specialities as especialidad', 'queries.speciality_id', '=', 'especialidad.id')
             ->select(['queries.id as id', 'queries.fecha_inicio', 'paciente.nombres as paciente', 'paciente.apellidos as apellidos', 'doctor.apellidos as doctor', 'especialidad.nombre as especialidad'])->where('queries.estado', '=' , 'atendido')->where('doctor_id', Auth::user()->id)->get();
 
@@ -102,7 +102,7 @@ class ConsultasMedicasController extends Controller
     }else{
 
         $consultas = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
-      //  ->join('users as doctor', 'queries.doctorConsulta', '=', 'doctor.id')
+        ->join('users as doctor', 'queries.doctorConsulta', '=', 'doctor.id')
         ->join('specialities as especialidad', 'queries.speciality_id', '=', 'especialidad.id')
         ->select(['queries.id as id', 'queries.fecha_inicio', 'paciente.nombres as paciente', 'paciente.apellidos as apellidos', 'doctor.apellidos as doctor', 'especialidad.nombre as especialidad'])->where('queries.estado', '=' , 'atendido');
         /*
