@@ -22,6 +22,8 @@
             </div>
     </div>
   <!-- Nav tabs -->
+ 
+
   <ul class="nav nav-tabs" role="tablist" id="myTabs">
     <li role="presentation" class="active"><a href="#vacunasantiparasitario" aria-controls="vacunasantiparasitario" role="tab" data-toggle="tab">Vacunas y Antiparasitario</a></li>
     <li role="presentation"><a href="#reconocimientos" aria-controls="reconocimientos" role="tab" data-toggle="tab">Reconocimientos</a></li>
@@ -367,5 +369,6 @@
             </div>
         </div>
      </div>
+     
  </form>
 </div>

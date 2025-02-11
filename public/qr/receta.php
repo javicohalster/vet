@@ -50,15 +50,17 @@ mysqli_set_charset($conexion, "utf8");
     <link rel="stylesheet" href="../assets/css/style_receta.css" media="all" />
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css" media="all" />
   </head>
-  <body style="text-transform: uppercase;">
+  <body style="text-transform: capitalize;font-size: 10px;">
     <header class="clearfix">
-      <div id="logo">
-        <img src="../images/firmas/logo.jpg">
-      </div>
-      <h1>RECETA MEDICA</h1>
+      
+     
            
     </header>
     <main class="container">
+    <div id="logo">
+        <img src="../images/firmas/logo.jpg">
+      </div>
+    <h1>RECETA MEDICA</h1>
     <div id="company" class="clearfix">
     <div id="img_perfil">
         <img src="../images/firmas/fotoclinica.jpeg">
@@ -95,7 +97,7 @@ mysqli_set_charset($conexion, "utf8");
             
           </tr>
           <tr>            
-            <td style="border: 1px solid black;padding: 8px;" colspan="3"><?php echo $columna['medicamentos']   ?></td><td style="border: 1px solid black;padding: 8px;"colspan="3"><?php echo $columna['indicaciones']   ?></td>      
+            <td style="border: 1px solid black;padding: 8px;" colspan="3"><?php echo nl2br($columna['medicamentos'] );   ?></td><td style="border: 1px solid black;padding: 8px;"colspan="3"><?php echo nl2br($columna['indicaciones']);   ?></td>      
           </tr>
           <tr>
             <td colspan="4"><b>&nbsp;</b></td>
@@ -111,14 +113,14 @@ mysqli_set_charset($conexion, "utf8");
           </tr>
           <tr>
           
-            <td colspan="6" class=""><div class="img qr" ><img style="width:15%;text-align: right;float:right;font-size: 16px;"  src="../images/firmas/<?php echo $columna['firma']  ?>" /></td>
+            <td colspan="6" class=""><div class="img qr" ><img style="width:12%;text-align: right;float:right;font-size: 16px;"  src="../images/firmas/<?php echo $columna['firma']  ?>" /></td>
           </tr>
           <tr>
-            <td colspan="4"><b>Fecha Siguiente cita</td>
+            <td colspan="4"><b>Fecha Siguiente cita:</td>
             <td><?php echo $columna['fechasiguientecita']   ?></td>
           </tr>
           <tr>
-            <td colspan="4"><b>OBSERVACIONES</b></td>
+            <td colspan="4"><b>OBSERVACIONES:</b></td>
             <td class="total" style="font-size: 12px;" ><?php echo $columna['diagnostico']  ?></td>
           </tr>
         </tbody>
