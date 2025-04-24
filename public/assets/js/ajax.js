@@ -2010,8 +2010,11 @@ function expediente_paciente(id) //carga datos en el expediente del paciente.
                         if(data.array[i].temperatura){
                             html+="<li><h6><strong>temperatura</strong></h6><p align='justify'><small>"+data.array[i].temperatura+"</small></p></li>";  
                         }
+                        if(data.array[i].trata){
+                            html+="<li><h6><strong>tratamiento</strong></h6><p align='justify'><small>"+data.array[i].trata+"</small></p></li>";  
+                        } 
                         if(data.array[i].tratamiento){
-                            html+="<li><h6><strong>tratamiento</strong></h6><p align='justify'><small>"+data.array[i].tratamiento+"</small></p></li>";  
+                            html+="<li><h6><strong>indicaciones</strong></h6><p align='justify'><small>"+data.array[i].tratamiento+"</small></p></li>";  
                         } 
                         if(data.array[i].receta){
                             html+="<li><h6><strong>receta</strong></h6><p align='justify'><small>"+data.array[i].receta+"</small></p></li>";  
@@ -2313,7 +2316,8 @@ function atender(id)
             $('#paciente').html(data.paciente)
             $('#sintomas').val(data.sintomas)
             $('#examenes').val(data.examenes)            
-            $('#tratamiento').val(data.tratamiento)
+            $('#tratamiento').val(data.trata)
+            $('#indicaciones').val(data.tratamiento)
             $('#observacion').val(data.observacion)
             $('#temperatura').val(data.temperatura)
             $('#diagnostico').val(data.diagnostico)
@@ -2369,6 +2373,7 @@ function ver_atencion(id)
             $('#sintomasv').val(data.sintomas)
             $('#examenesv').val(data.examenes)            
             $('#tratamientov').val(data.tratamiento)
+            $('#tratav').val(data.trata)
             $('#observacionv').val(data.observacion)
             $('#temperaturav').val(data.temperatura)
             $('#diagnosticov').val(data.diagnostico)

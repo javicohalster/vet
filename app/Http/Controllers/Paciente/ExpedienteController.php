@@ -17,7 +17,7 @@ class ExpedienteController extends Controller
         $queries = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
                         ->join('users as doctor', 'queries.doctor_id', '=', 'doctor.id')
                         ->join('specialities as especialidad', 'queries.speciality_id', '=', 'especialidad.id')
-                        ->select(['queries.*','queries.id as id', 'queries.fecha_inicio as fecha', 'queries.sintomas as sintomas', 'queries.examenes as examenes', 'queries.tratamiento as tratamiento', 'queries.observaciones as observaciones', 'paciente.nombres as nombres_paciente', 'paciente.apellidos as apellidos_paciente', 'doctor.nombres as nombres_doctor', 'doctor.apellidos as apellidos_doctor', 'especialidad.nombre as especialidad'])
+                        ->select(['queries.*','queries.id as id', 'queries.fecha_inicio as fecha', 'queries.sintomas as sintomas', 'queries.examenes as examenes', 'queries.tratamiento as tratamiento','queries.trata as trata', 'queries.observaciones as observaciones', 'paciente.nombres as nombres_paciente', 'paciente.apellidos as apellidos_paciente', 'doctor.nombres as nombres_doctor', 'doctor.apellidos as apellidos_doctor', 'especialidad.nombre as especialidad'])
                         ->where('queries.paciente_id', '=', $paciente->id)->where('queries.estado', '=', 'atendido')->orderBy('queries.fecha_inicio', 'desc')->get();
 
         $arreglo = array();

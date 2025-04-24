@@ -250,6 +250,14 @@
                                     </div>
                                 </div>
                                 <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">TRATAMIENTO:</label>
+                                            <textarea rows="6" type="text" class="form-control" id="trata" name="trata"></textarea>
+                                        </div>
+                                    </div>                                   
+                                </div>
+                                <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="control-label">PRUEBAS REALIZADAS:</label>
