@@ -264,7 +264,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label class="control-label">TRATAMIENTO:</label>
-                                                <textarea rows="6" type="text" class="form-control" id="tratav" name="tratav"></textarea>
+                                                <textarea rows="6" type="text" class="form-control" id="tratamientov" name="tratamientov"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -272,7 +272,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="control-label">MEDICAMENTOS:</label>
-                                                <textarea rows="6" type="text" class="form-control" id="tratamientov" name="tratamientov"></textarea>
+                                                <textarea rows="6" type="text" class="form-control" id="tratav" name="tratav"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
