@@ -12,6 +12,7 @@
             <th>F. Nacim.</th>
             <th>Edad</th>
             <th>F. Ult. Ate.</th>
+            <th>Chip</th>
         </tr>
     </thead>
     <tbody>

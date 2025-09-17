@@ -53,8 +53,8 @@ class PacienteController extends Controller
 
     public function show()
     {
-        $users = User::select(['id', 'rut', 'nombres', 'apellidos', 'telefono', 'sangre','vih','nacimiento','nacimiento as edad','fecha_ult_atencion'])->withRole('paciente');
-        
+        $users = User::select(['id', 'rut', 'nombres', 'apellidos', 'telefono', 'sangre','vih','nacimiento','nacimiento as edad','fecha_ult_atencion','chip'])->withRole('paciente');
+
         //$fecha = collect($arreglo);
 
         return  datatables()->of($users)
@@ -180,7 +180,7 @@ class PacienteController extends Controller
         
 
        $queriesq = Query::join('users as paciente', 'queries.paciente_id', '=', 'paciente.id')
-                        ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre','paciente.vih','paciente.nacimiento','paciente.nacimiento as edad','paciente.fecha_ult_atencion as fecha_ult_atencion', 'queries.fechasiguientecita as fechasiguientecita'])
+                        ->select(['paciente.id', 'paciente.rut', 'paciente.nombres', 'paciente.apellidos', 'paciente.telefono', 'paciente.sangre','paciente.vih','paciente.nacimiento','paciente.nacimiento as edad','paciente.fecha_ult_atencion as fecha_ult_atencion', 'queries.fechasiguientecita as fechasiguientecita', 'paciente.chip as chip'])
                         ->where('queries.fechasiguientecita', '!=',  null)
                         ->where('queries.fechasiguientecita', '!=',  "")->orderBy('queries.fechasiguientecita', 'desc')->get();
                         

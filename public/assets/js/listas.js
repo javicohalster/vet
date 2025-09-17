@@ -235,6 +235,7 @@ var listar_pacientes = function()
             {data: 'nacimiento', name: 'nacimiento'},
             {data: 'edad', name: 'nacimiento'},
             {data: 'fecha_ult_atencion', name: 'fecha_ult_atencion',searchable: true,orderable: true, class:"text-left"},
+            {data: 'chip', name: 'chip'},
         ]
 	})
 }

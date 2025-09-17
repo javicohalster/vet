@@ -13,6 +13,7 @@
                 <th>F. Ult. Ate.</th>
                 <th>F. Sig. Ate.</th>
                 <th>Edad</th>
+                <th>Chip</th>
             </tr>
         </thead>
         <tbody>
