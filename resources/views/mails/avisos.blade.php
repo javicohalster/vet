@@ -4,9 +4,7 @@ Saludos, <p>Le recordamos que el día de mañana
 <p style="text-transform: capitalize;">{!!$envio->paciente!!}</p>
 <p>Tiene una cita en la Clínica Veterinaria "San José del Condado".</p>
 <p>Nuestros horarios de atención son:</p>
-<p>De lunes a viernes de 8 am a 7:30 pm</p>
-<p>Sábados de 9 am a 7:30 pm</p>
-<p>Domingos de 9 am a 4 pm</p>
+<p>De Lunes a Domingo las 24 horas del día.</p>
 <br/>
 <p>Atentamente,</p>
 <p>Dr. Xavier Villacís Páez</p>
