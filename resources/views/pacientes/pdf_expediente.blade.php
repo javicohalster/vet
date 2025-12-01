@@ -118,14 +118,7 @@
               <td colspan="4">Pruebas Realizadas</td>              
               <td class="total">{{$query->examenes}}</td>
              </tr>
-             @endif
-            
-             @if($query->tratamiento)
-             <tr>
-              <td colspan="4">Tratamiento</td>              
-              <td class="total">{{$query->tratamiento}}</td>
-             </tr>
-             @endif
+             @endif    
              @if($query->observaciones)
              <tr>
               <td colspan="4">Resultados</td>              
@@ -198,10 +191,10 @@
               <td class="total">{{$query->descripciondesparacitacion}}</td>
              </tr>
              @endif
-             @if($query->tratamiento)
+             @if($query->trata)
              <tr>
               <td colspan="4">Tratamiento</td>              
-              <td class="total">{{$query->tratamiento}}</td>
+              <td class="total">{{$query->trata}}</td>
              </tr>
              @endif
              @if($query->posologia)
@@ -214,6 +207,12 @@
              <tr>
               <td colspan="4">Dosis</td>              
               <td class="total">{{$query->dosis}}</td>
+             </tr>
+             @endif
+              @if($query->tratamiento)
+             <tr>
+              <td colspan="4">Indicaciones</td>              
+              <td class="total">{{$query->tratamiento}}</td>
              </tr>
              @endif
              @if($query->diasdesparacitar)
