@@ -1992,7 +1992,7 @@ function expediente_paciente(id) //carga datos en el expediente del paciente.
                         html+="<a class='collapsed' role='button' data-toggle='collapse' data-parent='#accordion' href='#"+data.array[i].id+"1' aria-expanded='false' aria-controls='"+data.array[i].id+"1'>";
                         html+="<h4 class='panel-title'>"+data.fecha[i]+"<i class='material-icons'>keyboard_arrow_down</i></h4></a>";
                         html+='<a href="pdf-expediente/'+data.paciente_id+'/'+data.array[i].id+'" id="download_expediente" class="pull-right"><span class="btn-label"><i class="material-icons">save_alt</i></span></a>';
-                        html+='<a href="qr/previewex.php?qr='+data.array[i].id+'" id="view_documents" class="pull-right"><span class="btn-label"><i class="material-icons">preview</i></span></a>';
+                        html+='<a href="qr/preview.php?qr='+data.array[i].id+'" id="view_documents" class="pull-right"><span class="btn-label"><i class="material-icons">preview</i></span></a>';
                         html+="</div>";                        
                         html+="<div id='"+data.array[i].id+"1' class='panel-collapse collapse' role='tabpanel' aria-labelledby='"+data.array[i].id+"'>";
                         html+="<div class='panel-body'><table><tbody><tr><th>Atendido por: </th><td>&nbsp;</td><td> Dr/a. "+data.array[i].nombres_doctor.ucwords()+" "+data.array[i].apellidos_doctor.ucwords()+"</td><td>&nbsp;</td><td>&nbsp;</td><th>Especialidad:</th><td>&nbsp;</td><td>"+data.array[i].especialidad.ucwords()+"</td></tr></tbody></table><div id='divider'></div><ol>"
