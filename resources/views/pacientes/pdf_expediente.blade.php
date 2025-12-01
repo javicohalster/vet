@@ -198,6 +198,12 @@
               <td class="total">{{$query->descripciondesparacitacion}}</td>
              </tr>
              @endif
+             @if($query->tratamiento)
+             <tr>
+              <td colspan="4">Tratamiento</td>              
+              <td class="total">{{$query->tratamiento}}</td>
+             </tr>
+             @endif
              @if($query->posologia)
              <tr>
               <td colspan="4">Posología</td>              
