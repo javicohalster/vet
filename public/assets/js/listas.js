@@ -3,6 +3,7 @@ $(document).ready(function() {
     listar_recepcionistas()
     listar_personas()
     listar_pacientes()
+    listar_pacientes_documentos()
     listar_especialidades()
     listar_permisos()
     listar_roles()
@@ -213,6 +214,43 @@ var listar_pacientes = function()
         "order": [[ 3, "asc" ]],
         "ajax": {
              "url": "pacientes/show",
+            },
+
+        "pagingType": "simple_numbers",
+        "lengthMenu": [
+            [10, 25, 50, -1],
+            [10, 25, 50, "Todos"]
+        ],
+        "language": {
+            url: "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+        },
+        "responsive": true,
+        "columns":[
+            {data: 'action', name: 'action', orderable: false, searchable: false, class:"text-left"},
+            {data: 'id', name: 'id'},
+            {data: 'nombres', name: 'nombres'},
+            {data: 'apellidos', name: 'apellidos'},
+            {data: 'telefono', name: 'telefono'},
+            {data: 'sangre', name: 'sangre'},
+            {data: 'vih', name: 'vih'},
+            {data: 'nacimiento', name: 'nacimiento'},
+            {data: 'edad', name: 'nacimiento'},
+            {data: 'fecha_ult_atencion', name: 'fecha_ult_atencion',searchable: true,orderable: true, class:"text-left"},
+            {data: 'chip', name: 'chip'},
+        ]
+	})
+}
+
+var listar_pacientes_documentos = function()
+{
+  
+    var table = $('#pacientesdocu').DataTable({
+        "headers": {'X-CSRF-TOKEN':$('input[name=_token]').attr('content')},
+        "processing": true,
+        "serverSide": true,
+        "order": [[ 3, "asc" ]],
+        "ajax": {
+             "url": "documentos-pacientes/show",
             },
 
         "pagingType": "simple_numbers",

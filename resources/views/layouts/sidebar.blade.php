@@ -57,6 +57,12 @@
                     <p>Pacientes</p>
                 </a>
             </li>
+            <li>
+                <a href="{{ url('documentos-pacientes') }}">
+                    <i class="material-icons">folder</i>
+                    <p>Documentos</p>
+                </a>
+            </li>
             @endpermission
             @permission('leer-pacientes')
             <li>

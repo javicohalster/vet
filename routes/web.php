@@ -12,6 +12,7 @@ Route::middleware(['auth', 'role:administrador|doctor|recepcionista'])->group(fu
 	Route::resource('especialidades', 'Especialidad\EspecialidadController')->middleware(['permission:leer-especialidades']);
 	Route::resource('pacientes', 'Paciente\PacienteController')->middleware(['permission:leer-pacientes']);
 	Route::resource('revisar', 'Revisar\RevisarController')->middleware(['permission:leer-pacientes']);
+	Route::resource('documentos-pacientes', 'Paciente\PacienteFileController')->middleware(['permission:leer-pacientes']);
 	
 	Route::resource('roles', 'Roles\RolController')->middleware(['permission:leer-roles']);
 	Route::resource('permisos', 'Permisos\PermisoController')->middleware(['permission:leer-permisos']);
